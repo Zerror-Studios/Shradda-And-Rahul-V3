@@ -457,7 +457,7 @@ const TopMenu = () => {
     { name: "Pyaar Dosti Hai", path: "/pyaar-dosti-hai" },
     { name: "From Marrakech, with Love", path: "/venu" },
     { name: "Wedding Itinerary", path: "/wedding-itinerary" },
-    { name: "Travel and FAQs", path: "/travel-and-faqs" },
+    { name: "Travel and FAQ's", path: "/travel-and-faqs" },
   ];
 
   return (
@@ -510,7 +510,7 @@ const TopMenu = () => {
       </div>
 
       {/* MOBILE NAVIGATION */}
-      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#1E4858] z-[999] flex flex-col px-8 pt-[120px] pb-10">
+      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#D25F28] z-[999] flex flex-col px-8 pt-[120px] pb-10">
         <div className="flex flex-col gap-6">
           {navLinks.map((item, index) => (
             <Link key={index} href={item.path}
