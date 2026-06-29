@@ -968,7 +968,7 @@ const Nails_Cntr = () => {
                   className="absolute top-0 left-0 right-0 h-px opacity-40 group-hover:opacity-100 transition-opacity duration-500"
                 // style={{
                 //   background:
-                //     "linear-gradient(90deg, transparent, ##1E4858, transparent)",
+                //     "linear-gradient(90deg, transparent, ##D25F28, transparent)",
                 // }}
                 />
                 {/* Hover glow */}
@@ -982,7 +982,7 @@ const Nails_Cntr = () => {
 
                 <div className="relative z-10 p-8">
                   {/* Icon */}
-                  <div className="text-3xl mb-4" style={{ color: "#1E4858" }}>
+                  <div className="text-3xl mb-4" style={{ color: "#D25F28" }}>
                     {guide.icon}
                   </div>
 
@@ -990,7 +990,7 @@ const Nails_Cntr = () => {
                   <h3
                     className="mb-1 Font_CV uppercase font-semibold "
                     style={{
-                      color: "#1E4858",
+                      color: "#D25F28",
                       fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)",
                       // fontWeight: 300,
                       // fontStyle: "italic",
@@ -1002,7 +1002,7 @@ const Nails_Cntr = () => {
                   <p
                     className="text-xs tracking-[0.3em] uppercase mb-6"
                     style={{
-                      color: "#1E4858",
+                      color: "#D25F28",
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
@@ -1012,7 +1012,7 @@ const Nails_Cntr = () => {
                   {/* Divider */}
                   <div
                     className="w-10 h-px mb-6"
-                    style={{ background: "#1E4858" }}
+                    style={{ background: "#D25F28" }}
                   />
 
                   {/* Dress list */}
@@ -1027,7 +1027,7 @@ const Nails_Cntr = () => {
                       >
                         <span
                           className="text-xs mt-0.5"
-                          style={{ color: "#1E4858" }}
+                          style={{ color: "#D25F28" }}
                         >
                           ◈
                         </span>
@@ -1035,7 +1035,7 @@ const Nails_Cntr = () => {
                           <p
                             className="text-[18px] uppercase tracking-widest mb-0.5 font-bold"
                             style={{
-                              color: "#1E4858",
+                              color: "#D25F28",
                               fontFamily: "'Montserrat', sans-serif",
                             }}
                           >
@@ -1044,7 +1044,7 @@ const Nails_Cntr = () => {
                           <p
                             className="text-[14px] font-medium"
                             style={{
-                              color: "#1E4858",
+                              color: "#D25F28",
                               // fontFamily: "'Cormorant Garamond', serif",
                               fontSize: "1rem",
                               // fontStyle: "italic",
@@ -1061,7 +1061,7 @@ const Nails_Cntr = () => {
                   <p
                     className="text-sm text-[14px]"
                     style={{
-                      color: "#1E4858",
+                      color: "#D25F28",
                       // fontFamily: "'Cormorant Garamond', serif",
                       // fontStyle: "italic",
                       borderTop: "1px solid rgba(201,168,76,0.12)",
