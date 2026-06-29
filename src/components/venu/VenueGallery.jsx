@@ -77,7 +77,7 @@ const VenueGallery = ({ slideImg, STA1Txt, STA2Txt }) => {
 
   return (
     <>
-      <div className={`w-full h-fit flex flex-col justify-center bg-[#1E4858] text-center items-center ${STA1Txt == "" ? " pt-0vh" : " pt-[5vh]"}  pb-[10vh]`}>
+      <div className={`w-full h-fit flex flex-col justify-center BGCLR text-center items-center ${STA1Txt == "" ? " pt-0vh" : " pt-[5vh]"}  pb-[10vh]`}>
         <div className="COLOR_TEXT_RED Font_CV text-[3vw] w-fit h-fit leading-[3vw]  max-md:text-[10vw] max-md:leading-[12vw] tracking-tight overflow-hidden">
           <span className="flex MainTI Font_CV text-[#F1E2C6]  uppercase">
             {STA1Txt} <span className="max-md:hidden ml-4">{STA2Txt}</span>
@@ -88,7 +88,7 @@ const VenueGallery = ({ slideImg, STA1Txt, STA2Txt }) => {
         </div> */}
       </div>
 
-      <div className="w-full h-[60vh] overflow-hidden mb-[10vh] bg-[#1E4858]">
+      <div className="w-full h-[60vh] overflow-hidden mb-[10vh] BGCLR">
         <div
           ref={sliderRef}
           className="flex gap-6 h-full cursor-grab active:cursor-grabbing"

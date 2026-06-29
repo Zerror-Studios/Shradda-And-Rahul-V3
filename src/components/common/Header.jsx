@@ -19,7 +19,7 @@ const Header = () => {
 
           <div className="w-[1px] h-[50px] COLOR_BG_RED mx-10 COLOR_TEXT_RED md:my-auto max-md:w-[50px] max-md:h-[1px] max-md:hidden "></div>
 
-          <div className="w-1/2 flex flex-col  w-fit  text-[#1E4858] font-medium max-sm:w-full max-md:mt-5 ml-auto   max-md:text-center   justify-center">
+          <div className="w-1/2 flex flex-col  w-fit  text-[#D25F28] font-medium max-sm:w-full max-md:mt-5 ml-auto   max-md:text-center   justify-center">
             <span className=" ">
               ⁠For any wedding-related questions, please reach out to Shradda &
               Rahul wedding planning team at:

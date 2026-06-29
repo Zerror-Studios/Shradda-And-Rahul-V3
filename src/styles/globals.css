@@ -10,6 +10,7 @@
   src: url("/fonts/Cormorant-Italic.ttf");
 }
 
+
 * {
   scroll-behavior: smooth;
   user-select: none;
@@ -18,6 +19,10 @@
 body {
   overflow-x: hidden;
   width: 100%;
+}
+
+.BGCLR{
+  background-color: #D25F28;
 }
 
 body::-webkit-scrollbar {
@@ -117,14 +122,14 @@ button {
   }
 }
 
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 450px) {
   .Doorwidth {
-    width: 95%;
-
+    width: 90% !important;
+    /* background-color: #eb0ca8; */
   }
 
   .DoorHeight {
-    height: 75.5vh;
+    height: 85vh ;
   }
 
   .menuScaler {
@@ -132,13 +137,14 @@ button {
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 399px) {
   .Doorwidth {
-    width: 80%;
+    width: 85.5% !important;
+    /* background-color: #07f527; */
   }
 
   .DoorHeight {
-    height: 80vh;
+    height: 82.9vh !important;
   }
 
   .menuScaler {
@@ -306,7 +312,7 @@ button {
 
 /* Main Container */
 #How_to_Nail_it_Cntr {
-  background-color: #1E4858;
+  /* background-color: #1E4858; */
   width: 100%;
   position: relative;
   padding-top: 16.4705882353vw;

@@ -493,7 +493,7 @@ const TopMenu = () => {
           {/* DESKTOP RSVP BUTTON */}
           <button
 
-            className="ml-2 px-5 py-2  text-[13px] F1 uppercase tracking-widest text-[#F1E2C6] bg-[#1E4858] rounded-sm cursor-pointer transition-all duration-300 hover:bg-[#143542] hover:text-[#F1E2C6] border border-[#f1e2c638]"
+            className="ml-2 px-5 py-2  text-[13px] F1 uppercase tracking-widest text-[#F1E2C6] bg-[#D25F28] rounded-sm cursor-pointer transition-all duration-300 hover:bg-[#dd500e] hover:text-[#F1E2C6] border border-[#f1e2c638]"
           >
             RSVP
           </button>
@@ -529,7 +529,7 @@ const TopMenu = () => {
         {/* MOBILE RSVP BUTTON */}
         <button
 
-          className="smNavItem opacity-0 translate-y-[20px] font-semibold mt-10 w-full py-3 text-[1rem] F1 uppercase tracking-widest text-[#1E4858] bg-[#F1E2C6] border border-[#F1E2C6] rounded-sm cursor-pointer transition-all duration-300 hover:bg-transparent hover:text-[#F1E2C6] active:scale-95"
+          className="smNavItem opacity-0 translate-y-[20px] font-semibold mt-10 w-full py-3 text-[1rem] F1 uppercase tracking-widest text-[#D25F28] bg-[#F1E2C6] border border-[#F1E2C6] rounded-sm cursor-pointer transition-all duration-300 hover:bg-transparent hover:text-[#dd5618] active:scale-95"
         >
           RSVP
         </button>

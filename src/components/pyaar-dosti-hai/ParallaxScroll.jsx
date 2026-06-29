@@ -644,7 +644,7 @@ export default function ParallaxScroll() {
   }, []);
 
   return (
-    <main ref={scope} className="paren_nn relative h-[800vh] bg-[#F1E2C6]">
+    <main ref={scope} className="paren_nn relative h-[800vh] BGCLR">
 
       {/* Floating background images */}
       <section className="absolute inset-0 overflow-hidden">
@@ -670,7 +670,7 @@ export default function ParallaxScroll() {
           {DATA.map((item, i) => (
             <div
               key={i}
-              className="text_item leading-snug max-sm:text-[1.7rem] max-sm:leading-[1.7rem] text-[#1E4858] Font_CV font-medium absolute inset-0 text-sm sm:text-base md:text-xl text-center"
+              className="text_item leading-snug max-sm:text-[1.7rem] max-sm:leading-[1.7rem] text-[#F1E2C6] Font_CV font-medium absolute inset-0 text-sm sm:text-base md:text-xl text-center"
             >
               {item.text}
             </div>
@@ -679,8 +679,8 @@ export default function ParallaxScroll() {
 
         {/* Progress bar + year pill */}
         <div className="absolute flex items-center bottom-8 sm:bottom-16 w-[80vw] sm:w-[60vw] md:w-[30vw] h-0.5 bg-black/5">
-          <div className="fill_x h-full w-0 bg-[#1E4858]" />
-          <div className="overflow-hidden bg-[#1E4858] text-[#F1E2C6] px-2 h-4 rounded-full">
+          <div className="fill_x h-full w-0 bg-[#F1E2C6]" />
+          <div className="overflow-hidden bg-[#F1E2C6] text-[#D25F28] px-2 h-4 rounded-full">
             <div className="year_track h-4 text-xs">
               {DATA.map((item, i) => (
                 <div key={i} className="h-4 flex font-medium items-center justify-center">

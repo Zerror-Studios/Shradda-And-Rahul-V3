@@ -123,7 +123,9 @@ export default function FAQSection() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full py-10 relative overflow-hidden bg-[#1E4858]">
+
+    // #1E4858
+    <section ref={sectionRef} className="w-full py-10 relative overflow-hidden BGCLR">
       {/* <div className="fixed top-0 left-0 inset-0 w-full h-full z-[-1]  ">
       </div> */}
 

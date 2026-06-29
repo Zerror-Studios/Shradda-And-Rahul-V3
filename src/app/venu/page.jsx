@@ -26,7 +26,7 @@ const page = () => {
 
   return (
     <>
-      <div className='w-full h-fit overflow-x-hidden bg-[#1E4858] relative'>
+      <div className='w-full h-fit overflow-x-hidden BGCLR relative'>
 
         {/* <VenueHero /> */}
         <HeroSectionVenue />

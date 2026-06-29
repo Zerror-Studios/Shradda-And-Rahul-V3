@@ -53,7 +53,7 @@ const HeroSectionVenue = () => {
   return (
     <div
       ref={containerRef}
-      className="w-full h-[100vh] max-md:h-svh flex overflow-hidden  relative bg-[#1E4858]"
+      className="w-full h-[100vh] max-md:h-svh flex overflow-hidden  relative BGCLR"
     >
       <img
         src={`/new_img/AA.jpeg`}

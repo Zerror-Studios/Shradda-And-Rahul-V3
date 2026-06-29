@@ -30,7 +30,7 @@ const WeddingVenue = () => {
 
 
   return (
-    <section className="h-fit max-md:h-fit  WeddingTextCont py-[10vh] flex items-center justify-center bg-[#1E4858] px-6">
+    <section className="h-fit max-md:h-fit  WeddingTextCont py-[10vh] flex items-center justify-center BGCLR px-6">
       <div className=" text-center text-[#F1E2C6]  ">
 
         {/* Description */}

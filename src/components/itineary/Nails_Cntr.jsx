@@ -177,7 +177,7 @@ const Nails_Cntr = () => {
   }, []);
   return (
     <>
-      <div id="How_to_Nail_it_Cntr" className="gg bg-[#1E4858]">
+      <div id="How_to_Nail_it_Cntr" className=" BGCLR">
         <div className="row title  max-sm:my-[10vh]">
           <div className="mx-auto flex flex-col gap-10 justify-center max-sm:text-center items-center">
             <h3
@@ -950,7 +950,7 @@ const Nails_Cntr = () => {
       </div>
 
       {/* ======================================================================== */}
-      <div className=" w-full h-fit pt-[10vh] max-sm:pt-[0vh]  bg-[#1E4858]">
+      <div className=" w-full h-fit pt-[10vh] max-sm:pt-[0vh]  BGCLR">
         <div className="w-[70vw] max-sm:w-[90%] mx-auto pb-[20vh] max-sm:py-[5vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {wardrobeData.map((guide, gi) => (
