@@ -394,24 +394,24 @@ const Hero = () => {
 
   const menuItems = [
     {
-      img: "/new_img/Tile1.png",
-      title: "Pyaar Dosti Hai",
-      link: "/pyaar-dosti-hai",
+      img:"/images/home/Tile1.png",
+      title:"Pyaar Dosti Hai",
+      link:"/pyaar-dosti-hai",
     },
     {
-      img: "/new_img/Tile2.png",
-      title: "From Marrakech, with Love",
-      link: "/venu",
+      img:"/images/home/Tile2.png",
+      title:"From Marrakech, with Love",
+      link:"/venu",
     },
     {
-      img: "/new_img/Tile3.png",
-      title: "Wedding Itinerary",
-      link: "/wedding-itinerary",
+      img:"/images/home/Tile3.png",
+      title:"Wedding Itinerary",
+      link:"/wedding-itinerary",
     },
     {
-      img: "/new_img/Tile4.png",
-      title: "Travel and FAQs",
-      link: "/travel-and-faqs",
+      img:"/images/home/Tile4.png",
+      title:"Travel and FAQs",
+      link:"/travel-and-faqs",
     },
   ];
 
