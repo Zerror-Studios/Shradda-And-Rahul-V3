@@ -80,7 +80,7 @@ button {
 
 /* =======================================*/
 
-.DoorHeight {
+/* .DoorHeight {
   height: 74vh;
 }
 
@@ -92,81 +92,7 @@ button {
   scale: 0.7;
 }
 
-@media screen and (max-width: 375px) {
-  .Doorwidth {
-    width: 100%;
-    /* background-color: #7546ff; */
-  }
-
-  .DoorHeight {
-    height: 60vh;
-  }
-
-  .menuScaler {
-    scale: 1;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .Doorwidth {
-    width: 82%;
-    /* background-color: #7546ff; */
-  }
-
-  .DoorHeight {
-    height: 80vh;
-  }
-
-  .menuScaler {
-    scale: 1;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .Doorwidth {
-    width: 90% !important;
-    /* background-color: #eb0ca8; */
-  }
-
-  .DoorHeight {
-    height: 85vh ;
-  }
-
-  .menuScaler {
-    scale: 1;
-  }
-}
-
-@media screen and (max-width: 399px) {
-  .Doorwidth {
-    width: 85.5% !important;
-    /* background-color: #07f527; */
-  }
-
-  .DoorHeight {
-    height: 82.9vh !important;
-  }
-
-  .menuScaler {
-    scale: 1;
-  }
-}
-
-@media screen and (min-width: 1665px) {
-  .Doorwidth {
-    width: 25%;
-  }
-
-  .DoorHeight {
-    height: 85.5vh;
-  }
-
-  .menuScaler {
-    scale: 1;
-  }
-}
-
-
+ */
 
 
 

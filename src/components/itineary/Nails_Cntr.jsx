@@ -203,6 +203,7 @@ const Nails_Cntr = () => {
         <div className="row line_cntr_trigger ">
           <div className="pictos-wrapper">
             <div className="line-wrapper">
+              
               <svg
                 id="line"
                 x="0px"
@@ -833,7 +834,7 @@ const Nails_Cntr = () => {
                   <p>Welcome Dinner</p>
                   <p>19:00</p>
                   <p>Secret Location</p>
-                  <p className="flex ">Key elements: moon,stars,night garden</p>
+                  <p className="flex ">Dress Code :</p>
                 </div>
               </div>
               <div className="picto-two mt-[10vh]">
@@ -857,6 +858,7 @@ const Nails_Cntr = () => {
                   <p className="text-[1.3rem]!">Haldi Ceremony</p>
                   <p>13:00 </p>
                   <p>Location: Main Pool, The Oberoi</p>
+                  <p className="flex ">Dress Code :</p>
                   {/* <p className="flex ">
                     Key elements: sunflowers, marigolds, yellow vespa, citrus
                     trees
@@ -868,6 +870,7 @@ const Nails_Cntr = () => {
                   <p className="text-[1.3rem]!">Sangeet</p>
                   <p>19:30 </p>
                   <p>Location: The Obero</p>
+                  <p className="flex ">Dress Code :</p>
                   {/* <div>
                     <p className="flex flex-wrap">
                       Key elements: combining Morocco and Bollywood,
@@ -903,12 +906,13 @@ const Nails_Cntr = () => {
                   <p className="text-[1.3rem]!">Baraat</p>
                   <p>12:00 </p>
                   <p>Location: Olive tree driveway, The Oberoi</p>
-                  <p className="flex ">Key elements:</p>
+                  <p className="flex ">Dress Code :</p>
 
                   <p className="mt-10 mb-2">PYAAR DOSTI HAI</p>
                   <p>Wedding Ceremony </p>
                   <p>15:00 </p>
                   <p>Location, Patio, The Oberoi</p>
+                  <p className="flex ">Dress Code :</p>
 
                 </div>
               </div>
@@ -933,14 +937,13 @@ const Nails_Cntr = () => {
                   <p className="text-[1.3rem]!">Reception</p>
                   <p>19:00</p>
                   <p>Grand Canal, The Oberoi</p>
-                  <p className="flex ">
-                    Key elements: sunset, lanterns, elegant, infinity
-                  </p>
+                  <p className="flex ">Dress Code :</p>
 
                   <p className="mt-10 mb-2">DRUNK IN LOVE</p>
                   <p>After Party </p>
                   <p>22:00 till late</p>
                   <p>Patio, The Obero</p>
+                  <p className="flex ">Dress Code :</p>
 
                 </div>
               </div>
@@ -950,7 +953,7 @@ const Nails_Cntr = () => {
       </div>
 
       {/* ======================================================================== */}
-      <div className=" w-full h-fit pt-[10vh] max-sm:pt-[0vh]  BGCLR">
+      {/* <div className=" w-full h-fit pt-[10vh] max-sm:pt-[0vh]  BGCLR">
         <div className="w-[70vw] max-sm:w-[90%] mx-auto pb-[20vh] max-sm:py-[5vh]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {wardrobeData.map((guide, gi) => (
@@ -963,15 +966,11 @@ const Nails_Cntr = () => {
                   border: "1px solid rgba(201,168,76,0.15)",
                 }}
               >
-                {/* Top border accent */}
+                
                 <div
                   className="absolute top-0 left-0 right-0 h-px opacity-40 group-hover:opacity-100 transition-opacity duration-500"
-                // style={{
-                //   background:
-                //     "linear-gradient(90deg, transparent, ##D25F28, transparent)",
-                // }}
                 />
-                {/* Hover glow */}
+                
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
@@ -981,20 +980,18 @@ const Nails_Cntr = () => {
                 />
 
                 <div className="relative z-10 p-8">
-                  {/* Icon */}
+                 
                   <div className="text-3xl mb-4" style={{ color: "#D25F28" }}>
                     {guide.icon}
                   </div>
 
-                  {/* Guide title */}
+                 
                   <h3
                     className="mb-1 Font_CV uppercase font-semibold "
                     style={{
                       color: "#D25F28",
                       fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)",
-                      // fontWeight: 300,
-                      // fontStyle: "italic",
-                      // fontFamily: "'Cormorant Garamond', serif",
+                      
                     }}
                   >
                     {guide.guide}
@@ -1009,13 +1006,13 @@ const Nails_Cntr = () => {
                     {guide.subtitle}
                   </p>
 
-                  {/* Divider */}
+                  
                   <div
                     className="w-10 h-px mb-6"
                     style={{ background: "#D25F28" }}
                   />
 
-                  {/* Dress list */}
+                 
                   <div className="space-y-3 mb-6">
                     {guide.items.map((item, ii) => (
                       <div
@@ -1045,9 +1042,9 @@ const Nails_Cntr = () => {
                             className="text-[14px] font-medium"
                             style={{
                               color: "#D25F28",
-                              // fontFamily: "'Cormorant Garamond', serif",
+                              
                               fontSize: "1rem",
-                              // fontStyle: "italic",
+                              
                             }}
                           >
                             {item.dress}
@@ -1057,13 +1054,12 @@ const Nails_Cntr = () => {
                     ))}
                   </div>
 
-                  {/* Note */}
+                 
                   <p
                     className="text-sm text-[14px]"
                     style={{
                       color: "#D25F28",
-                      // fontFamily: "'Cormorant Garamond', serif",
-                      // fontStyle: "italic",
+                      
                       borderTop: "1px solid rgba(201,168,76,0.12)",
                       paddingTop: "1rem",
                     }}
@@ -1075,7 +1071,7 @@ const Nails_Cntr = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,5 +1,6 @@
 import Header from '@/components/common/Header';
 import HeroSectionVenue from '@/components/venu/HeroSectionVenue';
+import MarrakechMap from '@/components/venu/Marrakechmap';
 import VenueGallery from '@/components/venu/VenueGallery';
 import WeddingVenue from '@/components/venu/WeddingVenue';
 import React from 'react'
@@ -35,6 +36,8 @@ const page = () => {
         <VenueGallery slideImg={slideImg2} STA1Txt={'The Oberoi'} STA2Txt={'Marrakech'} />
         <VenueGallery slideImg={slideImg1} STA1Txt={'Marrakech,'} STA2Txt={'Morocco'} />
         {/* <OberoiSection /> */}
+
+        <MarrakechMap/>
         <Header />
       </div>
     </>

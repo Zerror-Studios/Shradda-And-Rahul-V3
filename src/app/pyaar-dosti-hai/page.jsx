@@ -1,5 +1,6 @@
 
 import Header from "@/components/common/Header";
+import Countdown from "@/components/pyaar-dosti-hai/Countdown";
 import HeartSection from "@/components/pyaar-dosti-hai/HeartSection";
 import HeroSection from "@/components/pyaar-dosti-hai/HeroSection";
 import ParallaxScroll from "@/components/pyaar-dosti-hai/ParallaxScroll";
@@ -13,6 +14,7 @@ const page = () => {
         {/* <HeartSection /> */}
         <ParallaxScroll />
         <div className="w-full h-[100px] BGCLR" />
+        <Countdown/>
         <Header />
       </div>
     </>

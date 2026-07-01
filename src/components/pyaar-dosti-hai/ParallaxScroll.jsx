@@ -1,3 +1,4 @@
+
 // "use client";
 
 // import { useEffect, useMemo, useRef } from "react";
@@ -6,74 +7,103 @@
 // import { useGSAP } from "@gsap/react";
 // gsap.registerPlugin(ScrollTrigger);
 
-
 // const DATA = [
 //   {
-//     img: "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
-//     // img: "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
+//     img: "/clientImg/21.webp",
 //     text: "In 1669, Dutch artist Willem Kalf painted Still Life with a Chinese Porcelain Jar.",
 //     year: "Mumba",
 //   },
 //   {
-//     img: "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
-//     // img: "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
+//     img: "/clientImg/26.webp",
 //     text: "Venetian goblet, and Ottoman rug depicted in his painting - circulated widely, and were a sign of cosmopolitan taste.",
 //     year: "NYC",
 //   },
 //   {
-//     img: "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
-//     // img: "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
+//     img: "/clientImg/2.webp",
 //     text: "Kalf worked in 1600s Amsterdam, a dynamic trade center where luxurious imports - like the Chinese porcelain jar,",
 //     year: "Singapore",
 //   },
 //   {
-//     img: "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
-//     // img: "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
+//     img: "/clientImg/16.webp",
 //     text: "For the next two centuries of its existence, it's hard to know much about how and where this painting traveled.",
 //     year: "Goa",
 //   },
 //   {
-//     img: "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
-//     // img: "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
+//     img: "/clientImg/5.webp",
 //     text: "In 1864, it was sold at auction in Paris, but the name of the buyer remains unknown.",
 //     year: "Bangkok",
 //   },
+// ];
 
-// ];
 // const IMAGES = [
-//   "https://www.getty.edu/tracingart/images/getty/intro/Pitcher-Goryeo%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Mummy-Portrait-of-a-Woman%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Striding-Statue-of-Minnefer%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Study-of-the-Model-Joseph%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/goblet%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Family-Group-in-an-Interior%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Wallclock%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/DP356939%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Irises%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/The-Fitting-Room%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Male-skeleton-walking-behind-a-female-skeleton%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/DP356939%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Irises-at-Yatsuhashi%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/On-the-Southern-Plains%40thumb.webp",
-//   "https://www.getty.edu/tracingart/images/section-2/transaction-2-img-1@sm.webp",
-//   "https://www.getty.edu/tracingart/images/section-2/transaction-2-img-2@sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/the_marquise_de_pezay%2C_and_the_marquise_de_rouge_with_her_sons_alexis_and_adrien_1964.11.1%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Comtesse-de-la-Ch%C3%A2tre%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Julie-Le-Brun%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/section-2/husband-and-wife/wife@sm.webp",
-//   "https://www.getty.edu/tracingart/images/section-2/husband-and-wife/husband@sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Votive-Checkerboard-Tunic%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Fly-or-Blister-Beetle_Willow-Bellflower_Gourd_and-Bindweed%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Still-Life-with-Apples%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/rural_school_room%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/intro/Wheatstacks_Snow-Effect_Morning%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Baluster-vase%40sm.webp",
-//   "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
+//   '/clientImg/1.webp',
+//   '/clientImg/2.webp',
+//   '/clientImg/3.webp',
+//   '/clientImg/4.webp',
+//   '/clientImg/5.webp',
+//   '/clientImg/6.webp',
+//   '/clientImg/7.webp',
+//   '/clientImg/8.webp',
+//   '/clientImg/9.webp',
+//   '/clientImg/10.webp',
+//   '/clientImg/11.webp',
+//   '/clientImg/12.webp',
+//   '/clientImg/13.webp',
+//   '/clientImg/14.webp',
+//   '/clientImg/15.webp',
+//   '/clientImg/16.webp',
+//   '/clientImg/17.webp',
+//   '/clientImg/18.webp',
+//   '/clientImg/19.webp',
+//   '/clientImg/20.webp',
+//   '/clientImg/21.webp',
+//   '/clientImg/22.webp',
+//   '/clientImg/23.webp',
+//   '/clientImg/24.webp',
+//   '/clientImg/25.webp',
+//   '/clientImg/26.webp',
+//   '/clientImg/27.webp',
+//   '/clientImg/28.webp',
+//   '/clientImg/29.webp',
+//   '/clientImg/30.webp',
+//   '/clientImg/31.webp',
+//   '/clientImg/32.webp',
 // ];
+// // const IMAGES = [
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Pitcher-Goryeo%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Mummy-Portrait-of-a-Woman%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Striding-Statue-of-Minnefer%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Study-of-the-Model-Joseph%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/goblet%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Family-Group-in-an-Interior%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Wallclock%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/DP356939%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Irises%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/The-Fitting-Room%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Male-skeleton-walking-behind-a-female-skeleton%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/DP356939%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Irises-at-Yatsuhashi%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/On-the-Southern-Plains%40thumb.webp",
+// //   "https://www.getty.edu/tracingart/images/section-2/transaction-2-img-1@sm.webp",
+// //   "https://www.getty.edu/tracingart/images/section-2/transaction-2-img-2@sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/the_marquise_de_pezay%2C_and_the_marquise_de_rouge_with_her_sons_alexis_and_adrien_1964.11.1%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Comtesse-de-la-Ch%C3%A2tre%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Julie-Le-Brun%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/section-2/husband-and-wife/wife@sm.webp",
+// //   "https://www.getty.edu/tracingart/images/section-2/husband-and-wife/husband@sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Votive-Checkerboard-Tunic%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Fly-or-Blister-Beetle_Willow-Bellflower_Gourd_and-Bindweed%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Still-Life-with-Apples%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/rural_school_room%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/intro/Wheatstacks_Snow-Effect_Morning%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Baluster-vase%40sm.webp",
+// //   "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
+// // ];
+
 // const LAYOUT = [
 //   { x: 4, y: 12, o: 1 },
 //   { x: 22, y: 26, o: 0.1 },
@@ -106,76 +136,51 @@
 //   const ref = useRef(null);
 
 //   useEffect(() => {
+//     // Disable mouse parallax on touch/mobile devices
+//     const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
 //     let mouseX = 0;
 //     let mouseY = 0;
-
 //     let currentX = 0;
 //     let currentY = 0;
-
 //     let sectionProgress = 0;
 
 //     const lerp = (a, b, t) => a + (b - a) * t;
 
 //     const onMove = (e) => {
+//       if (isMobile) return;
 //       mouseX = (e.clientX / window.innerWidth - 0.5) * 120;
 //       mouseY = (e.clientY / window.innerHeight - 0.5) * 120;
 //     };
 
 //     window.addEventListener("mousemove", onMove);
 
-//     // ONLY update while section is active
 //     const st = ScrollTrigger.create({
 //       trigger: ".paren_nn",
 //       start: "top top",
 //       end: "bottom bottom",
 //       scrub: true,
-
 //       onUpdate(self) {
 //         sectionProgress = self.progress;
 //       },
-
-//       onLeave: () => {
-//         sectionProgress = 1;
-//       },
-
-//       onLeaveBack: () => {
-//         sectionProgress = 0;
-//       },
+//       onLeave: () => { sectionProgress = 1; },
+//       onLeaveBack: () => { sectionProgress = 0; },
 //     });
 
 //     let raf;
-
-//     const section =
-//       document.querySelector(".paren_nn");
-
-//     const sectionHeight =
-//       section?.offsetHeight || 1;
+//     const section = document.querySelector(".paren_nn");
+//     const sectionHeight = section?.offsetHeight || 1;
 
 //     const update = () => {
-//       const targetX =
-//         mouseX * (item.o > 0.5 ? 0.6 : 0.3);
-
-//       // normalized progress
-//       const progressY =
-//         sectionProgress * sectionHeight;
-
-//       // MUCH SMALLER travel
-//       const scrollOffset =
-//         -(progressY * 0.12);
-
-//       const targetY =
-//         mouseY * (item.o > 0.5 ? 0.5 : 0.25) +
-//         scrollOffset;
+//       const targetX = mouseX * (item.o > 0.5 ? 0.6 : 0.3);
+//       const progressY = sectionProgress * sectionHeight;
+//       const scrollOffset = -(progressY * 0.12);
+//       const targetY = mouseY * (item.o > 0.5 ? 0.5 : 0.25) + scrollOffset;
 
 //       currentX = lerp(currentX, targetX, 0.08);
 //       currentY = lerp(currentY, targetY, 0.08);
 
-//       gsap.set(ref.current, {
-//         x: currentX,
-//         y: currentY,
-//         force3D: true,
-//       });
-
+//       gsap.set(ref.current, { x: currentX, y: currentY, force3D: true });
 //       raf = requestAnimationFrame(update);
 //     };
 
@@ -192,19 +197,13 @@
 //     <div
 //       ref={ref}
 //       className="absolute will-change-transform"
-//       style={{
-//         left: `${item.x}%`,
-//         top: `${item.y}%`,
-//         opacity: item.o,
-//       }}
+//       style={{ left: `${item.x}%`, top: `${item.y}%`, opacity: item.o }}
 //     >
 //       <img
 //         src={IMAGES[index % IMAGES.length]}
 //         alt=""
 //         draggable={false}
-//         className={`w-[8vw] ${item.o === 1
-//           ? "hover:scale-115 transition-all duration-700"
-//           : ""
+//         className={`w-[16vw] sm:w-[12vw] md:w-[8vw] ${item.o === 1 ? "hover:scale-115 transition-all duration-700" : ""
 //           }`}
 //       />
 //     </div>
@@ -222,7 +221,6 @@
 
 //       gsap.set(images, { opacity: 0 });
 //       gsap.set(texts, { opacity: 0 });
-
 //       gsap.set(images[0], { opacity: 1 });
 //       gsap.set(texts[0], { opacity: 1 });
 
@@ -236,13 +234,13 @@
 //           scrub: true,
 //         },
 //       });
+
 //       gsap.to(".sticky_child", {
 //         opacity: 1,
 //         scale: 1,
 //         scrollTrigger: {
 //           trigger: ".sticky_child",
 //           start: "5% top",
-//           // markers: true,
 //           toggleActions: "play none none reverse",
 //         },
 //       });
@@ -256,28 +254,13 @@
 //         gsap.killTweensOf(texts);
 //         gsap.killTweensOf(years);
 
-//         const tl = gsap.timeline({
-//           defaults: {
-//             duration: 0.5,
-//             ease: "power2.out",
-//           },
-//         });
+//         const tl = gsap.timeline({ defaults: { duration: 0.5, ease: "power2.out" } });
 
-//         tl.to(images[current], {
-//           opacity: 0,
-//         })
-//           .to(texts[current], {
-//             opacity: 0,
-//           }, "<")
-//           .to(images[index], {
-//             opacity: 1,
-//           }, "<")
-//           .to(texts[index], {
-//             opacity: 1,
-//           }, "<")
-//           .to(years, {
-//             y: `${-index * 1}rem`,
-//           }, "<");
+//         tl.to(images[current], { opacity: 0 })
+//           .to(texts[current], { opacity: 0 }, "<")
+//           .to(images[index], { opacity: 1 }, "<")
+//           .to(texts[index], { opacity: 1 }, "<")
+//           .to(years, { y: `${-index * 1}rem` }, "<");
 
 //         current = index;
 //       }
@@ -286,14 +269,9 @@
 //         trigger: ".paren_nn",
 //         start: "top top",
 //         end: "bottom bottom",
-
 //         onUpdate(self) {
 //           const total = DATA.length;
-//           const index = Math.min(
-//             total - 1,
-//             Math.floor(self.progress * total)
-//           );
-
+//           const index = Math.min(total - 1, Math.floor(self.progress * total));
 //           changeSlide(index);
 //         },
 //       });
@@ -304,84 +282,71 @@
 //     },
 //     { scope }
 //   );
+
 //   const repeated = useMemo(() => {
 //     const arr = [];
-
 //     for (let i = 0; i < 6; i++) {
 //       LAYOUT.forEach((l) => {
-//         arr.push({
-//           ...l,
-//           y: l.y + i * 25, // denser stacking
-//         });
+//         arr.push({ ...l, y: l.y + i * 25 });
 //       });
 //     }
-
 //     return arr;
 //   }, []);
 
 //   return (
-//     <main ref={scope} className=" paren_nn relative h-[800vh] bg-[#F1E2C6]">
+//     <main ref={scope} className="paren_nn relative h-[800vh] BGCLR">
+
+//       {/* Floating background images */}
 //       <section className="absolute inset-0 overflow-hidden">
 //         {repeated.map((item, i) => (
-//           <FloatingImage
-//             key={i}
-//             item={item}
-//             index={i}
-//           />
+//           <FloatingImage key={i} item={item} index={i} />
 //         ))}
 //       </section>
-//       <div className=" sticky_child opacity-0 scale-90 sticky pointer-events-none top-0 h-screen flex flex-col items-center justify-center gap-y-10">
-//         <div className="relative w-[25vw] aspect-[3.5/4]">
 
+//       {/* Sticky content */}
+//       <div className="sticky_child opacity-0 scale-90 sticky pointer-events-none top-0 h-screen flex flex-col items-center justify-center gap-y-6 sm:gap-y-10 px-4 sm:px-8">
+
+//         {/* Main image */}
+//         <div className="relative w-[55vw] sm:w-[38vw] md:w-[25vw] aspect-[3.5/4]">
 //           {DATA.map((item, i) => (
-//             <div
-//               key={i}
-//               className="img_item absolute inset-0"
-//             >
-//               <img
-//                 src={item.img}
-//                 className="w-full h-full object-cover"
-//               />
+//             <div key={i} className="img_item absolute inset-0">
+//               <img src={item.img} className="w-full h-full object-cover" alt="" />
 //             </div>
 //           ))}
-
 //         </div>
-//         <div className="relative w-[30vw] h-[120px]">
 
+//         {/* Text */}
+//         <div className="relative w-[85vw] sm:w-[60vw] md:w-[30vw] h-[80px] sm:h-[100px] md:h-[120px]">
 //           {DATA.map((item, i) => (
 //             <div
 //               key={i}
-//               className="text_item  leading-none text-[#1E4858] Font_CV font-medium absolute inset-0 text-xl text-center"
+//               className="text_item leading-snug max-sm:text-[1.7rem] max-sm:leading-[1.7rem] text-[#F1E2C6] Font_CV font-medium absolute inset-0 text-sm sm:text-base md:text-xl text-center"
 //             >
 //               {item.text}
 //             </div>
 //           ))}
-
 //         </div>
-//         <div className="absolute flex items-center bottom-16 w-[30vw] h-0.5 bg-black/5">
 
-//           <div className="fill_x h-full w-0 bg-[#1E4858]" />
-//           <div className="overflow-hidden bg-[#1E4858] text-[#F1E2C6]  px-2 h-4 rounded-full">
-//             <div className="year_track h-4 text-xs ">
+//         {/* Progress bar + year pill */}
+//         <div className="absolute flex items-center bottom-8 sm:bottom-16 w-[80vw] sm:w-[60vw] md:w-[30vw] h-0.5 bg-black/5">
+//           <div className="fill_x h-full w-0 bg-[#F1E2C6]" />
+//           <div className="overflow-hidden bg-[#F1E2C6] text-[#D25F28] px-2 h-4 rounded-full">
+//             <div className="year_track h-4 text-xs">
 //               {DATA.map((item, i) => (
-//                 <div
-//                   key={i}
-//                   className="h-4 flex font-medium items-center justify-center"
-//                 >
+//                 <div key={i} className="h-4 flex font-medium items-center justify-center">
 //                   {item.year}
 //                 </div>
 //               ))}
-
 //             </div>
 //           </div>
 //         </div>
+
 //       </div>
 
-//       <div className="h-[500vh] " />
+//       <div className="h-[500vh]" />
 //     </main>
 //   );
 // }
-
 
 "use client";
 
@@ -392,66 +357,52 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const DATA = [
-  {
-    img: "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
-    text: "In 1669, Dutch artist Willem Kalf painted Still Life with a Chinese Porcelain Jar.",
-    year: "Mumba",
-  },
-  {
-    img: "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
-    text: "Venetian goblet, and Ottoman rug depicted in his painting - circulated widely, and were a sign of cosmopolitan taste.",
-    year: "NYC",
-  },
-  {
-    img: "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
-    text: "Kalf worked in 1600s Amsterdam, a dynamic trade center where luxurious imports - like the Chinese porcelain jar,",
-    year: "Singapore",
-  },
-  {
-    img: "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
-    text: "For the next two centuries of its existence, it's hard to know much about how and where this painting traveled.",
-    year: "Goa",
-  },
-  {
-    img: "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
-    text: "In 1864, it was sold at auction in Paris, but the name of the buyer remains unknown.",
-    year: "Bangkok",
-  },
+  { img: "/clientImg/2.webp", text: "Atlanta", year: "2022" },
+  { img: "/clientImg/5.webp", text: "Bangkok", year: "2022" },
+  { img: "/clientImg/12.webp", text: "Singapore", year: "2022" },
+  { img: "/clientImg/26.webp", text: "New York", year: "2023" },
+  { img: "/clientImg/13.webp", text: "Ithaca", year: "2024" },
+  { img: "/clientImg/24.webp", text: "New Orleans", year: "2024" },
+  { img: "/clientImg/31.webp", text: "Sri Lanka", year: "2025" },
+  { img: "/clientImg/16.webp", text: "Kampala", year: "2025" },
+  { img: "/clientImg/21.webp", text: "Key West / Miami", year: "2025" },
+  { img: "/clientImg/29.webp", text: "Savannah (Civil Ceremony)", year: "2025" },
+  { img: "/clientImg/10.webp", text: "Egypt", year: "2025" },
 ];
 
 const IMAGES = [
-  "https://www.getty.edu/tracingart/images/getty/intro/Pitcher-Goryeo%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Mummy-Portrait-of-a-Woman%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Striding-Statue-of-Minnefer%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Study-of-the-Model-Joseph%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/goblet%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Family-Group-in-an-Interior%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Wallclock%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/DP356939%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Irises%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/The-Fitting-Room%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Male-skeleton-walking-behind-a-female-skeleton%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/DP356939%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Irises-at-Yatsuhashi%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/On-the-Southern-Plains%40thumb.webp",
-  "https://www.getty.edu/tracingart/images/section-2/transaction-2-img-1@sm.webp",
-  "https://www.getty.edu/tracingart/images/section-2/transaction-2-img-2@sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/artist-to-artist/the_marquise_de_pezay%2C_and_the_marquise_de_rouge_with_her_sons_alexis_and_adrien_1964.11.1%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Madam-Grand%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Comtesse-de-la-Ch%C3%A2tre%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/artist-to-artist/Julie-Le-Brun%40sm.webp",
-  "https://www.getty.edu/tracingart/images/section-2/husband-and-wife/wife@sm.webp",
-  "https://www.getty.edu/tracingart/images/section-2/husband-and-wife/husband@sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Votive-Checkerboard-Tunic%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/An-Old-Man-in-Military-Costume%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Fly-or-Blister-Beetle_Willow-Bellflower_Gourd_and-Bindweed%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Portrait-of-a-Man%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Still-Life-with-Apples%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Madonna-of-the-Cherries%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/rural_school_room%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/intro/Wheatstacks_Snow-Effect_Morning%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Baluster-vase%40sm.webp",
-  "https://www.getty.edu/tracingart/images/getty/still-life/Portrait-of-a-Boy-in-Fancy-Dress%40sm.webp",
+  '/clientImg/1.webp',
+  '/clientImg/2.webp',
+  '/clientImg/3.webp',
+  '/clientImg/4.webp',
+  '/clientImg/5.webp',
+  '/clientImg/6.webp',
+  '/clientImg/7.webp',
+  '/clientImg/8.webp',
+  '/clientImg/9.webp',
+  '/clientImg/10.webp',
+  '/clientImg/11.webp',
+  '/clientImg/12.webp',
+  '/clientImg/13.webp',
+  '/clientImg/14.webp',
+  '/clientImg/15.webp',
+  '/clientImg/16.webp',
+  '/clientImg/17.webp',
+  '/clientImg/18.webp',
+  '/clientImg/19.webp',
+  '/clientImg/20.webp',
+  '/clientImg/21.webp',
+  '/clientImg/22.webp',
+  '/clientImg/23.webp',
+  '/clientImg/24.webp',
+  '/clientImg/25.webp',
+  '/clientImg/26.webp',
+  '/clientImg/27.webp',
+  '/clientImg/28.webp',
+  '/clientImg/29.webp',
+  '/clientImg/30.webp',
+  '/clientImg/31.webp',
+  '/clientImg/32.webp',
 ];
 
 const LAYOUT = [
@@ -665,19 +616,19 @@ export default function ParallaxScroll() {
           ))}
         </div>
 
-        {/* Text */}
-        <div className="relative w-[85vw] sm:w-[60vw] md:w-[30vw] h-[80px] sm:h-[100px] md:h-[120px]">
+        {/* Text -> country / location name */}
+        <div className="relative w-[85vw] sm:w-[60vw] md:w-[30vw] h-[80px] sm:h-[100px] md:h-[120px] flex items-center justify-center">
           {DATA.map((item, i) => (
             <div
               key={i}
-              className="text_item leading-snug max-sm:text-[1.7rem] max-sm:leading-[1.7rem] text-[#F1E2C6] Font_CV font-medium absolute inset-0 text-sm sm:text-base md:text-xl text-center"
+              className="text_item leading-snug max-sm:text-[1.7rem] max-sm:leading-[1.7rem] text-[#F1E2C6] Font_CV font-medium absolute inset-0 flex items-center justify-center text-xl sm:text-2xl md:text-3xl text-center"
             >
               {item.text}
             </div>
           ))}
         </div>
 
-        {/* Progress bar + year pill */}
+        {/* Progress bar + year pill -> year */}
         <div className="absolute flex items-center bottom-8 sm:bottom-16 w-[80vw] sm:w-[60vw] md:w-[30vw] h-0.5 bg-black/5">
           <div className="fill_x h-full w-0 bg-[#F1E2C6]" />
           <div className="overflow-hidden bg-[#F1E2C6] text-[#D25F28] px-2 h-4 rounded-full">

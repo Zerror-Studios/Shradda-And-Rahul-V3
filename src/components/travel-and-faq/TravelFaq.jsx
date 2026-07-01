@@ -78,6 +78,11 @@ export default function FAQSection() {
       question: "Can I share the event details on social media?",
       answer: `Of course! We'd love for you to share the joy. Please use our wedding hashtag when posting your photos.`,
     },
+    {
+      id: 11,
+      question: "Is there a dress code for the events?",
+      answer: ``,
+    },
   ];
 
   // ── Accordion GSAP logic ─────────────────────────────────────────

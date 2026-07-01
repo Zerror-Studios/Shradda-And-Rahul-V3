@@ -493,7 +493,7 @@ const TopMenu = () => {
           {/* DESKTOP RSVP BUTTON */}
           <button
 
-            className="ml-2 px-5 py-2  text-[13px] F1 uppercase tracking-widest text-[#F1E2C6] bg-[#D25F28] rounded-sm cursor-pointer transition-all duration-300 hover:bg-[#dd500e] hover:text-[#F1E2C6] border border-[#f1e2c638]"
+            className="ml-2 px-5 py-2  text-[13px] F1 uppercase tracking-widest text-[#F1E2C6] bg-[#D25F28]  cursor-pointer transition-all duration-300 hover:bg-[#dd500e] hover:text-[#F1E2C6] border border-[#f1e2c638]"
           >
             RSVP
           </button>
