@@ -605,7 +605,7 @@ const Hero = () => {
                       <img
                         src={item.img}
                         alt={item.title}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-center"
                       />
                       {/* Cursor-click dot */}
                       <span className="cursor-hint " />
