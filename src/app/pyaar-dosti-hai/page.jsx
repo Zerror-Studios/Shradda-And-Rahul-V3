@@ -13,7 +13,6 @@ const page = () => {
         <HeroSection />
         {/* <HeartSection /> */}
         <ParallaxScroll />
-        <div className="w-full h-[100px] BGCLR" />
         <Countdown/>
         <Header />
       </div>

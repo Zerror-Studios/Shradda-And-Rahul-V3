@@ -529,7 +529,7 @@ const Hero = () => {
               {/* Door-Container */}
               <div
                 ref={doorContainer}
-                className="  DoorHeight Doorwidth w-[95vw] h-[95vh] sm:w-[70vw] sm:h-[90vh]  lg:w-[25vw] lg:h-[95vh] xl:w-[30vw] 2xl:w-[26vw] absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[7.5%] z-49 "
+                className="  DoorHeight Doorwidth w-[95vw] h-[95vh] sm:w-[70vw] sm:h-[90vh] md:w-[55vw]  lg:w-[40vw]  lg:h-[95vh] xl:w-[30vw] 2xl:w-[26vw] absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[7.5%] z-49 "
               >
                 {/* Left-Door */}
                 <div
@@ -543,7 +543,7 @@ const Hero = () => {
                   <img
                     src={`/images/home/DOOR-L.png`}
                     alt="left"
-                    className=" h-full  object-center"
+                    className=" h-full  w-full object-center"
                   />
                 </div>
 
@@ -559,7 +559,7 @@ const Hero = () => {
                   <img
                     src={`/images/home/DOOR-R.png`}
                     alt="Right"
-                    className=" h-full object-center "
+                    className=" h-full w-full object-center "
                   />
                 </div>
               </div>
@@ -578,7 +578,7 @@ const Hero = () => {
 
             <div className="wedding-container text-center pb-[5vh]">
               <div className="wedding-title w-[50vw] max-sm:w-[90vw] opacity-0 translate-y-10  flex mx-auto">
-               <h1 className=" my-2 flex mx-auto Font_CV uppercase text-[#F1E2C6]">The Wedding Of</h1>
+               <h1 className=" my-2 flex mx-auto Font_CV uppercase text-[#F1E2C6] font-bold">The Wedding Of</h1>
               </div>
               <div className="wedding-title w-[50vw] max-sm:w-[90vw] opacity-0 translate-y-10  flex mx-auto">
                  <h1 className=" text-[5vw] leading-[5vw] flex mx-auto Font_CV uppercase text-[#F1E2C6]">Shradda & Rahul</h1>

@@ -73,7 +73,7 @@ const HeroSectionVenue = () => {
             fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
             lineHeight: "clamp(3rem, 6.5vw, 6rem)",
           }}
-          className=" capitalize Font_CV   mt-[17vh] max-md:mt-[0.5vh] text-[#F1E2C6] overflow-hidden ">
+          className=" capitalize Font_CV   mt-[21vh] max-md:mt-[0.5vh] text-[#F1E2C6] overflow-hidden ">
           <span className="flex WEDMAIMTT2 text-center uppercase  translate-y-[100%] max-md:text-center">
             {" "}
             From Marrakech,
