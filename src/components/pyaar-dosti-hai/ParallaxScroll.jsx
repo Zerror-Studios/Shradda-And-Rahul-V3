@@ -1981,7 +1981,7 @@ export default function ParallaxScroll() {
               </div>
             </div>
 
-            <div
+            {/* <div
               className={`mt-3 flex items-center justify-between  uppercase bg-[#F1E2C6]/95 px-3 py-2 Font_CV text-[1rem] font-medium text-[#D25F28] shadow-[0_10px_28px_rgba(0,0,0,0.14)] transition-all duration-500 ease-out ${
                 isExpanded ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
               }`}
@@ -1990,7 +1990,7 @@ export default function ParallaxScroll() {
               <span>
                 {activeIndex + 1}/{DATA.length} - {activeItem.year}
               </span>
-            </div>
+            </div> */}
           </button>
         </div>
       </div>
