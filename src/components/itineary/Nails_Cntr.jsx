@@ -958,7 +958,7 @@ const Nails_Cntr = () => {
       day: "DAY ONE: 20 OCTOBER, 2026",
       events: [
         {
-          title: "MARBHA",
+          title: "AZUL",
           name: "Welcome Dinner",
           time: "19:00",
           location: "Secret Location",
@@ -977,7 +977,7 @@ const Nails_Cntr = () => {
           dress: "__",
         },
         {
-          title: "NAACH HABIBI: BOLLYWOOD IN THE MEDINA",
+          title: "NAMASTE MARRAKECH",
           name: "Sangeet",
           time: "19:30",
           location: "The Oberoi",
@@ -989,7 +989,7 @@ const Nails_Cntr = () => {
       day: "DAY THREE: 22 OCTOBER, 2026",
       events: [
         {
-          title: "DILWALE DULHANIA LE JAAYENGE",
+          title: "DILWALE DULHANIA LE JAAYENGE ",
           name: "Baraat",
           time: "12:00",
           location: "Olive tree driveway, The Oberoi",
@@ -999,7 +999,7 @@ const Nails_Cntr = () => {
           title: "PYAAR DOSTI HAI",
           name: "Wedding Ceremony",
           time: "15:00",
-          location: "Patio, The Oberoi",
+          location: "The Patio, The Oberoi",
           dress: "__",
         },
         {
@@ -1013,7 +1013,7 @@ const Nails_Cntr = () => {
           title: "DRUNK IN LOVE",
           name: "After Party",
           time: "22:00 till late",
-          location: "Patio, The Oberoi",
+          location: "The Oberoi",
           dress: "__",
         },
       ],

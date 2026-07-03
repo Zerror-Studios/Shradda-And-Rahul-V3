@@ -35,7 +35,7 @@ const WeddingVenue = () => {
 
         {/* Description */}
         <p className="max-w-[70vw] mx-auto   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
-          The Oberoi Marrakech is a monument to artisanal refinement and patience. It's hard to feign nonchalance upon entering this hotel's breathtaking entrance, where a high, intricately domed cedar wood ceiling—handcrafted by 250 artisans—displays jaw-dropping mastery of detail. The space leads into an impressive marble-floored courtyard lined with black-and-white zellige tiles and keyhole arches that hark back to the Moorish palaces of Andalusia. Inside, Berber and Moghul paintings, studded sofas (handmade in Casablanca), and arabesque-tiled fireplaces lend the atmosphere of a grand noble home in which you feel like the family's personal guest.</p>
+          Marrakech rewards the unhurried. The medina has a way of folding in on itself; take the wrong turn down an alley, and you'll often end up somewhere better than where you meant to go. We've mapped our favorite corners of the city, so you can wander with intention or with none at all. Whether you’ve got a free afternoon or you’re arriving a few days early to make the most of it, here is a brief guide on attractions, food, shopping and general fun.</p>
       </div>
     </section>
   );

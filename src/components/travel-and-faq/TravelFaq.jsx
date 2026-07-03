@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -30,56 +28,43 @@ export default function FAQSection() {
   const faqData = [
     {
       id: 1,
-      question: "Are children invited?",
-      answer: `While we love your little ones, this will be an adults-only celebration. We hope you enjoy a relaxing weekend with us!`,
+      question: "What to wear",
+      answer:
+        "Modest dress is appreciated in the medina and around mosque exteriors- shoulders and knees covered, but good energy uncovered!",
     },
     {
       id: 2,
-      question: "Is there a gift registry?",
-      answer: `Your presence at our wedding is the greatest gift. However, if you wish to honor us with a gift, we will be sharing registry details soon.`,
+      question: "Getting around",
+      answer:
+        "Petit taxis are cheap and everywhere. Agree on a fare (or ask for the meter) before you get in, especially near tourist spots.",
     },
     {
       id: 3,
-      question: "Will there be parking available at the venue?",
-      answer: `Yes, complimentary parking will be available at the venue for all guests. Valet service will also be provided.`,
+      question: "Bargaining in the souks",
+      answer:
+        "It's expected, and it's part of the fun. Carry small dirham notes; fewer vendors can break a large bill than you'd think.",
     },
     {
       id: 4,
-      question: "Can I take photos during the",
-      answer: `We kindly request guests to limit phone usage during the ceremony and enjoy the moment with us. A professional photographer will capture all special moments.`,
+      question: "Fridays run differently",
+      answer:
+        "Many shops close or shorten hours around midday prayer. Worth checking before you plan a Friday souk trip.",
     },
     {
       id: 5,
-      question: "Are dietary restrictions accommodated?",
-      answer: `Absolutely! Please inform us of any dietary restrictions in advance, and we will ensure suitable arrangements are made.`,
+      question: "Best light",
+      answer:
+        "Early morning or golden hour, especially at Jemaa el-Fnaa and Menara Gardens, when the crowds and the heat both thin out.",
     },
     {
       id: 6,
-      question: "Will there be Wi-Fi at the venue?",
-      answer: `Yes, complimentary Wi-Fi will be available at the venue for all guests.`,
+      question: "Book ahead",
+      answer:
+        "Jardin Majorelle now requires timed tickets booked in advance online, especially in October.",
     },
+
     {
       id: 7,
-      question: "What should I do if I arrive early?",
-      answer: `If you arrive early, feel free to explore the city, relax at the hotel, or connect with other guests before the celebrations begin.`,
-    },
-    {
-      id: 8,
-      question: "Is there a backup plan for outdoor events?",
-      answer: `Yes, in case of unexpected weather, all outdoor events will have a beautiful indoor backup arranged.`,
-    },
-    {
-      id: 9,
-      question: "Will there be live music or entertainment?",
-      answer: `Yes! We have planned live music and special performances to make the celebration even more memorable.`,
-    },
-    {
-      id: 10,
-      question: "Can I share the event details on social media?",
-      answer: `Of course! We'd love for you to share the joy. Please use our wedding hashtag when posting your photos.`,
-    },
-    {
-      id: 11,
       question: "Is there a dress code for the events?",
       answer: ``,
     },
@@ -116,7 +101,7 @@ export default function FAQSection() {
           duration: 0.8,
           ease: "power3.out",
           stagger: 0.08,
-        }
+        },
       );
     }, sectionRef);
 
@@ -128,9 +113,11 @@ export default function FAQSection() {
   };
 
   return (
-
     // #1E4858
-    <section ref={sectionRef} className="w-full py-10 relative overflow-hidden BGCLR">
+    <section
+      ref={sectionRef}
+      className="w-full py-10 relative overflow-hidden BGCLR"
+    >
       {/* <div className="fixed top-0 left-0 inset-0 w-full h-full z-[-1]  ">
       </div> */}
 
