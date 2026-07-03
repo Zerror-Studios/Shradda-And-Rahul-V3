@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const images = [
-  { src: "/clientImg/9.webp", span: "row-span-2 col-span-1" },
-  { src: "/clientImg/14.webp", span: "row-span-1 col-span-1" },
-  { src: "/clientImg/18.webp", span: "row-span-2 col-span-1" },
-  { src: "/clientImg/17.webp", span: "row-span-1 col-span-1" },
-  { src: "/clientImg/19.webp", span: "row-span-1 col-span-1" },
-  { src: "/clientImg/31.webp", span: "row-span-1 col-span-1" },
+  { src: "/new_img/A3.png", span: "row-span-2 col-span-1" },
+  { src: "/new_img/S1.png", span: "row-span-1 col-span-1" },
+  { src: "/new_img/S2.png", span: "row-span-2 col-span-1" },
+  { src: "/new_img/S3.png", span: "row-span-1 col-span-1" },
+  { src: "/new_img/A2.png", span: "row-span-1 col-span-1" },
+  { src: "/new_img/A1.png", span: "row-span-1 col-span-1" },
 ];
 
 export default function ImageGallery() {
