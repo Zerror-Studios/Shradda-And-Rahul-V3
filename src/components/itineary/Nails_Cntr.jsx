@@ -1225,7 +1225,7 @@ const Nails_Cntr = () => {
             </p>
             <p>After Party </p>
             <p>23:00 to Sunrise</p>
-            <p> The Obero</p>
+            <p> The Oberoi</p>
             <p className="flex ">Dress Code : __</p>
           </div>
         </div>
