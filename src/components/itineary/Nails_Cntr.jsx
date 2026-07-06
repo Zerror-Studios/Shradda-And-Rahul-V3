@@ -1122,7 +1122,7 @@ const Nails_Cntr = () => {
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY ONE: 20 OCTOBER, 2026
             </h1>
-            <p className="text-[1.3rem] leading-[1.3rem]">MARBHA</p>
+            <p className="text-[1.3rem] leading-[1.3rem]">AZUL</p>
             <p>Welcome Dinner</p>
             <p>19:00</p>
             <p>Secret Location</p>
@@ -1163,11 +1163,11 @@ const Nails_Cntr = () => {
               DAY TWO: 21 OCTOBER, 2026
             </h1>
             <p className="text-[1.2rem] leading-[1.2rem] max-w-[400px]">
-              NAACH HABIBI: BOLLYWOOD IN THE MEDINA
+              NAMASTE MARRAKECH
             </p>
             <p>Sangeet</p>
             <p>19:30</p>
-            <p>The Obero</p>
+            <p>Gardens, The Oberoi</p>
             <p className="flex ">Dress Code : __</p>
           </div>
 
@@ -1216,7 +1216,7 @@ const Nails_Cntr = () => {
             </h1>
             <p className="text-[1.3rem] leading-[1.3rem]">DESINTATION: FOREVER</p>
             <p>Reception</p>
-            <p>19:00</p>
+            <p>20:00</p>
             <p>Grand Canal, The Oberoi</p>
             <p className="flex ">Dress Code : __</p>
 
@@ -1224,8 +1224,8 @@ const Nails_Cntr = () => {
               DRUNK IN LOVE
             </p>
             <p>After Party </p>
-            <p>22:00 till late</p>
-            <p>Patio, The Obero</p>
+            <p>23:00 to Sunrise</p>
+            <p> The Obero</p>
             <p className="flex ">Dress Code : __</p>
           </div>
         </div>
