@@ -649,6 +649,11 @@ export default function HeroSection() {
       symbol: "🇪🇸",
       audio: `/audio/Spanish.mp3`,
     },
+    English: {
+      text: "Love Is Friendship.",
+      symbol: "🇪n",
+      audio: `/audio/English.mp3`,
+    },
   };
 
   const [selectedLanguage, setSelectedLanguage] = useState("Sindhi");
