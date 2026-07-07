@@ -770,7 +770,7 @@ export default function HeroSection() {
             className={`flex justify-center items-center mt-[0.8rem] sm:mt-[1rem] ${isLoaded ? "animate-fade-in-up delay-100" : "opacity-0"
               }`}
           >
-            <p className="capitalize tracking-tight text-[#F1E2C6] sm:max-w-[50vw] text-[1rem] sm:text-[0.9rem] leading-[1.3rem] px-2 sm:px-0">
+            <p className="capitalize tracking-tight text-[#F1E2C6] sm:max-w-[55vw] text-[1rem] sm:text-[0.9rem] leading-[1.3rem] px-2 sm:px-0">
               "Pyaar dosti hai," Rahul told Shradda, the line every 2000s Bollywood has tattooed somewhere on their heart. Under the pillars of the Millennium Gate Museum, he asked her to be his forever.
                <br />
   <br />

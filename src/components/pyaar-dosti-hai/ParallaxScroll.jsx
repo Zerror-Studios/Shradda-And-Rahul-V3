@@ -2217,22 +2217,77 @@ const IMAGES = [
   "/clientImg/32.webp",
 ];
 
+//  ------------------------------------------------------------------------------- OLD BACK
+
+// const BACKGROUND_IMAGE_COUNT = 64;
+
+// function createBackgroundLayout() {
+//   const columns = 4;
+//   const rows = Math.ceil(BACKGROUND_IMAGE_COUNT / columns);
+//   // Reduced padding so images fill out to the edges instead of
+//   // being boxed into the center of the section.
+//   const xPadding = 2;
+//   const yPadding = 2;
+//   const usableWidth = 100 - xPadding * 2;
+//   const usableHeight = 100 - yPadding * 2;
+//   const directionOffsets = [
+//     { x: 0, y: -2.4 },
+//     { x: 0, y: 2.4 },
+//     { x: -4.4, y: 0 },
+//     { x: 4.4, y: 0 },
+//   ];
+
+//   return Array.from({ length: BACKGROUND_IMAGE_COUNT }, (_, index) => {
+//     const row = Math.floor(index / columns);
+//     const col = index % columns;
+//     const lineDirection = directionOffsets[index % directionOffsets.length];
+//     const rowShift = row % 2 === 0 ? -2 : 2;
+//     const baseX = ((col + 0.5) / columns) * usableWidth + xPadding;
+//     const baseY = ((row + 0.5) / rows) * usableHeight + yPadding;
+
+//     return {
+//       // Clamp range widened to match the smaller padding so items
+//       // can sit much closer to the true edges of the section.
+//       x: Math.min(98, Math.max(2, baseX + lineDirection.x + rowShift)),
+//       y: Math.min(98, Math.max(2, baseY + lineDirection.y)),
+//       o: index % 3 === 1 ? 0.16 : 1,
+//     };
+//   });
+// }
+
+//  ------------------------------------------------------------------------------- New BACK
+
 const BACKGROUND_IMAGE_COUNT = 64;
+
+// Percentage width of the empty gap in the center of the screen.
+// e.g. 30 means the middle 30% of the width (35%–65%) stays empty.
+const CENTER_GAP_PERCENT = 40;
 
 function createBackgroundLayout() {
   const columns = 4;
   const rows = Math.ceil(BACKGROUND_IMAGE_COUNT / columns);
-  // Reduced padding so images fill out to the edges instead of
-  // being boxed into the center of the section.
+
   const xPadding = 2;
   const yPadding = 2;
-  const usableWidth = 100 - xPadding * 2;
+
+  // Split the usable width into a LEFT half and a RIGHT half,
+  // with CENTER_GAP_PERCENT reserved as empty space in the middle.
+  const halfGap = CENTER_GAP_PERCENT / 2;
+  const leftStart = xPadding;
+  const leftEnd = 50 - halfGap;
+  const rightStart = 50 + halfGap;
+  const rightEnd = 100 - xPadding;
+
+  const leftWidth = leftEnd - leftStart;
+  const rightWidth = rightEnd - rightStart;
+
   const usableHeight = 100 - yPadding * 2;
+
   const directionOffsets = [
     { x: 0, y: -2.4 },
     { x: 0, y: 2.4 },
-    { x: -4.4, y: 0 },
-    { x: 4.4, y: 0 },
+    { x: -2, y: 0 },
+    { x: 2, y: 0 },
   ];
 
   return Array.from({ length: BACKGROUND_IMAGE_COUNT }, (_, index) => {
@@ -2240,18 +2295,30 @@ function createBackgroundLayout() {
     const col = index % columns;
     const lineDirection = directionOffsets[index % directionOffsets.length];
     const rowShift = row % 2 === 0 ? -2 : 2;
-    const baseX = ((col + 0.5) / columns) * usableWidth + xPadding;
+
+    // First 2 columns go in the left half, last 2 columns go in the right half.
+    const isLeftSide = col < columns / 2;
+    const sideColIndex = isLeftSide ? col : col - columns / 2;
+    const sideColumns = columns / 2;
+
+    const baseX = isLeftSide
+      ? leftStart + ((sideColIndex + 0.5) / sideColumns) * leftWidth
+      : rightStart + ((sideColIndex + 0.5) / sideColumns) * rightWidth;
+
     const baseY = ((row + 0.5) / rows) * usableHeight + yPadding;
 
+    const minX = isLeftSide ? leftStart : rightStart;
+    const maxX = isLeftSide ? leftEnd : rightEnd;
+
     return {
-      // Clamp range widened to match the smaller padding so items
-      // can sit much closer to the true edges of the section.
-      x: Math.min(98, Math.max(2, baseX + lineDirection.x + rowShift)),
+      x: Math.min(maxX, Math.max(minX, baseX + lineDirection.x + rowShift)),
       y: Math.min(98, Math.max(2, baseY + lineDirection.y)),
       o: index % 3 === 1 ? 0.16 : 1,
     };
   });
 }
+
+// =================================================================================================================
 
 function FloatingImage({ item, index }) {
   const ref = useRef(null);
@@ -2332,7 +2399,7 @@ function FloatingImage({ item, index }) {
         src={IMAGES[index % IMAGES.length]}
         alt=""
         draggable={false}
-        className={`w-[16vw] sm:w-[12vw] md:w-[8vw] ${
+        className={`w-[14vw] sm:w-[10vw] md:w-[8vw] ${
           item.o === 1 ? "hover:scale-115 transition-all duration-700" : ""
         }`}
       />
@@ -2466,7 +2533,7 @@ export default function ParallaxScroll() {
 
       <div className="sticky_child opacity-0 scale-90 sticky pointer-events-none top-0 flex h-screen flex-col items-center justify-center gap-y-2 px-3 sm:gap-y-4 sm:px-8">
         {/* Main photo with city + year overlaid */}
-        <div className="relative w-[68vw] max-w-[280px] h-[32vh] overflow-hidden sm:w-[36vw] sm:h-[38vh] sm:max-w-none md:w-[24vw] md:h-[44vh]">
+        <div className="relative w-[68vw] max-w-[280px] h-[32vh] overflow-hidden sm:w-[36vw] sm:h-[38vh] sm:max-w-none md:w-[24vw] md:h-[50vh]">
           {DATA.map((item, i) => (
             <div
               key={i}
@@ -2475,11 +2542,13 @@ export default function ParallaxScroll() {
               }`}
             >
               <img src={item.img} className="h-full w-full object-cover" alt={item.text} />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent p-3 sm:p-4">
+
+              <div className="absolute bottom-0 left-0 h-[10vh] w-full bg-gradient-to-t from-[#D25F28] via-[#D25F28]/60 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t flex justify-between to-transparent p-3 sm:p-4 z-99">
                 <h2 className="Font_CV text-lg font-medium leading-none text-[#F1E2C6] sm:text-xl md:text-2xl">
                   {item.text}
                 </h2>
-                <p className="Font_CV mt-1 text-[0.7rem] text-[#F1E2C6]/80 sm:text-xs md:text-sm">
+                <p className="Font_CV mt-1 text-[1rem] text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.year}
                 </p>
               </div>
@@ -2508,7 +2577,7 @@ export default function ParallaxScroll() {
           {DATA.map((item, i) => (
             <p
               key={i}
-              className={`Font_CV absolute inset-0 flex items-center justify-center px-1 text-[0.85rem] leading-snug text-[#F1E2C6]/85 transition-all duration-500 ease-out sm:text-base md:text-lg ${
+              className={`Font_CV absolute inset-0 flex items-center justify-center px-1 text-[1.5rem] leading-[1.5rem]  text-[#F1E2C6]/85 transition-all duration-500 ease-out   ${
                 i === activeIndex
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-3 pointer-events-none"
