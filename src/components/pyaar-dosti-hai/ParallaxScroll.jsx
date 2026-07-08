@@ -2533,25 +2533,30 @@ export default function ParallaxScroll() {
 
       <div className="sticky_child opacity-0 scale-90 sticky pointer-events-none top-0 flex h-screen flex-col items-center justify-center gap-y-2 px-3 sm:gap-y-4 sm:px-8">
         {/* Main photo with city + year overlaid */}
-        <div className="relative w-[68vw] max-w-[280px] h-[32vh] overflow-hidden sm:w-[36vw] sm:h-[38vh] sm:max-w-none md:w-[24vw] md:h-[50vh]">
+        <div className="relative w-[68vw] max-w-[280px] h-[32vh]  sm:w-[36vw] sm:h-[38vh] sm:max-w-none md:w-[24vw] md:h-[50vh]">
           {DATA.map((item, i) => (
             <div
               key={i}
               className={`absolute inset-0 transition-all duration-700 ease-out ${
                 i === activeIndex ? "opacity-100 scale-100" : "opacity-0 scale-105"
               }`}
-            >
-              <img src={item.img} className="h-full w-full object-cover" alt={item.text} />
 
-              <div className="absolute bottom-0 left-0 h-[10vh] w-full bg-gradient-to-t from-[#D25F28] via-[#D25F28]/60 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t flex justify-between to-transparent p-3 sm:p-4 z-99">
-                <h2 className="Font_CV text-lg font-medium leading-none text-[#F1E2C6] sm:text-xl md:text-2xl">
+
+            >
+
+               <div className=" absolute top-[-5%] left-0 inset-x-0 flex justify-between to-transparent  z-99">
+                <h2 className="Font_CV  font-medium leading-none text-[1rem] text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.text}
                 </h2>
-                <p className="Font_CV mt-1 text-[1rem] text-[#F1E2C6] sm:text-xs md:text-sm">
+                <p className="Font_CV  text-[1rem]   leading-none text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.year}
                 </p>
               </div>
+
+              <img src={item.img} className="h-full w-full object-cover" alt={item.text} />
+
+              {/* <div className="absolute bottom-0 left-0 h-[10vh] w-full bg-gradient-to-t from-[#D25F28] via-[#D25F28]/60 to-transparent" /> */}
+             
             </div>
           ))}
         </div>
