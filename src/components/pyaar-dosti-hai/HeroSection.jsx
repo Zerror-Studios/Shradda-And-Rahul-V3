@@ -773,9 +773,10 @@ export default function HeroSection() {
             <p className="capitalize tracking-tight text-[#F1E2C6] sm:max-w-[45vw] flex flex-col gap-2 text-[1rem] sm:text-[0.9rem] leading-[1.3rem] px-2 sm:px-0">
               "Pyaar dosti hai," Rahul told Shradda, the line every 2000s Bollywood has tattooed somewhere on their heart. Under the pillars of the Millennium Gate Museum, he asked her to be his forever.
                <br />
-
+               <br />
                No spoilers here: you already know how she answered.
               <br/> 
+              <br />
               We can't wait to celebrate our journey through time, space, and destiny with you,  from Dosti in Boston to Pyaar everywhere.
             </p>
           </div>
