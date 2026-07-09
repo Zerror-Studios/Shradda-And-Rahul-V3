@@ -2544,11 +2544,11 @@ export default function ParallaxScroll() {
 
             >
 
-               <div className=" absolute top-[-5%] left-0 inset-x-0 flex justify-between to-transparent  z-99">
-                <h2 className="Font_CV  font-medium leading-none text-[1rem] text-[#F1E2C6] sm:text-xs md:text-sm">
+               <div className=" absolute top-[-7%] left-0 inset-x-0 flex justify-between to-transparent  z-99">
+                <h2 className="Font_CV  font-medium leading-none text-[1.5rem]! text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.text}
                 </h2>
-                <p className="Font_CV  text-[1rem]   leading-none text-[#F1E2C6] sm:text-xs md:text-sm">
+                <p className="Font_CV  text-[1.5rem]!   leading-none text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.year}
                 </p>
               </div>

@@ -446,7 +446,7 @@ const Hero = () => {
                 {/* Door-Container */}
                 <div
                   ref={doorContainer}
-                  className="  DoorHeight Doorwidth w-[95vw] h-[95vh] sm:w-[70vw] sm:h-[90vh] md:w-[55vw]  lg:w-[40vw]  lg:h-[95vh] xl:w-[30vw] 2xl:w-[26vw] absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[7.5%] z-49 "
+                  className="  DoorHeight Doorwidth w-[95vw] h-[80vh] sm:w-[70vw] sm:h-[90vh] md:w-[55vw]  lg:w-[40vw]  lg:h-[95vh] xl:w-[30vw] 2xl:w-[26vw] absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[7.5%] z-49 "
                 >
                   {/* Left-Door */}
                   <div
