@@ -2422,11 +2422,11 @@ function LandmarkTile({ landmark }) {
   return (
     <Wrapper
       {...wrapperProps}
-      className={`group flex w-14 shrink-0 flex-col items-center gap-1 text-center sm:w-[4.5rem] md:w-20 ${
+      className={`group flex w-4 shrink-0 flex-col items-center gap-1 text-center sm:w-[4.5rem] md:w-20 ${
         isLink ? "cursor-pointer" : ""
       }`}
     >
-      <div className="relative aspect-square w-full overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.25)] transition-transform duration-500 ease-out group-hover:-translate-y-1">
+      <div className="relative aspect-square w-full overflow-hidden  transition-transform duration-500 ease-out group-hover:-translate-y-1">
         {landmark.img ? (
           <img
             src={landmark.img}
@@ -2435,7 +2435,7 @@ function LandmarkTile({ landmark }) {
             draggable={false}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center text-[#D25F28] bg-[#F1E2C6]">
+          <div className="flex h-full w-full items-end justify-center pb-2 text-[#F1E2C6] ">
             {Icon && <Icon size={27} strokeWidth={1.5} />}
           </div>
         )}
@@ -2544,13 +2544,13 @@ export default function ParallaxScroll() {
 
             >
 
-               <div className=" absolute top-[-7%] left-0 inset-x-0 flex justify-between to-transparent  z-99">
+               <div className=" absolute bottom-[-15%] sm:bottom-[-8%] left-0 inset-x-0 flex justify-center items-center to-transparent  z-99">
                 <h2 className="Font_CV  font-medium leading-none text-[1.5rem]! text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.text}
                 </h2>
-                <p className="Font_CV  text-[1.5rem]!   leading-none text-[#F1E2C6] sm:text-xs md:text-sm">
+                {/* <p className="Font_CV  text-[1.5rem]!   leading-none text-[#F1E2C6] sm:text-xs md:text-sm">
                   {item.year}
-                </p>
+                </p> */}
               </div>
 
               <img src={item.img} className="h-full w-full object-cover" alt={item.text} />
@@ -2562,7 +2562,7 @@ export default function ParallaxScroll() {
         </div>
 
         {/* Landmark tiles - photo or icon, with a visible link + label */}
-        <div className="relative min-h-[68px] w-[92vw] max-w-[420px] sm:min-h-[84px] sm:w-[70vw] md:w-[40vw]">
+        <div className="relative min-h-[68px] w-[92vw] max-w-[420px] sm:min-h-[84px] mt-10 sm:mt-2 sm:w-[70vw] md:w-[40vw]">
           {DATA.map((item, i) => (
             <div
               key={i}
@@ -2649,7 +2649,7 @@ export default function ParallaxScroll() {
               </div>
 
               <div
-                className="absolute top-1/2 overflow-hidden  bg-[#F1E2C6] px-3 py-1 text-[#D25F28] shadow-[0_8px_18px_rgba(0,0,0,0.12)] transition-all duration-500 ease-out group-hover:bg-[#D25F28] group-hover:text-[#F1E2C6]"
+                className="absolute top-1/2 overflow-hidden  bg-[#F1E2C6] px-5 py-1 text-[#D25F28] shadow-[0_8px_18px_rgba(0,0,0,0.12)] transition-all duration-500 ease-out group-hover:bg-[#D25F28] group-hover:text-[#F1E2C6]"
                 style={{
                   left: `clamp(1.65rem, ${progress * 100}%, calc(100% - 1.65rem))`,
                   transform: "translate(-50%, -50%)",

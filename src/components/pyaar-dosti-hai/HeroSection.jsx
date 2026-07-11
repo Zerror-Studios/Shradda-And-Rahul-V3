@@ -654,6 +654,16 @@ export default function HeroSection() {
       symbol: "🇪n",
       audio: `/audio/English.mp3`,
     },
+    Korean: {
+      text: "사랑은 우정이다.",
+      symbol: "은",
+      audio: `/audio/Korean.mp3`,
+    },
+    Gujarati: {
+      text: "પ્રેમ એટલે મિત્રતા",
+      symbol: "પ્રે",
+      audio: `/audio/Gujarati.mp3`,
+    },
   };
 
   const [selectedLanguage, setSelectedLanguage] = useState("Sindhi");
