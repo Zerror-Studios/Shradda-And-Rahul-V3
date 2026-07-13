@@ -145,7 +145,6 @@ const Nails_Cntr = () => {
 
   return (
     <div className="w-full h-fit bg-[#D25F28]">
-
       <div id="How_to_Nail_it_Cntr" className=" BGCLR relative">
         <div className="row title  max-sm:my-[10vh]">
           <div className="mx-auto flex flex-col gap-10 justify-center max-sm:text-center items-center">
@@ -384,17 +383,32 @@ const Nails_Cntr = () => {
           </div>
         </div>
         {/* ===================== END MOBILE ONLY ===================== */}
-
-       
       </div>
 
-       <div className="w-full pb-[5vh] pt-[10vh]  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%] justify-center items-center bg-[#D25F28] text-[#F1E2C6] ">
-         <p className=" Font_CV"> Click here for a detailed wardrobe planner.</p>
+      <div className="w-full pb-[5vh] pt-[10vh]  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%]  justify-center items-center bg-[#D25F28] text-[#F1E2C6] ">
+        <p className=" Font_CV"> Click here for a detailed wardrobe planner.</p>
 
-          <div className="w-fit h-fit flex px-5 py-2 capitalize text-[0.9rem] mt-5 leading-[0.9rem] bg-[#F1E2C6] select-none cursor-pointer text-[#D25F28] hover:bg-[#ffffff]">
-            Download PDF
-          </div>
-        </div>
+        <a
+          href="/path/to/file.pdf"
+          download
+          className="w-fit h-fit flex px-5 py-2 capitalize text-[0.9rem] mt-5 leading-[0.9rem]  select-none cursor-pointer text-[#F1E2C6] hover:underline  items-center gap-2 py-2 transition-colors"
+        >
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+            />
+          </svg>
+          Download PDF
+        </a>
+      </div>
     </div>
   );
 };

@@ -2594,7 +2594,7 @@ export default function ParallaxScroll() {
         </div>
 
         <div
-          className="pointer-events-auto absolute bottom-3 sm:bottom-0 left-1/2 z-20 w-[92vw] max-w-[560px] -translate-x-1/2 px-2 pb-3 pt-8 sm:pb-4 sm:pt-10"
+          className="pointer-events-auto absolute bottom-3 sm:bottom-0 left-1/2 z-20 w-[92vw] max-w-[660px] -translate-x-1/2 px-2 pb-3 pt-8 sm:pb-4 sm:pt-10"
           onPointerEnter={openFromPointer}
           onPointerLeave={closeFromPointer}
         >
@@ -2623,7 +2623,7 @@ export default function ParallaxScroll() {
                   <span className="flex min-w-0 items-center">
                     <span className="truncate uppercase Font_CV">
                       {item.text}
-                      {isRowEnd ? "." : ","}
+                      {/* {isRowEnd ? "." : ","} */}
                     </span>
                   </span>
                   <span className="ml-2 translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">

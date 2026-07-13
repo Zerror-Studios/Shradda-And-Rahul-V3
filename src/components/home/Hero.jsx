@@ -435,18 +435,18 @@ const Hero = () => {
             {/* Wall-With-MainDoor — entirely removed for tablets/iPads */}
             {!isTablet && (
               <div className=" w-full h-svh absolute  top-0 left-0 overflow-hidden z-50 pointer-events-none">
-                {/* Wall-Image */}
+                {/* Wall-Image ==== max-sm:object-[51.1%_100%] */}
                 <img
                   ref={Wall}
                   src={`/images/home/Wall.png`}
                   alt="wall"
-                  className="w-full h-full object-bottom object-cover max-sm:object-[51.1%_100%]  relative z-50"
+                  className="w-full h-full object-top object-cover   relative z-50"
                 />
 
                 {/* Door-Container */}
                 <div
                   ref={doorContainer}
-                  className="  DoorHeight Doorwidth w-[100vw] h-[80vh] sm:w-[70vw] sm:h-[90vh] md:w-[55vw]  lg:w-[40vw]  lg:h-[95vh] xl:w-[30vw] 2xl:w-[26vw] absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[7.5%] z-49 "
+                  className="  DoorHeight Doorwidth  h-[90vh] w-[110vw] sm:w-[30vw]  absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[0%] z-49 "
                 >
                   {/* Left-Door */}
                   <div
