@@ -242,7 +242,7 @@ const Nails_Cntr = () => {
             />
           </div>
           {/* Detail-Text-1-Data */}
-          <div className="  w-fit Font_CV absolute top-[23%] left-[75%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-white flex gap-1 flex-col  justify-start items-start">
+          <div className="  w-fit Font_CV absolute top-[23%] left-[75%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-[#F1E2C6] flex gap-1 flex-col  justify-start items-start">
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY ONE: 20 OCTOBER, 2026
             </h1>
@@ -262,7 +262,7 @@ const Nails_Cntr = () => {
             />
           </div>
           {/* Detail-Text-2-Data */}
-          <div className="  w-fit Font_CV absolute top-[36%] left-[88%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-white flex gap-1 flex-col  justify-start items-start">
+          <div className="  w-fit Font_CV absolute top-[36%] left-[88%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-[#F1E2C6] flex gap-1 flex-col  justify-start items-start">
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY TWO: 21 OCTOBER, 2026
             </h1>
@@ -282,7 +282,7 @@ const Nails_Cntr = () => {
             />
           </div>
           {/* Detail-Text-3-Data */}
-          <div className="  w-fit Font_CV absolute top-[49%] left-[15%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-white flex gap-1 flex-col  justify-start items-start">
+          <div className="  w-fit Font_CV absolute top-[49%] left-[15%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-[#F1E2C6] flex gap-1 flex-col  justify-start items-start">
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY TWO: 21 OCTOBER, 2026
             </h1>
@@ -304,7 +304,7 @@ const Nails_Cntr = () => {
             />
           </div>
           {/* Detail-Text-4-Data */}
-          <div className="  w-fit Font_CV absolute top-[56%] left-[73%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-white flex gap-1 flex-col  justify-start items-start">
+          <div className="  w-fit Font_CV absolute top-[56%] left-[73%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-[#F1E2C6] flex gap-1 flex-col  justify-start items-start">
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY THREE: 22 OCTOBER, 2026
             </h1>
@@ -330,11 +330,11 @@ const Nails_Cntr = () => {
             <img
               src={`/icons/RECEPTION.svg`}
               alt="IMG"
-              className=" h-full object-cover object-center text-white"
+              className=" h-full object-cover object-center text-[#F1E2C6]"
             />
           </div>
           {/* Detail-Text-5-Data */}
-          <div className="  w-fit Font_CV absolute top-[82%] left-[20%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-white flex gap-1 flex-col  justify-start items-start">
+          <div className="  w-fit Font_CV absolute top-[82%] left-[20%] -translate-x-1/2  text-[1rem] leading-[1rem]  text-[#F1E2C6] flex gap-1 flex-col  justify-start items-start">
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY THREE: 22 OCTOBER, 2026
             </h1>
@@ -362,13 +362,13 @@ const Nails_Cntr = () => {
           <div className="flex flex-col gap-12">
             {itineraryDays.map((d, di) => (
               <div key={di} className="flex flex-col gap-8">
-                <h1 className="Font_CV text-[1.3rem] leading-[1.3rem] text-white uppercase tracking-wide border-b border-white/20 pb-2">
+                <h1 className="Font_CV text-[1.3rem] leading-[1.3rem] text-[#F1E2C6] uppercase tracking-wide border-b border-white/20 pb-2">
                   {d.day}
                 </h1>
                 {d.events.map((e, ei) => (
                   <div
                     key={ei}
-                    className="Font_CV text-white flex flex-col gap-1 text-[1rem] leading-[1.2rem]"
+                    className="Font_CV text-[#F1E2C6] flex flex-col gap-1 text-[1rem] leading-[1.2rem]"
                   >
                     <p className="text-[1.15rem] leading-[1.2rem] mb-1">
                       {e.title}
@@ -388,7 +388,7 @@ const Nails_Cntr = () => {
        
       </div>
 
-       <div className="w-full pb-[5vh] pt-[10vh]  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%] justify-center items-center bg-[#D25F28] text-[white] ">
+       <div className="w-full pb-[5vh] pt-[10vh]  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%] justify-center items-center bg-[#D25F28] text-[#F1E2C6] ">
          <p className=" Font_CV"> Click here for a detailed wardrobe planner.</p>
 
           <div className="w-fit h-fit flex px-5 py-2 capitalize text-[0.9rem] mt-5 leading-[0.9rem] bg-[#F1E2C6] select-none cursor-pointer text-[#D25F28] hover:bg-[#ffffff]">
