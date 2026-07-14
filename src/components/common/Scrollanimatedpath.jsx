@@ -208,7 +208,7 @@ export default function ScrollAnimatedPath() {
       ],
     },
     {
-      day: "DAY 4: 22 OCTOBER, 2026",
+      day: "DAY 3: 22 OCTOBER, 2026",
       events: [
         {
           title: "DILWALE DULHANIA LE JAAYENGE",
@@ -220,7 +220,7 @@ export default function ScrollAnimatedPath() {
       ],
     },
     {
-      day: "DAY 5: 22 OCTOBER, 2026",
+      day: "DAY 3: 22 OCTOBER, 2026",
       events: [
         {
           title: "PYAAR DOSTI HAI",
