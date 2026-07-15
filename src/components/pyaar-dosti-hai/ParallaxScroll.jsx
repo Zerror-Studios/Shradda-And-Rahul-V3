@@ -1,4 +1,6 @@
 "use client";
+import { FaUmbrellaBeach } from "react-icons/fa";
+import { IoMusicalNotes } from "react-icons/io5";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
@@ -19,6 +21,7 @@ import {
   TreePine,
   Fish,
   MapPin,
+  
 } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,8 +30,18 @@ gsap.registerPlugin(ScrollTrigger);
 // carry a real photo (`img`) once you have one - until then it renders
 // as an icon tile. `href` makes the whole tile + its caption a link.
 const DATA = [
+   {
+    img: "/clientImg/Miami.jpg",
+    text: "Miami",
+    year: "2023",
+    pTxt: "  ",
+    landmarks: [
+      // { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
+      // { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
+    ],
+  },
   {
-    img: "/clientImg/9.webp",
+    img: "/clientImg/Boston1.jpg",
     text: "Boston",
     year: "2013",
     pTxt: "Where their Dosti began.",
@@ -64,8 +77,8 @@ const DATA = [
     year: "2022",
     pTxt: "Painting Bangkok red, celebrating love on the beach, overdosing on pad thai",
     landmarks: [
-      { icon: Music2, label: "Bangkok \u2014 Muay Thai & The Bamboo Bar" },
-      { icon: Heart, label: "Phuket \u2014 Friend's Wedding" },
+      { icon: IoMusicalNotes, label: "Bangkok \u2014 Muay Thai & The Bamboo Bar" },
+      { icon: FaUmbrellaBeach, label: "Phuket \u2014 Friend's Wedding" },
     ],
   },
   {
@@ -88,6 +101,7 @@ const DATA = [
       { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
     ],
   },
+ 
   {
     img: "/clientImg/12.webp",
     text: "Ithaca",
@@ -415,7 +429,7 @@ function LandmarkTile({ landmark }) {
         )}
       </div>
       <span
-        className={`Font_CV text-[0.55rem] max-sm:text-[0.7rem] uppercase leading-tight tracking-wide text-[#F1E2C6] sm:text-[0.62rem] ${
+        className={`Font_CV text-[0.55rem] max-sm:text-[0.7rem] leading-tight tracking-wide text-[#F1E2C6] sm:text-[0.8rem] sm:leading-[0.8rem] ${
           isLink ? "underline decoration-[#F1E2C6]/50 underline-offset-2 group-hover:decoration-[#F1E2C6]" : ""
         }`}
       >
@@ -618,7 +632,7 @@ export default function ParallaxScroll() {
                   }`}
                 >
                   <span className="flex min-w-0 items-center">
-                    <span className="truncate uppercase Font_CV">
+                    <span className="truncate  Font_CV">
                       {item.text}
                       {/* {isRowEnd ? "." : ","} */}
                     </span>

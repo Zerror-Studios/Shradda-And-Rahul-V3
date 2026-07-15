@@ -82,13 +82,13 @@ export default function FAQSection() {
   },
   {
     id: 10,
-    question: "Who can apply for an Electronic Visa?",
+    question: "Who can apply for an electronic visa?",
     answer:
       "You may apply for an e-visa if you reside in the EU, USA, Australia, Canada, UK, Japan, Norway, New Zealand, UAE, or Switzerland with a valid passport and residency permit, or if you hold a valid Schengen, US, or UK tourist visa. The electronic visa is valid for 180 days from the date of issue, allows a single entry, and permits a stay of up to 30 days.",
   },
   {
     id: 11,
-    question: "Do I need to apply for a Paper Visa?",
+    question: "Do I need to apply for a paper visa?",
     answer:
       "If you are not eligible for a visa-free entry or an e-visa, you will need to apply for a paper visa at your nearest Moroccan Consulate. We recommend applying at least three months before travel. If you need supporting documents for your application, we are happy to help.",
   },
@@ -107,8 +107,16 @@ export default function FAQSection() {
   {
     id: 14,
     question: "Recommended flight routes",
-    answer:
-      "Uganda: Turkish Airlines via Istanbul, Etihad via Abu Dhabi, Ethiopian Airlines via Addis Ababa. USA: Delta (ATL–RAK), Air France via Paris, TAP Portugal via Lisbon, Royal Air Maroc from JFK. India: Emirates/Flydubai via Dubai, Qatar Airways via Doha, Turkish Airlines via Istanbul. Hong Kong: Turkish Airlines via Istanbul or Air France via Paris. UK/Europe: Many direct flights to Marrakech. Travelling from elsewhere? Please reach out and we'll help map your journey.",
+    intro:
+      "We love and appreciate you all for making this massive journey to celebrate with us! Here are a few flight routes to get you smoothly to Marrakech, RAK:",
+    answer: [
+      { label: "From Uganda", text: "Turkish Airlines via Istanbul, Etihad via Abu Dhabi, Ethiopian Airlines via Addis Ababa." },
+      { label: "From the USA", text: "Delta flies direct from ATL to RAK; Air France via Paris; TAP Portugal via Lisbon; and Royal Air Maroc from JFK to RAK." },
+      { label: "From India", text: "Emirates/Flydubai via Dubai, Qatar Airways via Doha, or Turkish Airlines via Istanbul." },
+      { label: "From Hong Kong", text: "Turkish Airlines via Istanbul or Air France via Paris." },
+      { label: "From UK/Europe", text: "Many direct flights to Marrakech." },
+      { label: "From a more exotic location", text: "please reach out, and we can get mapping!" },
+    ],
   },
   {
     id: 15,
@@ -132,7 +140,7 @@ export default function FAQSection() {
     id: 18,
     question: "What is the weather like in Marrakech in October?",
     answer:
-      "October offers beautiful weather, with daytime temperatures between 22–27°C (71–80°F) and evening temperatures between 16–20°C (60–68°F). Pack light clothing for the day and a light layer for the evenings.",
+      "Literally perfect! A stunning 22-27°C in the day and 16-20°C in the evening. USA folks, we got you: 71 to 80°F in the day and 60-68°F- pack accordingly!",
   },
 ];
 
@@ -223,7 +231,6 @@ export default function FAQSection() {
                     text-[#F1E2C6]
                     Font_CV
                     text-[1.5rem]
-                     capitalize
                     sm:text-[1.4rem]
                     md:text-[1.8rem]
                     leading-[1.2]
@@ -259,14 +266,44 @@ export default function FAQSection() {
                     ref={(el) => (innerRefs.current[index] = el)}
                     className="pb-5 pr-4 sm:pr-8 md:pr-16"
                   >
-                    <p
-                      className={`
-                      capitalize tracking-tight font-light text-[#F1E2C6] text-[0.9rem]  leading-[1.1rem]
-                      max-w-[700px]
-                    `}
-                    >
-                      {item.answer}
-                    </p>
+                    {Array.isArray(item.answer) ? (
+                      <div className="max-w-[700px]">
+                        {item.intro && (
+                          <p
+                            className={`
+                            tracking-tight font-light text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]
+                            mb-3
+                          `}
+                          >
+                            {item.intro}
+                          </p>
+                        )}
+                        <div className="flex flex-col gap-2">
+                          {item.answer.map((line, lineIndex) => (
+                            <p
+                              key={lineIndex}
+                              className={`
+                              tracking-tight font-light text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]
+                            `}
+                            >
+                              <span className="font-semibold">
+                                {line.label}:
+                              </span>{" "}
+                              <span>{line.text}</span>
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <p
+                        className={`
+                        tracking-tight font-light text-[#F1E2C6] text-[0.9rem]  leading-[1.1rem]
+                        max-w-[700px]
+                      `}
+                      >
+                        {item.answer}
+                      </p>
+                    )}
                   </div>
                 </div>
 
