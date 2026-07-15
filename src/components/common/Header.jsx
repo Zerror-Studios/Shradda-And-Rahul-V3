@@ -26,10 +26,10 @@ const Header = () => {
             </span>
 
             <span className="  flex gap-2 max-md:gap-0 max-md:mt-2 sm:ml-auto  max-md:flex-col max-md:text-[14px] max-md:mx-auto max-md:text-center">
-              <a href="mailto:sonalskushie@gmail.com">
+              <a href="mailto:wedding2026.rs@gmail.com">
                 <span className=" relative flex flex-col w-fit  group  cursor-pointer select-none max-md:mx-auto ">
                   {" "}
-                  shraddarahul@gmail.com
+                  wedding2026.rs@gmail.com
                   <div className="h-[1px] w-[0px] COLOR_BG_RED transition-all duration-150 ease-in-out group-hover:w-full select-none  "></div>
                 </span>
               </a>

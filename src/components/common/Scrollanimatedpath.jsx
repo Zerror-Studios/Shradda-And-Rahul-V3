@@ -1281,6 +1281,10 @@ export default function ScrollAnimatedPath() {
           </defs>
         </svg>
 
+        <div className="w-[25%] aspect-square bg-[#D25F28] absolute top-[10%] left-[13%]">
+          <img src={`/icons/T2.svg`} alt="IMG" className="h-full  object-cover object-center scale-[1.2]" />
+        </div>
+
         {itineraryDays.map((day, index) => {
           const pos = positions[index] || positions[positions.length - 1];
           return (

@@ -222,7 +222,7 @@ const TopMenu = () => {
 
   const navLinks = [
     { name: "Pyaar Dosti Hai", path: "/pyaar-dosti-hai" },
-    { name: "From Marrakech, with Love", path: "/venu" },
+    { name: "Marrakech, with Love", path: "/venu" },
     { name: "Wedding Itinerary", path: "/wedding-itinerary" },
     { name: "Travel and FAQ's", path: "/travel-and-faqs" },
   ];

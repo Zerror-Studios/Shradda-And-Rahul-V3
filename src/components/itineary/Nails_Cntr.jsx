@@ -235,7 +235,7 @@ const Nails_Cntr = () => {
           {/* Detail-SVG-1-Data */}
           <div className=" h-[15vw]  absolute top-[23%] left-[53%] -translate-x-1/2 overflow-hidden">
             <img
-              src={`/icons/WELCOME DINNER.svg`}
+              src={`/icons/T1.svg`}
               alt="IMG"
               className=" h-full object-cover object-center"
             />

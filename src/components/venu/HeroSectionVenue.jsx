@@ -76,7 +76,7 @@ const HeroSectionVenue = () => {
           className=" capitalize Font_CV   mt-[21vh] max-md:mt-[0.5vh] text-[#F1E2C6] overflow-hidden ">
           <span className="flex WEDMAIMTT2 text-center uppercase  translate-y-[100%] max-md:text-center">
             {" "}
-            From Marrakech,
+            Marrakech,
             <br />
             with Love
           </span>
