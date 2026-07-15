@@ -81,10 +81,10 @@ function EventModal({ day, onClose }) {
                   <dt className="opacity-70 min-w-[70px]">Location</dt>
                   <dd>{event.location}</dd>
                 </div>
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2">
                   <dt className="opacity-70 min-w-[70px]">Dress</dt>
                   <dd>{event.dress}</dd>
-                </div>
+                </div> */}
               </dl>
             </div>
           ))}
@@ -172,7 +172,7 @@ export default function ScrollAnimatedPath() {
           name: "Welcome Dinner",
           time: "19:00",
           location: "Secret Location",
-          dress: "__",
+          
         },
       ],
     },
@@ -184,14 +184,14 @@ export default function ScrollAnimatedPath() {
           name: "Haldi Ceremony",
           time: "13:00",
           location: "Main Pool, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "NAMASTE MARRAKECH",
           name: "Sangeet",
           time: "19:30",
           location: "The Oberoi",
-          dress: "__",
+          
         },
       ],
     },
@@ -203,7 +203,7 @@ export default function ScrollAnimatedPath() {
           name: "Baraat",
           time: "12:00",
           location: "Olive tree driveway, The Oberoi",
-          dress: "__",
+          
         },
       ],
     },
@@ -215,7 +215,7 @@ export default function ScrollAnimatedPath() {
           name: "Baraat",
           time: "12:00",
           location: "Olive tree driveway, The Oberoi",
-          dress: "__",
+          
         },
       ],
     },
@@ -227,21 +227,21 @@ export default function ScrollAnimatedPath() {
           name: "Wedding Ceremony",
           time: "15:00",
           location: "The Patio, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "DESTINATION: FOREVER",
           name: "Reception",
           time: "19:00",
           location: "Grand Canal, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "DRUNK IN LOVE",
           name: "After Party",
           time: "22:00 till late",
           location: "The Oberoi",
-          dress: "__",
+          
         },
       ],
     },

@@ -85,7 +85,7 @@ const Nails_Cntr = () => {
           name: "Welcome Dinner",
           time: "19:00",
           location: "Secret Location",
-          dress: "__",
+          
         },
       ],
     },
@@ -97,14 +97,14 @@ const Nails_Cntr = () => {
           name: "Haldi Ceremony",
           time: "13:00",
           location: "Main Pool, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "NAMASTE MARRAKECH",
           name: "Sangeet",
           time: "19:30",
           location: "The Oberoi",
-          dress: "__",
+          
         },
       ],
     },
@@ -116,28 +116,28 @@ const Nails_Cntr = () => {
           name: "Baraat",
           time: "12:00",
           location: "Olive tree driveway, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "PYAAR DOSTI HAI",
           name: "Wedding Ceremony",
           time: "15:00",
           location: "The Patio, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "DESINTATION: FOREVER",
           name: "Reception",
           time: "19:00",
           location: "Grand Canal, The Oberoi",
-          dress: "__",
+          
         },
         {
           title: "DRUNK IN LOVE",
           name: "After Party",
           time: "22:00 till late",
           location: "The Oberoi",
-          dress: "__",
+          
         },
       ],
     },
@@ -249,7 +249,7 @@ const Nails_Cntr = () => {
             <p>Welcome Dinner</p>
             <p>19:00</p>
             <p>Secret Location</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
           </div>
 
           {/* Detail-SVG-2-Data */}
@@ -269,7 +269,7 @@ const Nails_Cntr = () => {
             <p>Haldi Ceremony</p>
             <p>13:00</p>
             <p>Main Pool, The Oberoi</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
           </div>
 
           {/* Detail-SVG-3-Data */}
@@ -291,7 +291,7 @@ const Nails_Cntr = () => {
             <p>Sangeet</p>
             <p>19:30</p>
             <p>Gardens, The Oberoi</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
           </div>
 
           {/* Detail-SVG-4-Data */}
@@ -313,7 +313,7 @@ const Nails_Cntr = () => {
             <p>Baraat</p>
             <p>12:00 </p>
             <p>Location: Olive tree driveway, The Oberoi</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
 
             <p className="mt-8 mb-2 text-[1.3rem] leading-[1.3rem]">
               PYAAR DOSTI HAI
@@ -321,7 +321,7 @@ const Nails_Cntr = () => {
             <p>Wedding Ceremony </p>
             <p>15:00 </p>
             <p>Location, Patio, The Oberoi</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
           </div>
 
           {/* Detail-SVG-5-Data */}
@@ -343,7 +343,7 @@ const Nails_Cntr = () => {
             <p>Reception</p>
             <p>20:00</p>
             <p>Grand Canal, The Oberoi</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
 
             <p className="mt-8 mb-2 text-[1.3rem] leading-[1.3rem]">
               DRUNK IN LOVE
@@ -351,7 +351,7 @@ const Nails_Cntr = () => {
             <p>After Party </p>
             <p>23:00 to Sunrise</p>
             <p> The Oberoi</p>
-            <p className="flex ">Dress Code : __</p>
+            <p className="flex "></p>
           </div>
         </div>
         {/* ===================== END DESKTOP / TABLET ONLY ===================== */}
