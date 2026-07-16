@@ -30,16 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
 // carry a real photo (`img`) once you have one - until then it renders
 // as an icon tile. `href` makes the whole tile + its caption a link.
 const DATA = [
-   {
-    img: "/clientImg/Miami.jpg",
-    text: "Miami",
-    year: "2023",
-    pTxt: "  ",
-    landmarks: [
-      // { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
-      // { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
-    ],
-  },
+  
   {
     img: "/clientImg/Boston1.jpg",
     text: "Boston",
@@ -69,6 +60,16 @@ const DATA = [
       { icon: Music2, label: "Tongue and Groove", href: "https://tandgonline.com/" },
       { icon: Waves, label: "Amicalola Falls State Park" },
       { icon: Utensils, label: "Waffle House" },
+    ],
+  },
+   {
+    img: "/clientImg/Miami.jpg",
+    text: "Miami",
+    year: "2023",
+    pTxt: "  ",
+    landmarks: [
+      // { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
+      // { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
     ],
   },
   {
