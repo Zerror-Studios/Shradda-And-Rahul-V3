@@ -1,46 +1,39 @@
-'use client'
+"use client";
 import React, { useState } from "react";
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useGSAP } from '@gsap/react'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger)
-
+gsap.registerPlugin(ScrollTrigger);
 
 const WeddingVenue = () => {
-
-
   useGSAP(() => {
-    const isMobile = window.innerWidth < 700
+    const isMobile = window.innerWidth < 700;
 
-    gsap.from('.WeddingText', {
+    gsap.from(".WeddingText", {
       opacity: 0,
       yPercent: 20,
       stagger: { each: 0.5 },
-      ease: 'none',
+      ease: "none",
       scrollTrigger: {
-        trigger: '.WeddingTextCont',
-        start: isMobile ? 'top 90%' : 'top 70%',
-        end: isMobile ? 'top 50%' : 'top 20%',
+        trigger: ".WeddingTextCont",
+        start: isMobile ? "top 90%" : "top 70%",
+        end: isMobile ? "top 50%" : "top 20%",
         scrub: true,
         // markers: true
-      }
-    })
-  }, [])
-
+      },
+    });
+  }, []);
 
   return (
     <section className="h-fit max-md:h-fit  WeddingTextCont py-[10vh] flex items-center justify-center BGCLR px-6">
       <div className=" text-center text-[#F1E2C6]  ">
-
         <p className="max-w-[70vw] mx-auto   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
-
-        ⴰⵣⵓⵍ, Azul
-
-        <br />
-        <br />
-
-A greeting from the native Berber tongue conveying Peace and Love. “Azul” is derived from the roots “Az” meaning to come close, and “Oul” translating to heart. Welcome to our heart. 
+          ⴰⵣⵓⵍ, Azul
+          <br />
+          <br />A greeting from the native berber tongue conveying peace and
+          love. “Azul” is derived from the roots “Az” meaning to come close, and
+          “Oul” translating to heart. Welcome to our heart.
         </p>
 
         {/* <br />

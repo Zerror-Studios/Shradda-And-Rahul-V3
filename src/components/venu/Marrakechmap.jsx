@@ -1044,7 +1044,7 @@ const MarrakechMap = () => {
         <h2 className="text-2xl md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
           Marrakech Map
         </h2>
-        <p className="text-sm md:text-base Font_CV text-[#F1E2C6] opacity-80 mb-6 text-center max-w-md mx-auto">
+        <p className="text-sm md:text-base  text-[#F1E2C6]  mb-6 text-center max-w-md mx-auto">
           Hover a place on the list to see its story on the map.
         </p>
 

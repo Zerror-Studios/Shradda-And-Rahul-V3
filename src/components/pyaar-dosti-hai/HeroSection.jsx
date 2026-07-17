@@ -48,6 +48,11 @@ export default function HeroSection() {
       symbol: "પ્રે",
       audio: `/audio/Gujarati.mp3`,
     },
+    Hindi: {
+      text: "प्यार दोस्ती है।",
+      symbol: "अ",
+      audio: `/audio/Hindi.mp3`,
+    },
   };
 
   const [selectedLanguage, setSelectedLanguage] = useState("Sindhi");
