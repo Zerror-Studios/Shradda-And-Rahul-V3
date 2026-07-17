@@ -15,9 +15,16 @@
 //   const doorContainer = useRef();
 //   const menuItemsRef = useRef([]);
 //   const bgLayerRef = useRef(); // wraps BG image + wall/doors for blur
+//   const audioRef = useRef();
+//   const introRef = useRef();
 //   const [isAnimating, setIsAnimating] = useState(false);
 //   const [isTablet, setIsTablet] = useState(false);
 //   const [hasMounted, setHasMounted] = useState(false);
+
+//   // ── Intro gate + music state ─────────────────────────────────────────
+//   const [showIntro, setShowIntro] = useState(true);
+//   const [isMuted, setIsMuted] = useState(false);
+//   const [isEntering, setIsEntering] = useState(false);
 
 //   const menuItems = [
 //     {
@@ -49,6 +56,90 @@
 //     setIsAnimating(true);
 
 //     router.push(link);
+//   };
+
+//   // ── Lock page scroll while the intro overlay is showing ────────────────
+//   // overflow:hidden alone isn't always reliable (Next.js wrapper divs, iOS
+//   // momentum scrolling, etc.), so we also pin the body in place with
+//   // position:fixed AND block wheel/touch/key events as a hard fallback.
+//   useEffect(() => {
+//     if (!showIntro) return;
+
+//     const htmlEl = document.documentElement;
+//     const bodyEl = document.body;
+//     const scrollY = window.scrollY;
+
+//     const prevHtmlOverflow = htmlEl.style.overflow;
+//     const prevBodyOverflow = bodyEl.style.overflow;
+//     const prevBodyPosition = bodyEl.style.position;
+//     const prevBodyTop = bodyEl.style.top;
+//     const prevBodyWidth = bodyEl.style.width;
+
+//     htmlEl.style.overflow = "hidden";
+//     bodyEl.style.overflow = "hidden";
+//     bodyEl.style.position = "fixed";
+//     bodyEl.style.top = `-${scrollY}px`;
+//     bodyEl.style.width = "100%";
+
+//     // Hard fallback: swallow any wheel / touch / keyboard scroll attempts.
+//     const blockEvent = (e) => {
+//       e.preventDefault();
+//       e.stopPropagation();
+//     };
+//     const blockKeys = (e) => {
+//       const keys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown", " ", "Spacebar", "Home", "End"];
+//       if (keys.includes(e.key)) blockEvent(e);
+//     };
+
+//     window.addEventListener("wheel", blockEvent, { passive: false });
+//     window.addEventListener("touchmove", blockEvent, { passive: false });
+//     window.addEventListener("keydown", blockKeys, { passive: false });
+
+//     return () => {
+//       htmlEl.style.overflow = prevHtmlOverflow;
+//       bodyEl.style.overflow = prevBodyOverflow;
+//       bodyEl.style.position = prevBodyPosition;
+//       bodyEl.style.top = prevBodyTop;
+//       bodyEl.style.width = prevBodyWidth;
+
+//       // restore scroll position that was pinned
+//       window.scrollTo(0, scrollY);
+
+//       window.removeEventListener("wheel", blockEvent);
+//       window.removeEventListener("touchmove", blockEvent);
+//       window.removeEventListener("keydown", blockKeys);
+//     };
+//   }, [showIntro]);
+
+//   // ── "Scroll to enter" click: hide intro, unlock scroll, start music ────
+//   const handleEnterClick = () => {
+//     if (isEntering) return;
+//     setIsEntering(true);
+
+//     // fade the overlay out, then unmount it
+//     gsap.to(introRef.current, {
+//       opacity: 0,
+//       duration: 0.8,
+//       ease: "power2.out",
+//       onComplete: () => {
+//         setShowIntro(false);
+//       },
+//     });
+
+//     if (audioRef.current) {
+//       audioRef.current.volume = 0.6;
+//       audioRef.current.muted = false;
+//       audioRef.current.play().catch(() => {
+//         // Autoplay may still be blocked in some browsers; ignore silently.
+//       });
+//     }
+//   };
+
+//   const toggleMute = () => {
+//     if (!audioRef.current) return;
+//     const nextMuted = !isMuted;
+//     audioRef.current.muted = nextMuted;
+//     setIsMuted(nextMuted);
 //   };
 
 //   // ── Detect tablet / iPad viewport (768px–1024px) ───────────────────────
@@ -164,9 +255,83 @@
 //         isTablet ? "h-svh" : "max-sm:h-[300svh] sm:h-[400svh]"
 //       }`}
 //     >
+//       {/* Background music — update the src to point at your mp3 file */}
+//       <audio ref={audioRef} src="/music/BGMUSIC.mp3" loop preload="auto" />
+
+//       {/* ── Intro Gate Overlay ─────────────────────────────────────────── */}
+//       {showIntro && (
+//         <div
+//           ref={introRef}
+//           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0d0d0d]/80 px-6 text-center"
+//         >
+//           <div className="w-[36px] aspect-square mb-6">
+//             <img src="/logo.svg" className="w-full h-full object-contain" alt="Logo" />
+//           </div>
+
+//           <h1 className="Font_CV uppercase text-[#F1E2C6] text-[1rem] max-sm:text-[0.85rem] font-bold tracking-[0.15em] mb-2">
+//             The Wedding Of
+//           </h1>
+//           <h2 className="Font_CV uppercase text-[#F1E2C6] text-[4vw] leading-[4vw] max-lg:text-[6vw] max-lg:leading-[6vw] max-sm:text-[9vw] max-sm:leading-[9vw] mb-10">
+//             Shradda &amp; Rahul
+//           </h2>
+
+//           <button
+//             type="button"
+//             onClick={handleEnterClick}
+//             disabled={isEntering}
+//             className="Font_CV group relative flex items-center gap-3  border border-[#F1E2C6]/60 px-5 py-3 uppercase tracking-[0.2em] text-[#F1E2C6] text-[0.8rem] transition-all duration-300 hover:border-[#F1E2C6] hover:bg-[#F1E2C6]/10 disabled:opacity-60"
+//           >
+//             <span
+//               className={`inline-block h-2 w-2  bg-[#F1E2C6] ${
+//                 isEntering ? "" : "animate-pulse"
+//               }`}
+//             />
+//             {isEntering ? "Entering…" : "Click To Enter"}
+//           </button>
+//         </div>
+//       )}
+
 //       <div className=" w-full h-svh sticky top-0 left-0">
 //         {/* All-Content-Container */}
 //         <div className="w-full h-svh relative overflow-hidden">
+//           {/* Mute / Unmute control */}
+//           <button
+//             type="button"
+//             onClick={toggleMute}
+//             aria-label={isMuted ? "Unmute music" : "Mute music"}
+//             className="absolute top-[5%] right-[5%] z-[60] flex h-9 w-9 items-center justify-center rounded-full border border-[#F1E2C6]/50 bg-black/20 backdrop-blur-sm transition-colors duration-300 hover:bg-black/40"
+//           >
+//             {isMuted ? (
+//               <svg
+//                 viewBox="0 0 24 24"
+//                 fill="none"
+//                 stroke="#F1E2C6"
+//                 strokeWidth="1.8"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 className="h-4 w-4"
+//               >
+//                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+//                 <line x1="23" y1="9" x2="17" y2="15" />
+//                 <line x1="17" y1="9" x2="23" y2="15" />
+//               </svg>
+//             ) : (
+//               <svg
+//                 viewBox="0 0 24 24"
+//                 fill="none"
+//                 stroke="#F1E2C6"
+//                 strokeWidth="1.8"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 className="h-4 w-4"
+//               >
+//                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+//                 <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+//                 <path d="M18.36 5.64a9 9 0 0 1 0 12.72" />
+//               </svg>
+//             )}
+//           </button>
+
 //           {/* bgLayerRef wraps the BG image AND the wall/doors so both blur together */}
 //           <div ref={bgLayerRef} className="w-full h-svh absolute top-0 left-0">
 //             {/* Background image */}
@@ -349,6 +514,30 @@ const Hero = () => {
     router.push(link);
   };
 
+  // ── GLOBAL iOS Safari ScrollTrigger fixes ───────────────────────────────
+  // 1) Stop ScrollTrigger from recalculating every time the iOS address bar
+  //    hides/shows mid-scroll (this alone causes most "sticky panel releases
+  //    too early → blank space" bugs on iPhone).
+  // 2) Prevent the default page background from flashing through during
+  //    iOS's elastic/rubber-band overscroll.
+  useEffect(() => {
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
+    const prevHtmlOverscroll = document.documentElement.style.overscrollBehaviorY;
+    const prevBodyOverscroll = document.body.style.overscrollBehaviorY;
+    const prevBodyBg = document.body.style.backgroundColor;
+
+    document.documentElement.style.overscrollBehaviorY = "none";
+    document.body.style.overscrollBehaviorY = "none";
+    document.body.style.backgroundColor = "#0d0d0d"; // match intro/wall tone so any bounce doesn't show white
+
+    return () => {
+      document.documentElement.style.overscrollBehaviorY = prevHtmlOverscroll;
+      document.body.style.overscrollBehaviorY = prevBodyOverscroll;
+      document.body.style.backgroundColor = prevBodyBg;
+    };
+  }, []);
+
   // ── Lock page scroll while the intro overlay is showing ────────────────
   // overflow:hidden alone isn't always reliable (Next.js wrapper divs, iOS
   // momentum scrolling, etc.), so we also pin the body in place with
@@ -399,6 +588,34 @@ const Hero = () => {
       window.removeEventListener("wheel", blockEvent);
       window.removeEventListener("touchmove", blockEvent);
       window.removeEventListener("keydown", blockKeys);
+    };
+  }, [showIntro]);
+
+  // ── Once the intro is dismissed and real scrolling begins, apply iOS
+  //    scroll normalization + force a fresh measurement. Body's position
+  //    just changed from fixed → static, which changes layout height, so
+  //    ScrollTrigger's cached start/end values from before are stale.
+  useEffect(() => {
+    if (showIntro) return;
+
+    const isTouch =
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+
+    let normalized;
+    if (isTouch) {
+      normalized = ScrollTrigger.normalizeScroll({
+        momentum: 3,
+        allowNestedScroll: true,
+      });
+    }
+
+    // Wait a frame so the body's unlocked layout has settled, then refresh.
+    const id = requestAnimationFrame(() => ScrollTrigger.refresh());
+
+    return () => {
+      cancelAnimationFrame(id);
+      if (normalized && normalized.kill) normalized.kill();
     };
   }, [showIntro]);
 
@@ -459,6 +676,7 @@ const Hero = () => {
             end: "bottom bottom",
             scrub: true,
             ease: "none",
+            invalidateOnRefresh: true, // recompute rotation/scale values on refresh instead of using stale cached ones
           },
         });
         // Left door opens to the left (rotate from right edge)
@@ -501,6 +719,7 @@ const Hero = () => {
                 trigger: MainContHome.current,
                 start: "85% bottom",
                 toggleActions: "play reverse play reverse",
+                invalidateOnRefresh: true,
                 // markers:true,
               },
             }
@@ -536,7 +755,16 @@ const Hero = () => {
       );
     }, MainContHome);
 
-    return () => ctx.revert(); // cleanup all ScrollTriggers/animations on unmount or re-run
+    // Give the browser a beat to settle real layout (fonts/images), then
+    // make sure ScrollTrigger's measurements match reality — this is what
+    // stops the "everything ends but there's still blank scroll left" gap.
+    const refreshId = requestAnimationFrame(() => ScrollTrigger.refresh());
+    window.addEventListener("load", () => ScrollTrigger.refresh());
+
+    return () => {
+      cancelAnimationFrame(refreshId);
+      ctx.revert(); // cleanup all ScrollTriggers/animations on unmount or re-run
+    };
   }, [isTablet, hasMounted]);
 
   return (
@@ -560,7 +788,7 @@ const Hero = () => {
           </div>
 
           <h1 className="Font_CV uppercase text-[#F1E2C6] text-[1rem] max-sm:text-[0.85rem] font-bold tracking-[0.15em] mb-2">
-            The Wedding Of
+            Wedding Of
           </h1>
           <h2 className="Font_CV uppercase text-[#F1E2C6] text-[4vw] leading-[4vw] max-lg:text-[6vw] max-lg:leading-[6vw] max-sm:text-[9vw] max-sm:leading-[9vw] mb-10">
             Shradda &amp; Rahul
@@ -572,12 +800,12 @@ const Hero = () => {
             disabled={isEntering}
             className="Font_CV group relative flex items-center gap-3  border border-[#F1E2C6]/60 px-5 py-3 uppercase tracking-[0.2em] text-[#F1E2C6] text-[0.8rem] transition-all duration-300 hover:border-[#F1E2C6] hover:bg-[#F1E2C6]/10 disabled:opacity-60"
           >
-            <span
+            {/* <span
               className={`inline-block h-2 w-2  bg-[#F1E2C6] ${
                 isEntering ? "" : "animate-pulse"
               }`}
-            />
-            {isEntering ? "Entering…" : "Scroll to Enter"}
+            /> */}
+            {isEntering ? "Entering…" : "Click To Enter"}
           </button>
         </div>
       )}

@@ -29,7 +29,7 @@ const page = () => {
 
         <section className="h-fit max-md:h-fit  mx-auto  WeddingTextCont pt-5 flex items-center justify-center BGCLR px-6">
           <div className=" text-center text-[#F1E2C6]  ">
-            <p className="max-w-[70vw] mx-auto   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
+            <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
               Marrakech has always had our hearts- the ochre walls, the lush
               gardens, the vibrant souks with both loud and quiet magic tucked
               into every corner. It's the kind of beauty that is true to us- a
@@ -63,7 +63,7 @@ const page = () => {
 
         <section className="h-fit max-md:h-fit  mx-auto  WeddingTextCont pt-5 flex items-center justify-center BGCLR px-6">
           <div className=" text-center text-[#F1E2C6]  ">
-            <p className="max-w-[70vw] mx-auto   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
+            <p className="max-w-[70vw] mx-auto  max-sm:max-w-[95vw] max-sm:text-justify  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
               Marrakech rewards the unhurried. The medina has a way of folding in on itself; take the wrong turn down an alley, and you'll often end up somewhere better than where you meant to go. We've mapped our favourite corners of the city, so you can wander with intention or with none at all. Whether you’ve got a free afternoon or you’re arriving a few days early to make the most of it, here is a brief guide on attractions, food, shopping and general fun.
             </p>
           </div>

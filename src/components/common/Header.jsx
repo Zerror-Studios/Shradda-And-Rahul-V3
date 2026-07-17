@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <footer className="w-full bg-[#F1E2C6]  border-t border-[#5513013b] max-md:px-5  flex flex-col max-md:justify-center max-sm:items-center  overflow-hidden z-998">
-        <div className="flex max-md:flex-col max-md:justify-center max-sm:items-center py-8 px-10 z-998">
+        <div className="flex max-md:flex-col max-md:justify-center max-sm:items-center py-8 sm:px-10 z-998">
           <div className="w-fit h-fit flex justify-center items-center   md:my-auto">
             <Link href={`/`}>
               <img
@@ -17,9 +17,9 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="w-[1px] h-[50px] COLOR_BG_RED mx-10 COLOR_TEXT_RED md:my-auto max-md:w-[50px] max-md:h-[1px] max-md:hidden "></div>
+          <div className="w-[1px] h-[50px] COLOR_BG_RED mx-10 COLOR_TEXT_RED md:my-auto max-md:w-[50px]  max-md:h-[1px] max-md:hidden "></div>
 
-          <div className="w-1/2 flex flex-col  w-fit  text-[#D25F28] font-medium max-sm:w-full max-md:mt-5 ml-auto   max-md:text-center   justify-center">
+          <div className="w-1/2 flex flex-col     text-[#D25F28] font-medium max-sm:w-full  max-md:mt-5 ml-auto   max-md:text-center   justify-center">
             <span className=" ">
               ⁠For any wedding-related questions, please reach out to Shradda &
               Rahul wedding planning team at:

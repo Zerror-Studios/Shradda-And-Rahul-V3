@@ -602,7 +602,7 @@ export default function ParallaxScroll() {
 
 
         <div
-          className="pointer-events-auto absolute bottom-3 sm:bottom-0 left-1/2 z-20 w-[92vw] max-w-[660px] -translate-x-1/2 px-2 pb-3 pt-8 sm:pb-4 sm:pt-10"
+          className="pointer-events-auto absolute bottom-3 sm:bottom-0 left-1/2 z-20 w-[92vw] max-w-[660px]  -translate-x-1/2 px-2 pb-3 pt-8 sm:pb-4 sm:pt-0"
           onPointerEnter={openFromPointer}
           onPointerLeave={closeFromPointer}
         >
@@ -626,7 +626,7 @@ export default function ParallaxScroll() {
                   key={i}
                   type="button"
                   onClick={() => selectItem(i)}
-                  className={`group flex min-h-9 items-center justify-between r border border-[#D25F28]/10 px-3 py-2 text-left Font_CV text-sm font-medium transition-all duration-300 ease-out sm:text-base ${
+                  className={`group flex min-h-9 items-center  justify-between r border border-[#D25F28]/10 px-3 py-2 text-left Font_CV text-sm font-medium transition-all duration-300 ease-out sm:text-base ${
                     isActive
                       ? "bg-[#D25F28] text-[#F1E2C6]"
                       : "text-[#D25F28] hover:bg-[#D25F28] hover:text-[#F1E2C6]"

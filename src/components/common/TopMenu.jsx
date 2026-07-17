@@ -240,7 +240,7 @@ const TopMenu = () => {
           className="w-fit h-[40px] z-[1000]"
           onClick={(e) => {
             e.preventDefault();
-            router.push(`/`);
+            router.push(`/home`);
           }}
         >
           <img

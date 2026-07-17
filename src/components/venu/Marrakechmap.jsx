@@ -1041,10 +1041,10 @@ const MarrakechMap = () => {
   return (
     <section className="w-full py-16 px-4 md:px-6" style={{ backgroundColor: BG }}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
-          Marrakech Map
+        <h2 className="text-2xl max-md:text-[10vw] max-md:leading-[12vw] md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
+          Marrakech <br className="sm:hidden" /> Map
         </h2>
-        <p className="text-sm md:text-base  text-[#F1E2C6]  mb-6 text-center max-w-md mx-auto">
+        <p className="text-sm md:text-base  text-[#F1E2C6]  max-sm:text-[1.2rem] max-sm:leading-[1.4rem] mb-6 text-center max-w-md mx-auto">
           Hover a place on the list to see its story on the map.
         </p>
 

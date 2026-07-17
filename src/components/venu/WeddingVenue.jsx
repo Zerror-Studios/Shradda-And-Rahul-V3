@@ -26,9 +26,9 @@ const WeddingVenue = () => {
   }, []);
 
   return (
-    <section className="h-fit max-md:h-fit  WeddingTextCont py-[10vh] flex items-center justify-center BGCLR px-6">
+    <section className="h-fit max-md:h-fit   WeddingTextCont py-[10vh] flex items-center justify-center BGCLR px-6">
       <div className=" text-center text-[#F1E2C6]  ">
-        <p className="max-w-[70vw] mx-auto   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
+        <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
           ⴰⵣⵓⵍ, Azul
           <br />
           <br />A greeting from the native berber tongue conveying peace and

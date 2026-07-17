@@ -271,7 +271,7 @@ export default function FAQSection() {
                         {item.intro && (
                           <p
                             className={`
-                            tracking-tight font-light text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]
+                            tracking-tight font-medium text-[#F1E2C6]  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] 
                             mb-3
                           `}
                           >
@@ -283,7 +283,7 @@ export default function FAQSection() {
                             <p
                               key={lineIndex}
                               className={`
-                              tracking-tight font-light text-[#F1E2C6] text-[0.9rem] leading-[1.1rem]
+                              tracking-tight  text-[#F1E2C6]  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] 
                             `}
                             >
                               <span className="font-semibold">
@@ -297,7 +297,7 @@ export default function FAQSection() {
                     ) : (
                       <p
                         className={`
-                        tracking-tight font-light text-[#F1E2C6] text-[0.9rem]  leading-[1.1rem]
+                        tracking-tight font-medium text-[#F1E2C6]  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] 
                         max-w-[700px]
                       `}
                       >
