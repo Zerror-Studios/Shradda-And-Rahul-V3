@@ -2804,8 +2804,8 @@ export default function ScrollAnimatedPath() {
   ];
 
   return (
-    <div className="bg-[#D25F28] text-[#F1E2C6]">
-      <div className="row title  max-sm:pt-[10vh]">
+    <div className="bg-[#D25F28] text-[#F1E2C6] ">
+      <div className="row title  max-sm:pt-[15vh]">
         <div className="mx-auto flex flex-col gap-10 justify-center max-sm:text-center items-center">
           <h3 className="text-[5rem] font-semibold leading-none  Font_CV mx-auto uppercase max-sm:text-[3.5rem]!">
             Wedding itinerary
