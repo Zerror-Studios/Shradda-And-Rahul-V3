@@ -924,7 +924,7 @@ const Hero = () => {
 
             <div className="wedding-container text-center pb-[5vh]">
               <div className="wedding-title w-[50vw] max-sm:w-[90vw] opacity-0 translate-y-10  flex mx-auto">
-               <h1 className=" my-2 flex mx-auto Font_CV uppercase text-[#F1E2C6] text-[1.2rem] max-sm:text-[1rem] font-bold">The Wedding Of</h1>
+               <h1 className=" my-2 flex mx-auto Font_CV uppercase text-[#F1E2C6] text-[1.2rem] max-sm:text-[1rem] font-bold"> Wedding Of</h1>
               </div>
               <div className="wedding-title w-[50vw] max-lg:w-[99vw] opacity-0 translate-y-10  flex mx-auto">
                  <h1 className=" text-[5vw] leading-[5vw] max-lg:text-[6vw] max-lg:leading-[6vw] max-sm:text-[8vw] max-sm:leading-[8vw]  flex mx-auto Font_CV uppercase text-[#F1E2C6]">Shradda & Rahul</h1>

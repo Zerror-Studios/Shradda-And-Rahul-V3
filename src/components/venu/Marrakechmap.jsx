@@ -1044,8 +1044,11 @@ const MarrakechMap = () => {
         <h2 className="text-2xl max-md:text-[10vw] max-md:leading-[12vw] md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
           Marrakech <br className="sm:hidden" /> Map
         </h2>
-        <p className="text-sm md:text-base  text-[#F1E2C6]  max-sm:text-[1.2rem] max-sm:leading-[1.4rem] mb-6 text-center max-w-md mx-auto">
+        <p className="text-sm md:text-base max-sm:hidden  text-[#F1E2C6]  max-sm:text-[1.2rem] max-sm:leading-[1.4rem] mb-6 text-center max-w-md mx-auto">
           Hover a place on the list to see its story on the map.
+        </p>
+        <p className="text-sm md:text-base sm:hidden   text-[#F1E2C6]  max-sm:text-[1.2rem] max-sm:leading-[1.4rem] mb-6 text-center max-w-md mx-auto">
+         Tap the place on the list to see its story on the map.
         </p>
 
         {/* Category filter pills */}
