@@ -3821,9 +3821,13 @@ export default function ScrollAnimatedPath() {
               <button
                 type="button"
                 onClick={() => setSelectedDay(day)}
-                className="group inline-flex items-center gap-2 l border border-[#F1E2C6] px-5 py-2 text-[0.9rem] uppercase tracking-[0.15em] transition-all duration-300 bg-[#F1E2C6] text-[#D25F28] hover:bg-transparent hover:text-[#F1E2C6]"
+                className="group inline-flex items-center gap-2 l border border-[#F1E2C6] px-5 py-2 text-[0.9rem] ßtracking-[0.15em] transition-all duration-300 bg-[#F1E2C6] text-[#D25F28] hover:bg-transparent hover:text-[#F1E2C6]"
               >
-                View Event
+                {
+                  index === 0 || index === 2 || index === 3
+    ? "View Event"
+    : "View Events"
+                }
               </button>
             </div>
           );

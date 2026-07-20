@@ -7,6 +7,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { GoArrowUpRight } from "react-icons/go";
+import { PiBoxingGlove } from "react-icons/pi";
 import {
   GraduationCap,
   Gamepad2,
@@ -78,7 +79,8 @@ const DATA = [
     year: "2022",
     pTxt: "Painting Bangkok red, celebrating love on the beach, overdosing on pad thai",
     landmarks: [
-      { icon: IoMusicalNotes, label: "Bangkok \u2014 Muay Thai & The Bamboo Bar" },
+      { icon: IoMusicalNotes, label: "Bangkok \u2014 The Bamboo Bar" },
+      { icon: PiBoxingGlove, label: "Muay Thai " },
       { icon: FaUmbrellaBeach, label: "Phuket \u2014 Friend's Wedding" },
     ],
   },

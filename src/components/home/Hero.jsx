@@ -491,7 +491,7 @@ const Hero = () => {
     {
       img:"/images/home/Tile2.png",
       title:"From Marrakech, with Love",
-      link:"/venu",
+      link:"/venue",
     },
     {
       img:"/images/home/Tile3.png",
@@ -874,7 +874,7 @@ const Hero = () => {
                 {/* Door-Container */}
                 <div
                   ref={doorContainer}
-                  className="  DoorHeight Doorwidth  h-[90vh] w-[110vw] sm:w-[30vw]  absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[0%] z-49 "
+                  className="  DoorHeight Doorwidth  h-[90vh] w-[100vw] sm:w-[30vw]  absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[0%] z-49 "
                 >
                   {/* Left-Door */}
                   <div

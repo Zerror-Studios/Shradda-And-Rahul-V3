@@ -150,19 +150,19 @@ const TopMenu = () => {
     const nav = navRef.current;
     if (!nav) return;
 
-    const showNav = () => {
-      if (!navVisible) {
-        gsap.to(nav, { y: "0%", duration: 0.4, ease: "power3.out" });
-        navVisible = true;
-      }
-    };
+    // const showNav = () => {
+    //   if (!navVisible) {
+    //     gsap.to(nav, { y: "0%", duration: 0.4, ease: "power3.out" });
+    //     navVisible = true;
+    //   }
+    // };
 
-    const hideNav = () => {
-      if (navVisible) {
-        gsap.to(nav, { y: "-100%", duration: 0.4, ease: "power3.out" });
-        navVisible = false;
-      }
-    };
+    // const hideNav = () => {
+    //   if (navVisible) {
+    //     gsap.to(nav, { y: "-100%", duration: 0.4, ease: "power3.out" });
+    //     navVisible = false;
+    //   }
+    // };
 
     const handleScroll = () => {
       const currentScroll = window.scrollY;
@@ -222,7 +222,7 @@ const TopMenu = () => {
 
   const navLinks = [
     { name: "Pyaar Dosti Hai", path: "/pyaar-dosti-hai" },
-    { name: "Marrakech, with Love", path: "/venu" },
+    { name: "Marrakech, with Love", path: "/venue" },
     { name: "Wedding Itinerary", path: "/wedding-itinerary" },
     { name: "Travel and FAQ's", path: "/travel-and-faqs" },
   ];
@@ -232,7 +232,7 @@ const TopMenu = () => {
       {/* MAIN NAVBAR */}
       <div
         ref={navRef}
-        className="w-full h-[80px] fixed top-0 left-0 z-[9999] px-5 lg:px-8 flex items-center justify-between"
+        className="w-full h-[80px] absolute top-0 left-0 z-[9999] px-5 lg:px-8 flex items-center justify-between"
       >
         {/* LOGO */}
         <Link

@@ -6,7 +6,7 @@
       .st0 {
         fill: none;
         stroke: #efe1c5;
-         stroke-width: 7; /* Increase thickness */
+         stroke-width: 9; /* Increase thickness */
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 20;

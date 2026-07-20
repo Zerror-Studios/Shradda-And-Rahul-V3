@@ -36,7 +36,7 @@ const Home = () => {
     {
       img:"/images/home/Tile2.png",
       title:"From Marrakech, with Love",
-      link:"/venu",
+      link:"/venue",
     },
     {
       img:"/images/home/Tile3.png",
