@@ -779,7 +779,7 @@ const Hero = () => {
 
   const [isMobile, setIsMobile] = useState(false);
 
-    const scrollHintRef = useRef();
+  const scrollHintRef = useRef();
 
   useEffect(() => {
     const handleResize = () => {
@@ -789,21 +789,19 @@ const Hero = () => {
     handleResize();
 
     gsap.to(scrollHintRef.current, {
-  opacity: 0,
-  duration: 0.3,
-  scrollTrigger: {
-    trigger: MainContHome.current,
-    start: "top top",
-    end: "8% top",
-    scrub: true,
-  },
-});
+      opacity: 0,
+      duration: 0.3,
+      scrollTrigger: {
+        trigger: MainContHome.current,
+        start: "top top",
+        end: "8% top",
+        scrub: true,
+      },
+    });
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-
 
   return (
     <div
@@ -902,27 +900,27 @@ const Hero = () => {
               className=" w-full h-full object-cover object-bottom z-45"
             />
 
-                   {!showIntro && !isTablet && (
-  <div
-    ref={scrollHintRef}
-    className="pointer-events-none fixed bottom-[4%] left-1/2 -translate-x-1/2 z-999 flex flex-col items-center gap-1 sm:hidden"
-  >
-    <span className="Font_CV uppercase tracking-[0.25em] text-[10px] text-[#F1E2C6]/80">
-      Scroll
-    </span>
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#F1E2C6"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 opacity-80 animate-bounce"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  </div>
-)}
+            {!showIntro && !isTablet && (
+              <div
+                ref={scrollHintRef}
+                className="pointer-events-none fixed bottom-[4%] left-1/2 -translate-x-1/2 z-999 flex flex-col items-center gap-1 sm:hidden"
+              >
+                <span className="Font_CV uppercase tracking-[0.25em] text-[10px] text-[#F1E2C6]/80">
+                  Scroll
+                </span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#F1E2C6"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4 opacity-80 absolute -top-6 animate-bounce rotate-180"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+            )}
 
             {/* Wall-With-MainDoor — entirely removed for tablets/iPads */}
             {!isTablet && (
@@ -937,9 +935,7 @@ const Hero = () => {
 
                 <img
                   ref={Wall}
-                  src={
-                    isMobile ? "/BGV.png" : "/images/home/Wall.png"
-                  }
+                  src={isMobile ? "/BGV.png" : "/images/home/Wall.png"}
                   alt="wall"
                   className="w-full h-full object-top object-cover relative z-50"
                 />
@@ -1008,8 +1004,6 @@ const Hero = () => {
                 </h1>
               </div>
             </div>
-
-     
 
             {/* Menu_Cont */}
             <div className="grid w-fit grid-cols-4 menuScaler gap-[2vw] max-sm:grid-cols-2">
