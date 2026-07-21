@@ -75,6 +75,20 @@ const Nails_Cntr = () => {
       );
   }, []);
 
+  useEffect(() => {
+    gsap.to(".WDBTN", {
+      backgroundColor: "#F1E2C6",
+      color: "#D25F28",
+      duration: 0.05,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".WDBTNCONT",
+        start: "top 60%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
+
   // Single source of truth for the itinerary — used to render the mobile text-only list
   const itineraryDays = [
     {
@@ -85,7 +99,6 @@ const Nails_Cntr = () => {
           name: "Welcome Dinner",
           time: "19:00",
           location: "Secret Location",
-          
         },
       ],
     },
@@ -97,14 +110,12 @@ const Nails_Cntr = () => {
           name: "Haldi Ceremony",
           time: "13:00",
           location: "Main Pool, The Oberoi",
-          
         },
         {
           title: "NAMASTE MARRAKECH",
           name: "Sangeet",
           time: "19:30",
           location: "The Oberoi",
-          
         },
       ],
     },
@@ -116,28 +127,24 @@ const Nails_Cntr = () => {
           name: "Baraat",
           time: "12:00",
           location: "Olive tree driveway, The Oberoi",
-          
         },
         {
           title: "PYAAR DOSTI HAI",
           name: "Wedding Ceremony",
           time: "15:00",
           location: "The Patio, The Oberoi",
-          
         },
         {
           title: "DESINTATION: FOREVER",
           name: "Reception",
           time: "19:00",
           location: "Grand Canal, The Oberoi",
-          
         },
         {
           title: "DRUNK IN LOVE",
           name: "After Party",
           time: "22:00 till late",
           location: "The Oberoi",
-          
         },
       ],
     },
@@ -385,15 +392,15 @@ const Nails_Cntr = () => {
         {/* ===================== END MOBILE ONLY ===================== */}
       </div>
 
-      <div className="w-full pb-[5vh] pt-[10vh]  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%]  justify-center items-center bg-[#D25F28] text-[#F1E2C6] ">
-       
-
+      <div className="w-full pb-[5vh] pt-[10vh] WDBTNCONT  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%]  justify-center items-center bg-[#D25F28] text-[#F1E2C6] ">
         <a
           href="/pdf/WP.pdf"
           download
           className="w-fit h-fit flex px-5 py-2 uppercase Font_CV  text-[1.5rem] leading-[1.5rem] font-semibold  select-none cursor-pointer text-[#F1E2C6] hover:underline  items-center gap-2 py-2 transition-colors"
         >
-           Click here for a detailed wardrobe planner.
+          <div className=" px-5 py-2.5 WDBTN">
+            Click here for a detailed wardrobe planner.
+          </div>
         </a>
       </div>
     </div>
