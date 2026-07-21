@@ -394,7 +394,7 @@ const Nails_Cntr = () => {
 
       <div className="w-full pb-[5vh] pt-[10vh] WDBTNCONT  uppercase text-[1.3rem] leading-[1.3rem] px-5 text-center flex flex-col sm:translate-y-[-100%]  justify-center items-center bg-[#D25F28] text-[#F1E2C6] ">
         <a
-          href="/pdf/WP.pdf"
+          href="/pdf/Shradda & Rahul - Wardrobe Planner.pdf"
           download
           className="w-fit h-fit flex px-5 py-2 uppercase Font_CV  text-[1.5rem] leading-[1.5rem] font-semibold  select-none cursor-pointer text-[#F1E2C6] hover:underline  items-center gap-2 py-2 transition-colors"
         >
