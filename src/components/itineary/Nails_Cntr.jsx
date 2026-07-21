@@ -389,7 +389,7 @@ const Nails_Cntr = () => {
        
 
         <a
-          href="/path/to/file.pdf"
+          href="/pdf/WP.pdf"
           download
           className="w-fit h-fit flex px-5 py-2 uppercase Font_CV  text-[1.5rem] leading-[1.5rem] font-semibold  select-none cursor-pointer text-[#F1E2C6] hover:underline  items-center gap-2 py-2 transition-colors"
         >
