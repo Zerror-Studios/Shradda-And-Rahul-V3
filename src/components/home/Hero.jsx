@@ -484,24 +484,24 @@ const Hero = () => {
 
   const menuItems = [
     {
-      img:"/images/home/Tile1.png",
-      title:"Pyaar Dosti Hai",
-      link:"/pyaar-dosti-hai",
+      img: "/images/home/Tile1.png",
+      title: "Pyaar Dosti Hai",
+      link: "/pyaar-dosti-hai",
     },
     {
-      img:"/images/home/Tile2.png",
-      title:"From Marrakech, with Love",
-      link:"/venue",
+      img: "/images/home/Tile2.png",
+      title: "From Marrakech, with Love",
+      link: "/venue",
     },
     {
-      img:"/images/home/Tile3.png",
-      title:"Wedding Itinerary",
-      link:"/wedding-itinerary",
+      img: "/images/home/Tile3.png",
+      title: "Wedding Itinerary",
+      link: "/wedding-itinerary",
     },
     {
-      img:"/images/home/Tile4.png",
-      title:"Travel and FAQs",
-      link:"/travel-and-faqs",
+      img: "/images/home/Tile4.png",
+      title: "Travel and FAQs",
+      link: "/travel-and-faqs",
     },
   ];
 
@@ -523,7 +523,8 @@ const Hero = () => {
   useEffect(() => {
     ScrollTrigger.config({ ignoreMobileResize: true });
 
-    const prevHtmlOverscroll = document.documentElement.style.overscrollBehaviorY;
+    const prevHtmlOverscroll =
+      document.documentElement.style.overscrollBehaviorY;
     const prevBodyOverscroll = document.body.style.overscrollBehaviorY;
     const prevBodyBg = document.body.style.backgroundColor;
 
@@ -567,7 +568,16 @@ const Hero = () => {
       e.stopPropagation();
     };
     const blockKeys = (e) => {
-      const keys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown", " ", "Spacebar", "Home", "End"];
+      const keys = [
+        "ArrowUp",
+        "ArrowDown",
+        "PageUp",
+        "PageDown",
+        " ",
+        "Spacebar",
+        "Home",
+        "End",
+      ];
       if (keys.includes(e.key)) blockEvent(e);
     };
 
@@ -722,7 +732,7 @@ const Hero = () => {
                 invalidateOnRefresh: true,
                 // markers:true,
               },
-            }
+            },
       );
 
       TL2.to(".wedding-title", {
@@ -751,7 +761,7 @@ const Hero = () => {
           stagger: 0.12,
           duration: 0.9,
           ease: "back.out(1.8)",
-        }
+        },
       );
     }, MainContHome);
 
@@ -766,6 +776,34 @@ const Hero = () => {
       ctx.revert(); // cleanup all ScrollTriggers/animations on unmount or re-run
     };
   }, [isTablet, hasMounted]);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+    const scrollHintRef = useRef();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    handleResize();
+
+    gsap.to(scrollHintRef.current, {
+  opacity: 0,
+  duration: 0.3,
+  scrollTrigger: {
+    trigger: MainContHome.current,
+    start: "top top",
+    end: "8% top",
+    scrub: true,
+  },
+});
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
 
   return (
     <div
@@ -784,7 +822,11 @@ const Hero = () => {
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0d0d0d]/80 px-6 text-center"
         >
           <div className="w-[36px] aspect-square mb-6">
-            <img src="/logo.svg" className="w-full h-full object-contain" alt="Logo" />
+            <img
+              src="/logo.svg"
+              className="w-full h-full object-contain"
+              alt="Logo"
+            />
           </div>
 
           <h1 className="Font_CV uppercase text-[#F1E2C6] text-[1rem] max-sm:text-[0.85rem] font-bold tracking-[0.15em] mb-2">
@@ -860,15 +902,46 @@ const Hero = () => {
               className=" w-full h-full object-cover object-bottom z-45"
             />
 
+                   {!showIntro && !isTablet && (
+  <div
+    ref={scrollHintRef}
+    className="pointer-events-none fixed bottom-[4%] left-1/2 -translate-x-1/2 z-999 flex flex-col items-center gap-1 sm:hidden"
+  >
+    <span className="Font_CV uppercase tracking-[0.25em] text-[10px] text-[#F1E2C6]/80">
+      Scroll
+    </span>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F1E2C6"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4 opacity-80 animate-bounce"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </div>
+)}
+
             {/* Wall-With-MainDoor — entirely removed for tablets/iPads */}
             {!isTablet && (
               <div className=" w-full h-svh absolute  top-0 left-0 overflow-hidden z-50 pointer-events-none">
                 {/* Wall-Image ==== max-sm:object-[51.1%_100%] */}
+                {/* <img
+                  ref={Wall}
+                  src={`/images/home/Wall.png`} 
+                  alt="wall"  
+                  className="w-full h-full object-top object-cover  max-sm:hidden  relative z-50"
+                /> */}
+
                 <img
                   ref={Wall}
-                  src={`/images/home/Wall.png`}
+                  src={
+                    isMobile ? "/BGV.png" : "/images/home/Wall.png"
+                  }
                   alt="wall"
-                  className="w-full h-full object-top object-cover   relative z-50"
+                  className="w-full h-full object-top object-cover relative z-50"
                 />
 
                 {/* Door-Container */}
@@ -924,12 +997,19 @@ const Hero = () => {
 
             <div className="wedding-container text-center pb-[5vh]">
               <div className="wedding-title w-[50vw] max-sm:w-[90vw] opacity-0 translate-y-10  flex mx-auto">
-               <h1 className=" my-2 flex mx-auto Font_CV uppercase text-[#F1E2C6] text-[1.2rem] max-sm:text-[1rem] font-bold"> Wedding Of</h1>
+                <h1 className=" my-2 flex mx-auto Font_CV uppercase text-[#F1E2C6] text-[1.2rem] max-sm:text-[1rem] font-bold">
+                  {" "}
+                  Wedding Of
+                </h1>
               </div>
               <div className="wedding-title w-[50vw] max-lg:w-[99vw] opacity-0 translate-y-10  flex mx-auto">
-                 <h1 className=" text-[5vw] leading-[5vw] max-lg:text-[6vw] max-lg:leading-[6vw] max-sm:text-[8vw] max-sm:leading-[8vw]  flex mx-auto Font_CV uppercase text-[#F1E2C6]">Shradda & Rahul</h1>
+                <h1 className=" text-[5vw] leading-[5vw] max-lg:text-[6vw] max-lg:leading-[6vw] max-sm:text-[8vw] max-sm:leading-[8vw]  flex mx-auto Font_CV uppercase text-[#F1E2C6]">
+                  Shradda & Rahul
+                </h1>
               </div>
             </div>
+
+     
 
             {/* Menu_Cont */}
             <div className="grid w-fit grid-cols-4 menuScaler gap-[2vw] max-sm:grid-cols-2">
