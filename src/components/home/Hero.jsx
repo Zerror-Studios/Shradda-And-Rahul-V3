@@ -803,6 +803,24 @@ const Hero = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+useEffect(() => {
+  if (showIntro || isTablet || !scrollHintRef.current) return;
+
+  const ctx = gsap.context(() => {
+    gsap.to(scrollHintRef.current, {
+      opacity: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: MainContHome.current,
+        start: 'top top',
+        end: '20% top',
+        scrub: true,
+      },
+    });
+  });
+
+  return () => ctx.revert();
+}, [showIntro, isTablet]);
   return (
     <div
       ref={MainContHome}
@@ -858,7 +876,7 @@ const Hero = () => {
             type="button"
             onClick={toggleMute}
             aria-label={isMuted ? "Unmute music" : "Mute music"}
-            className="absolute top-[5%] right-[5%] z-[60] flex h-9 w-9 items-center justify-center rounded-full border border-[#F1E2C6]/50 bg-black/20 backdrop-blur-sm transition-colors duration-300 hover:bg-black/40"
+            className="absolute top-[5%] right-[5%] z-[60]  flex h-9 w-9 items-center justify-center rounded-full border border-[#F1E2C6]/50 bg-black/20 backdrop-blur-sm transition-colors duration-300 hover:bg-black/40"
           >
             {isMuted ? (
               <svg
@@ -903,7 +921,7 @@ const Hero = () => {
             {!showIntro && !isTablet && (
               <div
                 ref={scrollHintRef}
-                className="pointer-events-none fixed bottom-[4%] left-1/2 -translate-x-1/2 z-999 flex flex-col items-center gap-1 sm:hidden"
+                className="pointer-events-none fixed SCROLLOP bottom-[4%] left-1/2 -translate-x-1/2 z-999 flex flex-col items-center gap-1 sm:hidden"
               >
                 <span className="Font_CV uppercase tracking-[0.25em] text-[10px] text-[#F1E2C6]/80">
                   Scroll
