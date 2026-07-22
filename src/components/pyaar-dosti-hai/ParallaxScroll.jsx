@@ -64,16 +64,6 @@ const DATA = [
     ],
   },
    {
-    img: "/clientImg/Miami.jpg",
-    text: "Miami",
-    year: "2023",
-    pTxt: "  ",
-    landmarks: [
-      // { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
-      // { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
-    ],
-  },
-  {
     img: "/clientImg/Thailan.JPG",
     text: "Thailand",
     year: "2022",
@@ -102,6 +92,17 @@ const DATA = [
     landmarks: [
       { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
       { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
+    ],
+  },
+ 
+   {
+    img: "/clientImg/Miami.jpg",
+    text: "Miami",
+    year: "2023",
+    pTxt: "  ",
+    landmarks: [
+      // { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
+      // { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
     ],
   },
  
