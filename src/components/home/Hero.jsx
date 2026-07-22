@@ -943,7 +943,7 @@ const Hero = () => {
                 {/* Door-Container */}
                 <div
                   ref={doorContainer}
-                  className="  DoorHeight Doorwidth  h-[90vh] w-[100vw] sm:w-[30vw]  absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[0%] z-49 "
+                  className="  DoorHeight Doorwidth  h-[90vh] max-sm:h-[85vh] w-[100vw] sm:w-[30vw]  absolute left-[51.2%]  flex justify-center items-center -translate-x-1/2  bottom-[0%] z-49 "
                 >
                   {/* Left-Door */}
                   <div
@@ -957,7 +957,7 @@ const Hero = () => {
                     <img
                       src={`/images/home/DOOR-L.png`}
                       alt="left"
-                      className=" h-full  w-full object-center"
+                      className=" h-full  w-full object-center object-cover"
                     />
                   </div>
 

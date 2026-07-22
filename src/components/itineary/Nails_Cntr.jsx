@@ -153,18 +153,18 @@ const Nails_Cntr = () => {
   return (
     <div className="w-full h-fit bg-[#D25F28]">
       <div id="How_to_Nail_it_Cntr" className=" BGCLR relative">
-        <div className="row title  max-sm:my-[10vh]">
+        <div className="  max-sm:my-[10vh]">
           <div className="mx-auto flex flex-col gap-10 justify-center max-sm:text-center items-center">
             <h3
               ref={headingRef}
-              className="text-[5rem] font-semibold leading-none Font_CV mx-auto uppercase max-sm:text-[2.5rem]"
+              className="text-[5rem] text-[#F1E2C6] font-semibold leading-none Font_CV mx-auto uppercase max-sm:text-[2.5rem]"
             >
               Wedding itinerary
             </h3>
 
             <p
               ref={paraRef}
-              className="max-w-[800px]  tracking-tight text-[#F1E2C6] text-[0.9rem] leading-[1.1rem] max-sm:px-6"
+              className="max-w-[800px]  tracking-tight text-center text-[#F1E2C6] text-[1rem] leading-[1.1rem] max-sm:px-6"
             >
               We've thoughtfully planned each moment of our special day. Please
               find the itinerary below and join us in celebrating every chapter
