@@ -61,7 +61,7 @@ const HeroSectionVenue = () => {
         className="w-full h-full object-cover absolute top-0 left-0  object-bottom Igm  opacity-0 "
       />
 
-      <div className="w-2/2 absolute max-sm:top-[20%] sm:top-[14%] left-1/2  justify-center items-center max-md:w-full -translate-x-1/2 flex flex-col  max-sm:px-5">
+      <div className="w-2/2 absolute max-sm:top-[50%] max-sm:-translate-y-1/2 sm:top-[14%] left-1/2  justify-center items-center max-md:w-full -translate-x-1/2 flex flex-col  max-sm:px-5">
         {/* <p className=' uppercase Font_CV  COLOR_TEXT_RED text-[6rem] leading-[6rem] max-md:text-[15vw] max-md:leading-[16vw] ' >THE wedding Venue</p> */}
         {/* <h1 className=" uppercase Font_CV  COLOR_TEXT_RED text-[2.5vw] leading-[2.5vw] max-md:text-[1rem] max-md:leading-[1rem] mt-[2vh] overflow-hidden ">
           <span className="flex WEDMAIMTT2 translate-y-[100%]">
