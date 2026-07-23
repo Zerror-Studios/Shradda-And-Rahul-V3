@@ -387,6 +387,11 @@ export default function HeroSection() {
       symbol: "अ",
       audio: `/audio/Hindi.mp3`,
     },
+    Swahili: {
+      text: "Upendo ni Urafiki",
+      symbol: "SW",
+      audio: `/audio/Swahili.mp3`,
+    },
   };
 
   const [selectedLanguage, setSelectedLanguage] = useState("Sindhi");
