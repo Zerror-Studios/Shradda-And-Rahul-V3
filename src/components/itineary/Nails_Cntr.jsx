@@ -137,7 +137,7 @@ const Nails_Cntr = () => {
         {
           title: "DESINTATION: FOREVER",
           name: "Reception",
-          time: "19:00",
+          time: "20:00",
           location: "Grand Canal, The Oberoi",
         },
         {
@@ -274,7 +274,7 @@ const Nails_Cntr = () => {
             </h1>
             <p className="text-[1.3rem] leading-[1.3rem]">HERE COMES THE SUN</p>
             <p>Haldi Ceremony</p>
-            <p>13:00</p>
+            <p>12:00</p>
             <p>Main Pool, The Oberoi</p>
             <p className="flex "></p>
           </div>
@@ -319,15 +319,15 @@ const Nails_Cntr = () => {
             </p>
             <p>Baraat</p>
             <p>12:00 </p>
-            <p>Location: Olive tree driveway, The Oberoi</p>
+            <p> Olive tree driveway, The Oberoi</p>
             <p className="flex "></p>
 
             <p className="mt-8 mb-2 text-[1.3rem] leading-[1.3rem]">
               PYAAR DOSTI HAI
             </p>
             <p>Wedding Ceremony </p>
-            <p>15:00 </p>
-            <p>Location: Patio, The Oberoi</p>
+            <p>14:00 </p>
+            <p>The Oberoi Marrakesh</p>
             <p className="flex "></p>
           </div>
 
@@ -349,7 +349,7 @@ const Nails_Cntr = () => {
             </p>
             <p>Reception</p>
             <p>20:00</p>
-            <p>Grand Canal, The Oberoi</p>
+            <p>The Oberoi Marrakesh</p>
             <p className="flex "></p>
 
             <p className="mt-8 mb-2 text-[1.3rem] leading-[1.3rem]">

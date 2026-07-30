@@ -1465,14 +1465,14 @@ export default function ScrollAnimatedPath() {
         {
           title: "HERE COMES THE SUN",
           name: "Haldi Ceremony",
-          time: "13:00",
+          time: "12:00",
           location: "Main Pool, The Oberoi",
         },
         {
           title: "NAMASTE MARRAKECH",
           name: "Sangeet",
           time: "19:30",
-          location: "The Oberoi",
+          location: "Gardens, The Oberoi",
         },
       ],
     },
@@ -1504,14 +1504,14 @@ export default function ScrollAnimatedPath() {
         {
           title: "PYAAR DOSTI HAI",
           name: "Wedding Ceremony",
-          time: "15:00",
-          location: "The Patio, The Oberoi",
+          time: "14:00",
+          location: " The Oberoi Marrakech",
         },
         {
           title: "DESTINATION: FOREVER",
           name: "Reception",
-          time: "19:00",
-          location: "Grand Canal, The Oberoi",
+          time: "20:00",
+          location: "The Oberoi Marrakech",
         },
         {
           title: "DRUNK IN LOVE",
