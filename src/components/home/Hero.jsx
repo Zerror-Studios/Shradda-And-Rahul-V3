@@ -1049,7 +1049,7 @@ useEffect(() => {
                       <span className="cursor-hint " />
                     </div>
 
-                    <p className="menu-text F1 font-semibold Font_CV transition-all duration-500 ease-out   opacity-100 text-[14px] text-[#F1E2C6] leading-[15px] uppercase max-w-[150px] text-center">
+                    <p className="menu-text F1 font-semibold Font_CV transition-all duration-500 ease-out opacity-100 text-[#F1E2C6] uppercase max-w-[150px] text-center text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
                       {item.title}
                     </p>
                   </div>

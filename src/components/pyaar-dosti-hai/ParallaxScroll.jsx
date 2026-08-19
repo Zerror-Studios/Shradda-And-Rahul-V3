@@ -585,11 +585,7 @@ export default function ParallaxScroll() {
           {DATA.map((item, i) => (
             <p
               key={i}
-              className={`Font_CV absolute inset-0 flex items-center justify-center px-1 max-sm:text-[2rem] text-[1.5rem] leading-[1.5rem]  text-[#F1E2C6]/85 transition-all duration-500 ease-out   ${
-                i === activeIndex
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-3 pointer-events-none"
-              }`}
+              className={`Font_CV absolute inset-0 flex items-center justify-center px-1 text-[#F1E2C6]/85 transition-all duration-500 ease-out ${ i === activeIndex ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none" } text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]`}
             >
               {item.pTxt}
             </p>

@@ -889,8 +889,8 @@ const popupHTML = (place) => `
       <span style="font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:${BG};opacity:0.7;">${CATEGORY_LABELS[place.category]}</span>
     </div>
     <strong style="color:${BG};font-size:14px;display:block;margin-bottom:4px;">${place.name}</strong>
-    <p style="color:#4a3a2f;font-size:12.5px;line-height:1.45;margin:0 0 6px 0;">${place.description}</p>
-    <p style="color:${BG};font-style:italic;font-size:11.5px;margin:0;">${place.note}</p>
+    <p class="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]" style="color:#4a3a2f;margin:0 0 6px 0;">${place.description}</p>
+    <p class="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]" style="color:${BG};font-style:italic;margin:0;">${place.note}</p>
     ${
       place.personalNote
         ? `<div style="margin-top:8px;padding:6px 8px;background:#EAF1F7;border-radius:6px;color:#2c4a63;font-size:11px;line-height:1.4;">${place.personalNote}</div>`
@@ -1044,10 +1044,10 @@ const MarrakechMap = () => {
         <h2 className="text-2xl max-md:text-[10vw] max-md:leading-[12vw] md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
           Marrakech <br className="sm:hidden" /> Map
         </h2>
-        <p className="text-sm md:text-base max-sm:hidden  text-[#F1E2C6]  max-sm:text-[1.2rem] max-sm:leading-[1.4rem] mb-6 text-center max-w-md mx-auto">
+        <p className="max-sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
           Hover a place on the list to see its story on the map.
         </p>
-        <p className="text-sm md:text-base sm:hidden   text-[#F1E2C6]  max-sm:text-[1.2rem] max-sm:leading-[1.4rem] mb-6 text-center max-w-md mx-auto">
+        <p className="sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
          Tap the place on the list to see its story on the map.
         </p>
 
@@ -1104,7 +1104,7 @@ const MarrakechMap = () => {
               return (
                 <div key={section.id} className="mb-5 last:mb-0">
                   <p
-                    className="text-xs font-medium uppercase tracking-wide mb-2 opacity-70"
+                    className="font-medium uppercase tracking-wide mb-2 opacity-70 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"
                     style={{ color: BG }}
                   >
                     {section.title}

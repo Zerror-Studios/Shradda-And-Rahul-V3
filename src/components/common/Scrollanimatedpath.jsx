@@ -1303,7 +1303,7 @@ function EventModal({ day, onClose }) {
               key={idx}
               className="border-t border-[#F1E2C6]/30 pt-4 first:border-t-0 first:pt-0"
             >
-              <p className="uppercase tracking-[0.15em] text-[0.75rem] mb-1 opacity-80">
+              <p className="uppercase tracking-[0.15em] mb-1 opacity-80 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
                 {event.title}
               </p>
               <h3 className="Font_CV text-[1.15rem] mb-3">{event.name}</h3>
@@ -1556,7 +1556,7 @@ export default function ScrollAnimatedPath() {
             Wedding itinerary
           </h3>
 
-          <p className="max-w-[800px] max-sm:text-justify  tracking-tight text-[#F1E2C6] text-[0.9rem] leading-[1.1rem] max-sm:px-6">
+          <p className="max-w-[800px] max-sm:text-justify tracking-tight text-[#F1E2C6] max-sm:px-6 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
             We've thoughtfully planned each moment of our special day. Please
             find the itinerary below and join us in celebrating every chapter of
             our wedding journey. Join us as we celebrate our wedding day with

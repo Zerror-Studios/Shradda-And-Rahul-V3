@@ -270,10 +270,7 @@ export default function FAQSection() {
                       <div className="max-w-[700px]">
                         {item.intro && (
                           <p
-                            className={`
-                            tracking-tight font-medium text-[#F1E2C6]  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] 
-                            mb-3
-                          `}
+                            className={`tracking-tight font-medium text-[#F1E2C6] mb-3 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]`}
                           >
                             {item.intro}
                           </p>
@@ -282,9 +279,7 @@ export default function FAQSection() {
                           {item.answer.map((line, lineIndex) => (
                             <p
                               key={lineIndex}
-                              className={`
-                              tracking-tight  text-[#F1E2C6]  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] 
-                            `}
+                              className={`tracking-tight text-[#F1E2C6] text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]`}
                             >
                               <span className="font-semibold">
                                 {line.label}:
@@ -296,10 +291,7 @@ export default function FAQSection() {
                       </div>
                     ) : (
                       <p
-                        className={`
-                        tracking-tight font-medium text-[#F1E2C6]  text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] 
-                        max-w-[700px]
-                      `}
+                        className={`tracking-tight font-medium text-[#F1E2C6] max-w-[700px] text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]`}
                       >
                         {item.answer}
                       </p>

@@ -508,12 +508,12 @@ export default function HeroSection() {
             className={`flex justify-center items-center mt-[0.8rem] sm:mt-[1rem] ${isLoaded ? "animate-fade-in-up delay-100" : "opacity-0"
               }`}
           >
-            <p className=" tracking-tight text-[#F1E2C6] sm:max-w-[42vw] flex flex-col gap-2 text-[1rem] sm:text-[0.9rem] leading-[1.3rem] px-2 sm:px-0">
+            <p className="tracking-tight text-[#F1E2C6] sm:max-w-[42vw] flex flex-col gap-2 px-2 sm:px-0 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               "Pyaar dosti hai," Rahul told Shradda, the line every 2000s Bollywood has tattooed somewhere on their heart. Under the pillars of the Millennium Gate Museum, he asked her to be his forever.
-               <br />
-               <br />
-               No spoilers here: you already know how she answered.
-              <br/> 
+              <br />
+              <br />
+              No spoilers here: you already know how she answered.
+              <br />
               <br />
               We can't wait to celebrate our journey through time, space, and destiny with you,  from Dosti in Boston to Pyaar everywhere.
             </p>
@@ -601,7 +601,7 @@ export default function HeroSection() {
                 <h2 className="text-[2rem] sm:text-[2.8rem] leading-[1.1] Font_CV text-[#e7ddd4]">
                   {translations[selectedLanguage].text}
                 </h2>
-                <p className="mt-[0.6rem] sm:mt-[0.8rem] text-[0.85rem] sm:text-[1rem] Font_CV tracking-[0.12rem] sm:tracking-[0.15rem] uppercase text-[#e7ddd4]">
+                <p className="mt-[0.6rem] sm:mt-[0.8rem] Font_CV tracking-[0.12rem] sm:tracking-[0.15rem] uppercase text-[#e7ddd4] text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
                   Pyaar Dosti Hai
                 </p>
               </div>

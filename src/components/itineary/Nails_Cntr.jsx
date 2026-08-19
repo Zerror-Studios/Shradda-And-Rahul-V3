@@ -164,7 +164,7 @@ const Nails_Cntr = () => {
 
             <p
               ref={paraRef}
-              className="max-w-[800px]  tracking-tight text-center text-[#F1E2C6] text-[1.1rem] leading-[1.1rem] max-sm:px-6"
+              className="max-w-[800px] tracking-tight text-center text-[#F1E2C6] max-sm:px-6 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"
             >
               We've thoughtfully planned each moment of our special day. Please
               find the itinerary below and join us in celebrating every chapter
@@ -252,11 +252,11 @@ const Nails_Cntr = () => {
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY ONE: 20 OCTOBER, 2026
             </h1>
-            <p className="text-[1.3rem] leading-[1.3rem]">AZUL</p>
-            <p>Welcome Dinner</p>
-            <p>19:00</p>
-            <p>Secret Location</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">AZUL</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Welcome Dinner</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">19:00</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Secret Location</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
           </div>
 
           {/* Detail-SVG-2-Data */}
@@ -272,11 +272,11 @@ const Nails_Cntr = () => {
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY TWO: 21 OCTOBER, 2026
             </h1>
-            <p className="text-[1.3rem] leading-[1.3rem]">HERE COMES THE SUN</p>
-            <p>Haldi Ceremony</p>
-            <p>12:00</p>
-            <p>Main Pool, The Oberoi</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">HERE COMES THE SUN</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Haldi Ceremony</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">12:00</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Main Pool, The Oberoi</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
           </div>
 
           {/* Detail-SVG-3-Data */}
@@ -292,13 +292,13 @@ const Nails_Cntr = () => {
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY TWO: 21 OCTOBER, 2026
             </h1>
-            <p className="text-[1.2rem] leading-[1.2rem] max-w-[400px]">
+            <p className="max-w-[400px] text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               NAMASTE MARRAKECH
             </p>
-            <p>Sangeet</p>
-            <p>19:30</p>
-            <p>Gardens, The Oberoi</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Sangeet</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">19:30</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Gardens, The Oberoi</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
           </div>
 
           {/* Detail-SVG-4-Data */}
@@ -314,21 +314,21 @@ const Nails_Cntr = () => {
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY THREE: 22 OCTOBER, 2026
             </h1>
-            <p className="text-[1.3rem] leading-[1.3rem]">
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               DILWALE DULHANIA LE JAAYENGE
             </p>
-            <p>Baraat</p>
-            <p>12:00 </p>
-            <p> Olive tree driveway, The Oberoi</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Baraat</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">12:00 </p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"> Olive tree driveway, The Oberoi</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
 
-            <p className="mt-8 mb-2 text-[1.3rem] leading-[1.3rem]">
+            <p className="mt-8 mb-2 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               PYAAR DOSTI HAI
             </p>
-            <p>Wedding Ceremony </p>
-            <p>14:00 </p>
-            <p>The Oberoi Marrakesh</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Wedding Ceremony </p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">14:00 </p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">The Oberoi Marrakesh</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
           </div>
 
           {/* Detail-SVG-5-Data */}
@@ -344,21 +344,21 @@ const Nails_Cntr = () => {
             <h1 className="mb-2 text-[1.5rem] leading-[1.5rem]">
               DAY THREE: 22 OCTOBER, 2026
             </h1>
-            <p className="text-[1.3rem] leading-[1.3rem]">
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               DESINTATION: FOREVER
             </p>
-            <p>Reception</p>
-            <p>20:00</p>
-            <p>The Oberoi Marrakesh</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Reception</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">20:00</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">The Oberoi Marrakesh</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
 
-            <p className="mt-8 mb-2 text-[1.3rem] leading-[1.3rem]">
+            <p className="mt-8 mb-2 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               DRUNK IN LOVE
             </p>
-            <p>After Party </p>
-            <p>23:00 to Sunrise</p>
-            <p> The Oberoi</p>
-            <p className="flex "></p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">After Party </p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">23:00 to Sunrise</p>
+            <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"> The Oberoi</p>
+            <p className="flex text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"></p>
           </div>
         </div>
         {/* ===================== END DESKTOP / TABLET ONLY ===================== */}
@@ -376,13 +376,13 @@ const Nails_Cntr = () => {
                     key={ei}
                     className="Font_CV text-[#F1E2C6] flex flex-col gap-1 text-[1rem] leading-[1.2rem]"
                   >
-                    <p className="text-[1.15rem] leading-[1.2rem] mb-1">
+                    <p className="mb-1 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
                       {e.title}
                     </p>
-                    <p>{e.name}</p>
-                    <p>{e.time}</p>
-                    <p>{e.location}</p>
-                    <p>Dress Code : {e.dress}</p>
+                    <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">{e.name}</p>
+                    <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">{e.time}</p>
+                    <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">{e.location}</p>
+                    <p className="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Dress Code : {e.dress}</p>
                   </div>
                 ))}
               </div>

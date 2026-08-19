@@ -152,7 +152,7 @@ const ChaptersAccordion = () => {
           className="w-[60vh] bg-black/5 backdrop-blur-md fixed bottom-[5%] left-1/2 -translate-x-1/2 z-[10000] rounded-lg p-4 shadow-xl overflow-hidden"
         >
           <div className="flex justify-between items-center mb-4">
-            <p className="font-medium">Chapters</p>
+            <p className="font-medium text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">Chapters</p>
 
             <button onClick={closeAccordion} className="cursor-pointer text-lg">
               <IoCloseSharp />

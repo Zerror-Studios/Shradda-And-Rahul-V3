@@ -103,7 +103,7 @@ const Destiny = () => {
 
         <div className="w-full h-fit flex mt-[2vw]  TT2T COLOR_TEXT_RED gap-[2rem] max-sm:gap-[20px] max-sm:flex-col">
           <div className="w-1/2  max-sm:w-full mx-auto   text-center max-sm:text-justify max-sm:pr-0">
-            <p className="Font_CI text-[1.2rem] text-[#4f322d]">
+            <p className="Font_CI text-[#4f322d] text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
               {" "}
               Envision a timeline of all the destinations we visited as
               long-distance lovers. Starts with Covid lockdown- park walk chats
