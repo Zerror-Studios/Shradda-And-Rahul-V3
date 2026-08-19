@@ -164,7 +164,7 @@ const Nails_Cntr = () => {
 
             <p
               ref={paraRef}
-              className="max-w-[800px]  tracking-tight text-center text-[#F1E2C6] text-[1rem] leading-[1.1rem] max-sm:px-6"
+              className="max-w-[800px]  tracking-tight text-center text-[#F1E2C6] text-[1.1rem] leading-[1.1rem] max-sm:px-6"
             >
               We've thoughtfully planned each moment of our special day. Please
               find the itinerary below and join us in celebrating every chapter

@@ -29,26 +29,23 @@ const page = () => {
 
         <section className="h-fit max-md:h-fit  mx-auto  WeddingTextCont pt-5 flex items-center justify-center BGCLR px-6">
           <div className=" text-center text-[#F1E2C6]  ">
-            <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify   text-[1rem] leading-[1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
-              Marrakech has always had our hearts- the ochre walls, the lush
-              gardens, the vibrant souks with both loud and quiet magic tucked
-              into every corner. It's the kind of beauty that is true to us- a
-              perfect blend of chaos and calm.
+            <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify   text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem] COLOR_TEXT_RED  ">
+              Marrakech has always had our hearts - rich history, ochre walls, lush gardens, and vibrant souks. It strikes a beautiful balance of calm vs chaos and features magic around every corner. True to us, this city embraces a warm spirit and dynamic rhythm that makes its guests feel alive!
+
               <br />
               <br />
-              Set on 113,312 square meters of citrus orchards and centuries-old
-              olive groves, The Oberoi, Marrakech draws on the grandeur of
-              ancient palaces. Its central courtyard echoes the 14th-century
-              Medersa Ben Youssef, one of the city's most iconic landmarks,
-              while landscaped gardens, tranquil water features, and the Atlas
-              Mountains bless it all. Most importantly, The Oberoi is an ode to
-              our Indian heritage- something that has been deeply woven into our
-              being, despite us growing up outside India. At the Oberoi, where
-              Indian soul meets Moroccan architecture, we celebrate a love that
-              grew across continents, is grounded by desi culture, and is
-              nurtured by love, family, respect, and flow (our four pillars). We
-              can’t wait to bring all our worlds together with you, in one
-              place, under one sky, in one heart.
+              Set on 28 acres of ancient olive groves and citrus orchards, The Oberoi Marrakech is home to our celebrations. It’s hard to feign nonchalance upon entering this property’s stunning grounds. With an intentionally unassuming entryway, guests are greeted by a breathtaking juxtaposition when they step inside - revealing a grandeur inspired by the Moorish palaces of Andalusia. At the helm of its culinary experience is Michelin-starred chef Rohit Ghai.
+
+                <br />
+              <br />
+
+              The Oberoi Marrakech is a monument to artisanal refinement and patience. Look up and you’ll notice a jaw-dropping domed-ceiling that was intricately handcrafted over years. While taking a leisurely stroll through the courtyard, feel the cool touch of marble as you gracefully swan through towering arches. It’s difficult not to be captivated by the stunning attention-to-detail at every turn. Past the zellige tiles, you’ll find Berber and Moghul paintings, studded sofas handmade in Casablanca, and elegant fireplaces. To bring this entire vision to life, they enlisted a collective of 250 master craftsmen including specialist tilers from Fez, Nejjarine Square carpenters, and plaster carvers from Sidi Ghanem.
+
+              <br />
+              <br />
+
+              Beyond the grand canal, a panoramic view of the Atlas mountains hugs the horizon. Such was the uncompromising scale and ambition of this project that construction was heavily delayed by a world shortage of Carrara marble. Ironically, Rahul and Shradda’s romance was blossoming during this same exact period. Perhaps above all, the Oberoi Marrakech is an ode to our Indian heritage which is deeply woven into our souls and very existence. We extend a warm welcome to celebrate a love that grew across continents, is grounded by our desi roots, and is nurtured by four pillars: love, family, respect, and flow. We simply cannot wait for you to join us as our worlds and hearts collide - under a single roof and beneath the sacred skies of Marrakech!
+
             </p>
           </div>
         </section>
