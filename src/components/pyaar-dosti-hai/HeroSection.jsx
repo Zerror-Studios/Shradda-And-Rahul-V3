@@ -509,13 +509,13 @@ export default function HeroSection() {
               }`}
           >
             <p className="tracking-tight text-[#F1E2C6] sm:max-w-[42vw] flex flex-col gap-2 px-2 sm:px-0 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
-              "Pyaar dosti hai," Rahul told Shradda, the line every 2000s Bollywood has tattooed somewhere on their heart. Under the pillars of the Millennium Gate Museum, he asked her to be his forever.
+              “Pyaar Dosti Hai” is the dialogue Rahul charmingly delivered to Shradda as the sun set behind the towering pillars of the Millennium Gate Museum in Atlanta. 
               <br />
               <br />
-              No spoilers here: you already know how she answered.
+              No spoilers here. If you’re a 90s Bollywood fan, you already know how Shradda answered. He asked her to be his forever and the rest is history.
               <br />
               <br />
-              We can't wait to celebrate our journey through time, space, and destiny with you,  from Dosti in Boston to Pyaar everywhere.
+              From friendship in Boston to love in Morocco, we can’t wait to celebrate our beautiful journey through space and time with you.
             </p>
           </div>
         </div>

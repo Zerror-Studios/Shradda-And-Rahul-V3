@@ -33,10 +33,10 @@ gsap.registerPlugin(ScrollTrigger);
 const DATA = [
   
   {
-    img: "/clientImg/Boston1.jpg",
+    img: "/images/home/BT.jpeg",
     text: "Boston",
     year: "2013",
-    pTxt: "Where their Dosti began.",
+    pTxt: "Where it all began! Scoozi, Bijou and Mario Kart.",
     landmarks: [
       { icon: GraduationCap, label: "Boston University" },
       { icon: Gamepad2, label: "Mario Kart" },
@@ -99,7 +99,7 @@ const DATA = [
     img: "/clientImg/Miami.jpg",
     text: "Miami",
     year: "2023",
-    pTxt: "  ",
+    pTxt: " Birthday surprise! “Party in the city where the heat is on - All night, on the beach 'til the break of dawn: Welcome to Miami - Bienvenidos a Miami.” ",
     landmarks: [
       // { icon: Pizza, label: "Joe's Pizza", href: "https://www.joespizzanyc.com/" },
       // { icon: Utensils, label: "Kati Roll Company", href: "https://www.tkrc.co.uk/" },
