@@ -10,9 +10,9 @@ const BackgroundMusic = ({ src = "/music/BGMUSIC2.mp3" }) => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.volume = 0.5; // default 50%
+    audio.volume = 0.3; 
 
-    // Try to autoplay WITH sound first.
+
     const tryPlay = async () => {
       try {
         audio.muted = false;

@@ -645,7 +645,7 @@ const Hero = () => {
     });
 
     if (audioRef.current) {
-      audioRef.current.volume = 0.4;
+      audioRef.current.volume = 0.3;
       audioRef.current.muted = false;
       audioRef.current.play().catch(() => {
         // Autoplay may still be blocked in some browsers; ignore silently.
@@ -765,9 +765,7 @@ const Hero = () => {
       );
     }, MainContHome);
 
-    // Give the browser a beat to settle real layout (fonts/images), then
-    // make sure ScrollTrigger's measurements match reality — this is what
-    // stops the "everything ends but there's still blank scroll left" gap.
+   
     const refreshId = requestAnimationFrame(() => ScrollTrigger.refresh());
     window.addEventListener("load", () => ScrollTrigger.refresh());
 
