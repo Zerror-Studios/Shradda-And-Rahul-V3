@@ -830,7 +830,7 @@ const Hero = () => {
       }`}
     >
       {/* Background music — update the src to point at your mp3 file */}
-      <audio ref={audioRef} src="/music/BGMUSIC2.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/music/BGMUSIC.mp3" loop preload="auto" />
 
       {/* ── Intro Gate Overlay ─────────────────────────────────────────── */}
       {showIntro && (

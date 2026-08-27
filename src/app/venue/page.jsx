@@ -1,3 +1,4 @@
+import BackgroundMusic from "@/components/common/BackgroundMusic";
 import Header from "@/components/common/Header";
 import HeroSectionVenue from "@/components/venu/HeroSectionVenue";
 import ImageGallery from "@/components/venu/ImageGallery";
@@ -17,6 +18,9 @@ const page = () => {
   return (
     <>
       <div className="w-full h-fit overflow-x-hidden BGCLR relative">
+
+        <BackgroundMusic />
+
         {/* <VenueHero /> */}
         <HeroSectionVenue />
         <WeddingVenue />
