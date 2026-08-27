@@ -645,7 +645,7 @@ const Hero = () => {
     });
 
     if (audioRef.current) {
-      audioRef.current.volume = 0.6;
+      audioRef.current.volume = 0.4;
       audioRef.current.muted = false;
       audioRef.current.play().catch(() => {
         // Autoplay may still be blocked in some browsers; ignore silently.
@@ -803,24 +803,25 @@ const Hero = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-useEffect(() => {
-  if (showIntro || isTablet || !scrollHintRef.current) return;
+  useEffect(() => {
+    if (showIntro || isTablet || !scrollHintRef.current) return;
 
-  const ctx = gsap.context(() => {
-    gsap.to(scrollHintRef.current, {
-      opacity: 0,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: MainContHome.current,
-        start: 'top top',
-        end: '20% top',
-        scrub: true,
-      },
+    const ctx = gsap.context(() => {
+      gsap.to(scrollHintRef.current, {
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: MainContHome.current,
+          start: "top top",
+          end: "20% top",
+          scrub: true,
+        },
+      });
     });
-  });
 
-  return () => ctx.revert();
-}, [showIntro, isTablet]);
+    return () => ctx.revert();
+  }, [showIntro, isTablet]);
+
   return (
     <div
       ref={MainContHome}
@@ -829,7 +830,7 @@ useEffect(() => {
       }`}
     >
       {/* Background music — update the src to point at your mp3 file */}
-      <audio ref={audioRef} src="/music/BGMUSIC.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/music/BGMUSIC2.mp3" loop preload="auto" />
 
       {/* ── Intro Gate Overlay ─────────────────────────────────────────── */}
       {showIntro && (
