@@ -193,7 +193,7 @@ const DATA = [
     img: "/clientImg/20.webp",
     text: "London",
     year: "2026",
-    pTxt: "The next chapter, waiting to be written.",
+    pTxt: "From the lab to Lucky Cat. Park Chinois to pancakes at 24hr diners. Riding the London Underground (sometimes). And someday, Hyde Park to Gymkhana if we don't walk to Srilalitha instead. When not chasing fragrant curries and falafel wraps, it’s dancing in the living room to good music.",
     landmarks: [],
   },
 ];
