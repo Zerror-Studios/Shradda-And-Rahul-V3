@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Countdown = () => {
-  const targetDate = new Date("2026-11-14T00:00:00");
+  const targetDate = new Date("2026-10-20T00:00:00");
 
   const calculateTimeLeft = () => {
     const now = new Date();
@@ -56,7 +56,7 @@ const Countdown = () => {
 
   return (
     <>
-   
+
       {/* ================================================================ */}
       <section className="pb-[20vh] bg-[#D25F27] text-[#F1E2C6] max-md:pb-[0vh] max-md:pb-0 pt-22  max-md:pt-0 w-full   max-md:h-fit max-md:pb-[5vh] select-none   max-md:mt-0 flex flex-col justify-center items-center text-center">
         <div className="w-full h-fit flex justify-center gap-10 max-md:gap-1 COLOR_TEXT_RED CDD1 Font_CV">

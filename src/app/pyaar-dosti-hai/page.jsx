@@ -13,7 +13,7 @@ const page = () => {
         <HeroSection />
         {/* <HeartSection /> */}
         <ParallaxScroll />
-        <Countdown/>
+        <Countdown />
         <Header />
       </div>
     </>
