@@ -86,18 +86,23 @@ const page = () => {
           </div>
         </section>
 
-        <section className="h-fit max-md:h-fit  mx-auto mt-10  WeddingTextCont pt-5 flex items-center justify-center BGCLR px-6">
-          <div className=" text-center text-[#F1E2C6]  ">
+
+        {/* IMFO */}
+        <section className="WeddingTextCont BGCLR mx-auto border border-[#F1E2C6] w-[90vw] sm:w-fit p-5 mt-10 flex h-fit items-center relative justify-center px-6 pt-5">
+
+          <div className="text-center text-[#F1E2C6]">
             <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify COLOR_TEXT_RED text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
-              We have teamed up with I Morocco Tours to design a bespoke tour for you. This is an optional tour to the Atlas Mountains and Sahara’s desert that you can book directly with the agency. 
-              <a 
-  href="/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf" 
-  download="Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
-  target="_blank"
-  style={{ cursor: "pointer", color: "blue", textDecoration: "underline" }}
->
-  Click
-</a> here to find out more!
+              We have teamed up with I Morocco Tours to design a bespoke tour for you.
+              This is an optional tour to the Atlas Mountains and Sahara’s desert that
+              you can book directly with the agency.{" "}
+              <a
+                href="/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
+                download="Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
+                className="cursor-pointer font-semibold text-[#F1E2C6] underline underline-offset-4 transition-opacity hover:opacity-80"
+              >
+                Click
+              </a>{" "}
+              to find out more!
             </p>
           </div>
         </section>
