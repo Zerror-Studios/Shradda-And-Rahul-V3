@@ -100,7 +100,7 @@ const page = () => {
                 download="Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
                 className="cursor-pointer font-semibold text-[#F1E2C6] underline underline-offset-4 transition-opacity hover:opacity-80"
               >
-                Click
+                Click Here
               </a>{" "}
               to find out more!
             </p>
