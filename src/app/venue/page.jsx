@@ -1,3 +1,4 @@
+'use client'
 import BackgroundMusic from "@/components/common/BackgroundMusic";
 import Header from "@/components/common/Header";
 import HeroSectionVenue from "@/components/venu/HeroSectionVenue";
@@ -14,6 +15,21 @@ const page = () => {
     "/new_img/S2.png",
     "/new_img/S3.png",
   ];
+
+
+  const handleDownload = () => {
+    // 1. एक नया anchor <a> टैग बनाएं
+    const link = document.createElement("a");
+    // 2. पब्लिक फोल्डर में रखे PDF का पाथ दें
+    link.href = "/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf";
+    // 3. डाउनलोड होने वाली फाइल का नाम सेट करें
+    link.download = "/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf";
+
+    // 4. लिंक को क्लिक करवाएं और फिर हटा दें
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -69,6 +85,24 @@ const page = () => {
             </p>
           </div>
         </section>
+
+        <section className="h-fit max-md:h-fit  mx-auto mt-10  WeddingTextCont pt-5 flex items-center justify-center BGCLR px-6">
+          <div className=" text-center text-[#F1E2C6]  ">
+            <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify COLOR_TEXT_RED text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
+              We have teamed up with I Morocco Tours to design a bespoke tour for you. This is an optional tour to the Atlas Mountains and Sahara’s desert that you can book directly with the agency. 
+              <a 
+  href="/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf" 
+  download="Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
+  target="_blank"
+  style={{ cursor: "pointer", color: "blue", textDecoration: "underline" }}
+>
+  Click
+</a> here to find out more!
+            </p>
+          </div>
+        </section>
+
+
         <MarrakechMap />
         <Header />
       </div>
