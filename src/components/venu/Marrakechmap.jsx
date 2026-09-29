@@ -1,5 +1,6 @@
 
 
+
 // // "use client";
 
 // // import React, { useEffect, useRef, useState } from "react";
@@ -11,57 +12,285 @@
 
 // // // Small inline SVG glyphs per category (kept simple/monoline, colored via `currentColor`)
 // // const CATEGORY_ICONS = {
-// //   landmark: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>`,
+// //   hotel: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14"/><path d="M13 21V11a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v10"/><path d="M7 9h.01M7 13h.01M7 17h.01"/><path d="M3 21h18"/></svg>`,
+// //   square: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M4 21h16"/></svg>`,
+// //   landmark: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M12 7v13M8 20h8"/></svg>`,
 // //   palace: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6M12 4v3"/></svg>`,
+// //   madrasa: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><rect x="9" y="9" width="6" height="6" rx="0.5"/></svg>`,
 // //   garden: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-5 4-6 4-11a4 4 0 0 0-8 0c0 5 4 6 4 11z"/><path d="M12 11V2"/></svg>`,
-// //   market: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 2H7.5a2 2 0 0 1-2-2L4 8z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>`,
-// //   museum: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><circle cx="9.5" cy="9.5" r="1.5"/><path d="M20 15l-4.5-4.5a1 1 0 0 0-1.4 0L8 17"/></svg>`,
+// //   riad_garden: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>`,
+// //   mountains: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-11 4 6.5L16 9l5 11z"/></svg>`,
+// //   valley: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c2 0 2 3 4 3s2-3 4-3 2 3 4 3 2-3 4-3 2 3 4 3"/><path d="M2 14c2 0 2 3 4 3s2-3 4-3 2 3 4 3 2-3 4-3 2 3 4 3"/></svg>`,
+// //   desert: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M2 18c2.5 0 3.5-3 6-3s3.5 3 6 3 3.5-3 6-3 1.5 2 2 2"/></svg>`,
+// //   multi_day: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2 2M7.6 16.4l-2 2M18.4 18.4l-2-2M7.6 7.6l-2-2"/></svg>`,
+// //   garden_riad: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-5 4-6 4-11a4 4 0 0 0-8 0c0 5 4 6 4 11z"/><path d="M12 11V2"/></svg>`,
+// //   rooftop: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>`,
+// //   cafe: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2c0 1-1 1-1 2s1 1 1 2M12 2c0 1-1 1-1 2s1 1 1 2"/></svg>`,
 // // };
 
 // // const CATEGORY_LABELS = {
-// //   landmark: "Landmarks & squares",
-// //   palace: "Palaces & tombs",
-// //   garden: "Gardens",
-// //   market: "Medina & souks",
-// //   museum: "Museums",
+// //   hotel: "Hotel",
+// //   square: "Square",
+// //   landmark: "Landmark",
+// //   palace: "Palace",
+// //   madrasa: "Madrasa",
+// //   garden: "Garden",
+// //   riad_garden: "Riad Garden",
+// //   mountains: "Mountains",
+// //   valley: "Valley",
+// //   desert: "Desert",
+// //   multi_day: "Multi-day",
+// //   garden_riad: "Garden Riad",
+// //   rooftop: "Rooftop",
+// //   cafe: "Café",
 // // };
 
-// // // Real coordinates for Marrakech tourist attractions, grouped by category
-// // const PLACES = [
-// //   { id: "jemaa", name: "Jemaa el-Fnaa", category: "landmark", lat: 31.6258, lng: -7.9891 },
-// //   { id: "koutoubia", name: "Koutoubia Mosque", category: "landmark", lat: 31.6238, lng: -7.9932 },
-// //   { id: "qubba", name: "Almoravid Qubba", category: "landmark", lat: 31.6294, lng: -7.9836 },
-// //   { id: "madrasa", name: "Ben Youssef Madrasa", category: "landmark", lat: 31.6314, lng: -7.9838 },
-
-// //   { id: "bahia", name: "Bahia Palace", category: "palace", lat: 31.6215, lng: -7.9836 },
-// //   { id: "badi", name: "El Badi Palace", category: "palace", lat: 31.6178, lng: -7.9832 },
-// //   { id: "saadian", name: "Saadian Tombs", category: "palace", lat: 31.6198, lng: -7.9885 },
-// //   { id: "darbacha", name: "Dar El Bacha", category: "palace", lat: 31.6303, lng: -7.9903 },
-
-// //   { id: "majorelle", name: "Majorelle Garden", category: "garden", lat: 31.6417, lng: -8.0031 },
-// //   { id: "menara", name: "Menara Gardens", category: "garden", lat: 31.6089, lng: -8.0186 },
-// //   { id: "agdal", name: "Agdal Gardens", category: "garden", lat: 31.6055, lng: -7.9865 },
-// //   { id: "secret", name: "Le Jardin Secret", category: "garden", lat: 31.6294, lng: -7.9868 },
-
-// //   { id: "souks", name: "Souks / Medina", category: "market", lat: 31.6295, lng: -7.9811 },
-// //   { id: "mellah", name: "Mellah (Jewish Quarter)", category: "market", lat: 31.6198, lng: -7.9822 },
-
-// //   { id: "musee", name: "Marrakech Museum", category: "museum", lat: 31.6308, lng: -7.9835 },
-// //   { id: "ysl", name: "Yves Saint Laurent Museum", category: "museum", lat: 31.6421, lng: -8.0016 },
+// // // Real-world places, grouped into the sections from the trip notes.
+// // // Each place carries its own description + short "note" line (shown on hover),
+// // // and Ben Youssef Madrasa carries an extra personal note.
+// // const SECTIONS = [
+// //   {
+// //     id: "stay",
+// //     title: "Where We're Staying",
+// //     places: [
+// //       {
+// //         id: "oberoi",
+// //         name: "The Oberoi Marrakech",
+// //         category: "hotel",
+// //         // Approximate — the resort sits off Route de Ouarzazate, ~25 min
+// //         // south of the medina near the palmeraie/golf belt. Worth a quick
+// //         // check against Google Maps for the exact gate before this ships.
+// //         lat: 31.5985,
+// //         lng: -7.9105,
+// //         description:
+// //           "Twenty-eight acres of citrus orchards and olive groves on the edge of the city, with a central courtyard modeled on the Ben Youssef Madrasa and views out to the snow-capped Atlas Mountains.",
+// //         note: "~25 min from the medina",
+// //       },
+// //     ],
+// //   },
+// //   {
+// //     id: "medina",
+// //     title: "The Medina",
+// //     places: [
+// //       {
+// //         id: "jemaa",
+// //         name: "Jemaa el-Fnaa",
+// //         category: "square",
+// //         lat: 31.6258,
+// //         lng: -7.9891,
+// //         description:
+// //           "The beating heart of the medina, and a UNESCO-listed open-air theatre by night. Juice stalls, storytellers, and food carts that fill the square as the sun drops.",
+// //         note: "Best after 6pm — go hungry",
+// //       },
+// //       {
+// //         id: "koutoubia",
+// //         name: "Koutoubia Mosque",
+// //         category: "landmark",
+// //         lat: 31.6238,
+// //         lng: -7.9932,
+// //         description:
+// //           "A 12th-century minaret that still anchors the skyline. Non-Muslim visitors can't enter, but the gardens and exterior at dusk are worth the walk alone.",
+// //         note: "15 min, viewed from outside",
+// //       },
+// //       {
+// //         id: "bahia",
+// //         name: "Bahia Palace",
+// //         category: "palace",
+// //         lat: 31.6215,
+// //         lng: -7.9836,
+// //         description:
+// //           'A 19th-century palace built to be "the brilliant one" — and it is. Carved cedar ceilings, painted courtyards, and zellige tilework in every direction you look.',
+// //         note: "Allow 1 hour",
+// //       },
+// //       {
+// //         id: "madrasa",
+// //         name: "Ben Youssef Madrasa",
+// //         category: "madrasa",
+// //         lat: 31.6314,
+// //         lng: -7.9838,
+// //         description:
+// //           "Once one of the largest Islamic colleges in North Africa. The central courtyard — carved stucco, zellige, cedar lattice — is almost overwhelming in the best way.",
+// //         note: "45 min",
+// //         personalNote:
+// //           "A little personal note: this very courtyard is the architectural inspiration behind the patio at The Osera — where we'll be saying our vows.",
+// //       },
+// //     ],
+// //   },
+// //   {
+// //     id: "gardens",
+// //     title: "Gardens and Gueliz",
+// //     places: [
+// //       {
+// //         id: "majorelle",
+// //         name: "Jardin Majorelle & YSL Museum",
+// //         category: "garden",
+// //         lat: 31.6417,
+// //         lng: -8.0031,
+// //         description:
+// //           "The cobalt-blue villa garden built by Jacques Majorelle, later restored by Yves Saint Laurent. The blue that gives the garden its name is the same one we borrowed for this page.",
+// //         note: "Book timed tickets online in advance · 1.5–3 hrs",
+// //       },
+// //       {
+// //         id: "secret",
+// //         name: "Le Jardin Secret",
+// //         category: "riad_garden",
+// //         lat: 31.6294,
+// //         lng: -7.9868,
+// //         description:
+// //           "A restored riad garden tucked inside the medina itself, split into an Islamic garden and an exotic one. Quieter than Majorelle, with a tower view over the rooftops.",
+// //         note: "Good midday escape from the heat",
+// //       },
+// //     ],
+// //   },
+// //   {
+// //     id: "beyond",
+// //     title: "Beyond the City",
+// //     places: [
+// //       {
+// //         id: "atlas",
+// //         name: "Atlas Mountains & Imlil",
+// //         category: "mountains",
+// //         lat: 31.1449,
+// //         lng: -7.9146,
+// //         description:
+// //           "Berber villages, walnut groves, and trailheads into the High Atlas — about 90 minutes from the city by car. A full reset from the pace of the medina.",
+// //         note: "Half or full day",
+// //       },
+// //       {
+// //         id: "ourika",
+// //         name: "Ourika Valley",
+// //         category: "valley",
+// //         lat: 31.4928,
+// //         lng: -7.7645,
+// //         description:
+// //           "Waterfalls, riverside cafes built right into the rock, and a green, fast-running valley that feels nothing like the city below it.",
+// //         note: "Half day, roughly an hour each way",
+// //       },
+// //       {
+// //         id: "agafay",
+// //         name: "Agafay Desert",
+// //         category: "desert",
+// //         lat: 31.4700,
+// //         lng: -8.2600,
+// //         description:
+// //           "A rocky, lunar stretch of desert just 30 minutes from Marrakech — no need for the full Sahara trek. Camel rides and sunset dinners under open sky.",
+// //         note: "Best for golden hour",
+// //       },
+// //       {
+// //         id: "sahara",
+// //         name: "The Sahara",
+// //         category: "multi_day",
+// //         lat: 31.0801,
+// //         lng: -4.0133,
+// //         description:
+// //           "The real thing — endless dunes at Erg Chebbi or Erg Chegaga — sits two to three days from Marrakech, over the Atlas passes and down through the Draa Valley. Camel treks, a night camped under more stars than you knew existed, and dune-gold sunrises.",
+// //         note: "2–3 days round trip, book in advance",
+// //       },
+// //     ],
+// //   },
+// //   {
+// //     id: "eat",
+// //     title: "Eat and Unwind",
+// //     places: [
+// //       {
+// //         id: "lejardin",
+// //         name: "Le Jardin",
+// //         category: "garden_riad",
+// //         lat: 31.6298,
+// //         lng: -7.9819,
+// //         description:
+// //           "Down a quiet medina alleyway, a 16th-century mansion turned peaceful courtyard restaurant. Excellent for a slow lunch out of the sun.",
+// //         note: "Best for lunch or brunch",
+// //       },
+// //       {
+// //         id: "cafearabe",
+// //         name: "Café Arabe",
+// //         category: "rooftop",
+// //         lat: 31.6294,
+// //         lng: -7.9862,
+// //         description:
+// //           "Set inside a 17th-century palace, with a rooftop bar built for a sunset cocktail before dinner. One of the most atmospheric rooms in the medina.",
+// //         note: "Go for golden hour drinks",
+// //       },
+// //       {
+// //         id: "bacha",
+// //         name: "Bacha Coffee",
+// //         category: "cafe",
+// //         lat: 31.6303,
+// //         lng: -7.9903,
+// //         description:
+// //           "A coffee house dating back to 1910, recently reopened and instantly the most photographed café in the city. Palatial interiors, a tea and coffee list that runs for pages, and pastries worth the queue.",
+// //         note: "Go mid-morning, expect a line",
+// //       },
+// //     ],
+// //   },
 // // ];
 
-// // const GROUPED = Object.keys(CATEGORY_LABELS).map((category) => ({
-// //   category,
-// //   label: CATEGORY_LABELS[category],
-// //   places: PLACES.filter((p) => p.category === category),
-// // }));
+// // // Flat lookup used by the map layer
+// // const PLACES = SECTIONS.flatMap((s) => s.places);
+
+// // // Only show filter pills for categories that are actually in use, in the
+// // // order they first appear across the sections above.
+// // const USED_CATEGORIES = Array.from(new Set(PLACES.map((p) => p.category)));
+
+// // const popupHTML = (place) => `
+// //   <div style="min-width:220px;max-width:260px;font-family:inherit;">
+// //     <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+// //       <span style="width:16px;height:16px;display:block;color:${BG};">${CATEGORY_ICONS[place.category]}</span>
+// //       <span style="font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:${BG};opacity:0.7;">${CATEGORY_LABELS[place.category]}</span>
+// //     </div>
+// //     <strong style="color:${BG};font-size:14px;display:block;margin-bottom:4px;">${place.name}</strong>
+// //     <p class="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]" style="color:#4a3a2f;margin:0 0 6px 0;">${place.description}</p>
+// //     <p class="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]" style="color:${BG};font-style:italic;margin:0;">${place.note}</p>
+// //     ${place.personalNote
+// //     ? `<div style="margin-top:8px;padding:6px 8px;background:#EAF1F7;border-radius:6px;color:#2c4a63;font-size:11px;line-height:1.4;">${place.personalNote}</div>`
+// //     : ""
+// //   }
+// //   </div>
+// // `;
 
 // // const MarrakechMap = () => {
 // //   const mapRef = useRef(null);
 // //   const containerRef = useRef(null);
-// //   const markersRef = useRef({});
+// //   const markersRef = useRef({}); // id -> { marker, category }
 // //   const leafletRef = useRef(null);
+// //   const activeCategoriesRef = useRef(new Set(USED_CATEGORIES));
 // //   const [hoveredId, setHoveredId] = useState(null);
+// //   const [activeCategories, setActiveCategories] = useState(
+// //     new Set(USED_CATEGORIES)
+// //   );
+
+// //   // Keep a ref in sync so the async Leaflet setup can read the latest
+// //   // filter state without re-running the whole init effect.
+// //   useEffect(() => {
+// //     activeCategoriesRef.current = activeCategories;
+// //     applyVisibility();
+// //     // eslint-disable-next-line react-hooks/exhaustive-deps
+// //   }, [activeCategories]);
+
+// //   const applyVisibility = () => {
+// //     Object.values(markersRef.current).forEach(({ marker, category }) => {
+// //       const el = marker.getElement && marker.getElement();
+// //       if (!el) return;
+// //       const visible = activeCategoriesRef.current.has(category);
+// //       el.style.display = visible ? "" : "none";
+// //       el.style.pointerEvents = visible ? "auto" : "none";
+// //     });
+// //   };
+
+// //   const toggleCategory = (cat) => {
+// //     setActiveCategories((prev) => {
+// //       const next = new Set(prev);
+// //       if (next.has(cat)) {
+// //         next.delete(cat);
+// //       } else {
+// //         next.add(cat);
+// //       }
+// //       return next;
+// //     });
+// //   };
+
+// //   const showAllCategories = () => setActiveCategories(new Set(USED_CATEGORIES));
 
 // //   useEffect(() => {
 // //     if (mapRef.current || !containerRef.current) return;
@@ -71,8 +300,6 @@
 // //       leafletRef.current = L;
 
 // //       const map = L.map(containerRef.current, {
-// //         center: [31.624, -7.985],
-// //         zoom: 15,
 // //         scrollWheelZoom: false,
 // //       });
 // //       mapRef.current = map;
@@ -106,12 +333,24 @@
 
 // //         const marker = L.marker([place.lat, place.lng], { icon })
 // //           .addTo(map)
-// //           .bindPopup(
-// //             `<strong style="color:${BG}">${place.name}</strong>`
-// //           );
+// //           .bindPopup(popupHTML(place), { maxWidth: 280 });
 
-// //         markersRef.current[place.id] = marker;
+// //         marker.on("mouseover", () => setHoveredId(place.id));
+// //         marker.on("mouseout", () =>
+// //           setHoveredId((cur) => (cur === place.id ? null : cur))
+// //         );
+
+// //         markersRef.current[place.id] = { marker, category: place.category };
 // //       });
+
+// //       // Fit the map to every marker (locations range from the medina to the
+// //       // Sahara, so bounds-fitting beats a fixed center/zoom).
+// //       const bounds = L.latLngBounds(PLACES.map((p) => [p.lat, p.lng]));
+// //       map.fitBounds(bounds, { padding: [30, 30] });
+
+// //       // Apply whatever filter state exists at mount time (in case a
+// //       // category was toggled off before Leaflet finished loading).
+// //       applyVisibility();
 // //     });
 
 // //     return () => {
@@ -120,11 +359,12 @@
 // //         mapRef.current = null;
 // //       }
 // //     };
+// //     // eslint-disable-next-line react-hooks/exhaustive-deps
 // //   }, []);
 
-// //   // Highlight the matching marker whenever a sidebar item is hovered
+// //   // Highlight the matching marker whenever a sidebar item (or map marker) is hovered
 // //   useEffect(() => {
-// //     Object.entries(markersRef.current).forEach(([id, marker]) => {
+// //     Object.entries(markersRef.current).forEach(([id, { marker }]) => {
 // //       const el = marker.getElement && marker.getElement();
 // //       const pin = el && el.querySelector(".marrakech-pin");
 // //       if (!pin) return;
@@ -146,81 +386,143 @@
 // //     });
 // //   }, [hoveredId]);
 
+// //   const allActive = activeCategories.size === USED_CATEGORIES.length;
+
 // //   return (
 // //     <section className="w-full py-16 px-4 md:px-6" style={{ backgroundColor: BG }}>
 // //       <div className="max-w-6xl mx-auto">
-// //         <h2
-// //           className="text-2xl md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center"
-// //           style={{ color: OFFWHITE }}
-// //         >
-// //           Marrakech Map
+// //         <h2 className="text-2xl max-md:text-[10vw] max-md:leading-[12vw] md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
+// //           Marrakech <br className="sm:hidden" /> Map
 // //         </h2>
-// //         <p
-// //           className="text-sm md:text-base Font_CV text-[#F1E2C6] opacity-80 mb-8 text-center max-w-md mx-auto"
-// //           style={{ color: OFFWHITE }}
-// //         >
-// //           Hover a place on the list to see it on the map.
+// //         <p className="max-sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
+// //           Hover a place on the list to see its story on the map.
 // //         </p>
+// //         <p className="sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
+// //           Tap the place on the list to see its story on the map.
+// //         </p>
+
+// //         {/* Category filter pills */}
+// //         {/* <div className="flex flex-wrap justify-center gap-2 mb-6">
+// //           <button
+// //             type="button"
+// //             onClick={showAllCategories}
+// //             className="text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border transition-colors"
+// //             style={{
+// //               borderColor: OFFWHITE,
+// //               color: allActive ? BG : OFFWHITE,
+// //               backgroundColor: allActive ? OFFWHITE : "transparent",
+// //             }}
+// //           >
+// //             All
+// //           </button>
+// //           {USED_CATEGORIES.map((cat) => {
+// //             const active = activeCategories.has(cat);
+// //             return (
+// //               <button
+// //                 key={cat}
+// //                 type="button"
+// //                 onClick={() => toggleCategory(cat)}
+// //                 className="flex items-center gap-1.5 text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border transition-colors"
+// //                 style={{
+// //                   borderColor: OFFWHITE,
+// //                   color: active ? BG : OFFWHITE,
+// //                   backgroundColor: active ? OFFWHITE : "transparent",
+// //                 }}
+// //               >
+// //                 <span
+// //                   style={{ width: 12, height: 12, display: "block" }}
+// //                   dangerouslySetInnerHTML={{ __html: CATEGORY_ICONS[cat] }}
+// //                 />
+// //                 {CATEGORY_LABELS[cat]}
+// //               </button>
+// //             );
+// //           })}
+// //         </div> */}
 
 // //         <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch">
 // //           {/* Sidebar list */}
 // //           <div
-// //             className="w-full md:w-72 shrink-0  p-4 md:max-h-[560px] overflow-y-auto"
+// //             className="w-full md:w-72 shrink-0 p-4 md:max-h-[560px] overflow-y-auto"
 // //             style={{ backgroundColor: OFFWHITE }}
 // //           >
-// //             {GROUPED.map((group) => (
-// //               <div key={group.category} className="mb-5 last:mb-0">
-// //                 <p
-// //                   className="text-xs font-medium uppercase tracking-wide mb-2 opacity-70"
-// //                   style={{ color: BG }}
-// //                 >
-// //                   {group.label}
-// //                 </p>
-// //                 <ul>
-// //                   {group.places.map((place) => (
-// //                     <li key={place.id}>
-// //                       <button
-// //                         type="button"
-// //                         onMouseEnter={() => setHoveredId(place.id)}
-// //                         onMouseLeave={() => setHoveredId((cur) => (cur === place.id ? null : cur))}
-// //                         onFocus={() => setHoveredId(place.id)}
-// //                         onBlur={() => setHoveredId((cur) => (cur === place.id ? null : cur))}
-// //                         onClick={() => setHoveredId(place.id)}
-// //                         className="w-full flex items-center gap-2 text-left rounded-lg px-2 py-1.5 mb-1 transition-colors"
-// //                         style={{
-// //                           color: BG,
-// //                           backgroundColor: hoveredId === place.id ? "rgba(210,95,39,0.12)" : "transparent",
-// //                         }}
-// //                       >
-// //                         <span
-// //                           style={{ width: 16, height: 16, display: "block", color: BG }}
-// //                           dangerouslySetInnerHTML={{ __html: CATEGORY_ICONS[place.category] }}
-// //                         />
-// //                         <span className="text-sm">{place.name}</span>
-// //                       </button>
-// //                     </li>
-// //                   ))}
-// //                 </ul>
-// //               </div>
-// //             ))}
+// //             {SECTIONS.map((section) => {
+// //               const visiblePlaces = section.places.filter((p) =>
+// //                 activeCategories.has(p.category)
+// //               );
+// //               if (visiblePlaces.length === 0) return null;
+
+// //               return (
+// //                 <div key={section.id} className="mb-5 last:mb-0">
+// //                   <p
+// //                     className="font-medium uppercase tracking-wide mb-2 opacity-70 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"
+// //                     style={{ color: BG }}
+// //                   >
+// //                     {section.title}
+// //                   </p>
+// //                   <ul>
+// //                     {visiblePlaces.map((place) => (
+// //                       <li key={place.id}>
+// //                         <button
+// //                           type="button"
+// //                           onMouseEnter={() => setHoveredId(place.id)}
+// //                           onMouseLeave={() =>
+// //                             setHoveredId((cur) => (cur === place.id ? null : cur))
+// //                           }
+// //                           onFocus={() => setHoveredId(place.id)}
+// //                           onBlur={() =>
+// //                             setHoveredId((cur) => (cur === place.id ? null : cur))
+// //                           }
+// //                           onClick={() => setHoveredId(place.id)}
+// //                           className="w-full flex items-start gap-2 text-left rounded-lg px-2 py-1.5 mb-1 transition-colors"
+// //                           style={{
+// //                             color: BG,
+// //                             backgroundColor:
+// //                               hoveredId === place.id
+// //                                 ? "rgba(210,95,39,0.12)"
+// //                                 : "transparent",
+// //                           }}
+// //                         >
+// //                           <span
+// //                             style={{
+// //                               width: 16,
+// //                               height: 16,
+// //                               display: "block",
+// //                               color: BG,
+// //                               marginTop: 2,
+// //                               flexShrink: 0,
+// //                             }}
+// //                             dangerouslySetInnerHTML={{
+// //                               __html: CATEGORY_ICONS[place.category],
+// //                             }}
+// //                           />
+// //                           <span className="flex flex-col">
+// //                             <span className="text-sm font-medium">{place.name}</span>
+// //                             {hoveredId === place.id && (
+// //                               <span
+// //                                 className="text-xs mt-0.5"
+// //                                 style={{ color: BG, opacity: 0.85 }}
+// //                               >
+// //                                 {place.description}
+// //                               </span>
+// //                             )}
+// //                           </span>
+// //                         </button>
+// //                       </li>
+// //                     ))}
+// //                   </ul>
+// //                 </div>
+// //               );
+// //             })}
 // //           </div>
 
 // //           {/* Map */}
 // //           <div
-// //             className="flex-1  overflow-hidden"
+// //             className="flex-1 overflow-hidden"
 // //             style={{ border: `2px solid ${OFFWHITE}` }}
 // //           >
 // //             <div ref={containerRef} style={{ width: "100%", height: "560px" }} />
 // //           </div>
 // //         </div>
-
-// //         {/* <p
-// //           className="text-xs opacity-60 mt-6 text-center max-w-md mx-auto"
-// //           style={{ color: OFFWHITE }}
-// //         >
-// //           Concept draft — a fully custom-styled map can follow once this
-// //           direction is approved.
-// //         </p> */}
 // //       </div>
 // //     </section>
 // //   );
@@ -240,6 +542,7 @@
 
 // // Small inline SVG glyphs per category (kept simple/monoline, colored via `currentColor`)
 // const CATEGORY_ICONS = {
+//   hotel: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14"/><path d="M13 21V11a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v10"/><path d="M7 9h.01M7 13h.01M7 17h.01"/><path d="M3 21h18"/></svg>`,
 //   square: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M4 21h16"/></svg>`,
 //   landmark: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M12 7v13M8 20h8"/></svg>`,
 //   palace: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6M12 4v3"/></svg>`,
@@ -256,6 +559,7 @@
 // };
 
 // const CATEGORY_LABELS = {
+//   hotel: "Hotel",
 //   square: "Square",
 //   landmark: "Landmark",
 //   palace: "Palace",
@@ -272,9 +576,24 @@
 // };
 
 // // Real-world places, grouped into the sections from the trip notes.
-// // Each place carries its own description + short "note" line (shown on hover),
-// // and Ben Youssef Madrasa carries an extra personal note.
 // const SECTIONS = [
+//   {
+//     id: "stay",
+//     title: "Where We're Staying",
+//     places: [
+//       {
+//         id: "oberoi",
+//         name: "The Oberoi Marrakech",
+//         category: "hotel",
+//         // Approximate — worth a quick check against Google Maps for the exact gate.
+//         lat: 31.5985,
+//         lng: -7.9105,
+//         description:
+//           "Twenty-eight acres of citrus orchards and olive groves on the edge of the city, with a central courtyard modeled on the Ben Youssef Madrasa and views out to the snow-capped Atlas Mountains.",
+//         note: "~25 min from the medina",
+//       },
+//     ],
+//   },
 //   {
 //     id: "medina",
 //     title: "The Medina",
@@ -377,8 +696,8 @@
 //         id: "agafay",
 //         name: "Agafay Desert",
 //         category: "desert",
-//         lat: 31.4700,
-//         lng: -8.2600,
+//         lat: 31.47,
+//         lng: -8.26,
 //         description:
 //           "A rocky, lunar stretch of desert just 30 minutes from Marrakech — no need for the full Sahara trek. Camel rides and sunset dinners under open sky.",
 //         note: "Best for golden hour",
@@ -436,6 +755,9 @@
 // // Flat lookup used by the map layer
 // const PLACES = SECTIONS.flatMap((s) => s.places);
 
+// // Only show filter pills for categories that are actually in use
+// const USED_CATEGORIES = Array.from(new Set(PLACES.map((p) => p.category)));
+
 // const popupHTML = (place) => `
 //   <div style="min-width:220px;max-width:260px;font-family:inherit;">
 //     <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
@@ -443,28 +765,66 @@
 //       <span style="font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:${BG};opacity:0.7;">${CATEGORY_LABELS[place.category]}</span>
 //     </div>
 //     <strong style="color:${BG};font-size:14px;display:block;margin-bottom:4px;">${place.name}</strong>
-//     <p style="color:#4a3a2f;font-size:12.5px;line-height:1.45;margin:0 0 6px 0;">${place.description}</p>
-//     <p style="color:${BG};font-style:italic;font-size:11.5px;margin:0;">${place.note}</p>
-//     ${
-//       place.personalNote
-//         ? `<div style="margin-top:8px;padding:6px 8px;background:#EAF1F7;border-radius:6px;color:#2c4a63;font-size:11px;line-height:1.4;">${place.personalNote}</div>`
-//         : ""
-//     }
+//     <p style="color:#4a3a2f;margin:0 0 6px 0;font-size:12px;line-height:1.45;">${place.description}</p>
+//     <p style="color:${BG};font-style:italic;margin:0;font-size:12px;line-height:1.4;">${place.note}</p>
+//     ${place.personalNote
+//     ? `<div style="margin-top:8px;padding:6px 8px;background:#EAF1F7;border-radius:6px;color:#2c4a63;font-size:11px;line-height:1.4;">${place.personalNote}</div>`
+//     : ""
+//   }
 //   </div>
 // `;
 
 // const MarrakechMap = () => {
 //   const mapRef = useRef(null);
 //   const containerRef = useRef(null);
-//   const markersRef = useRef({});
+//   const markersRef = useRef({}); // id -> { marker, category }
 //   const leafletRef = useRef(null);
+//   const activeCategoriesRef = useRef(new Set(USED_CATEGORIES));
 //   const [hoveredId, setHoveredId] = useState(null);
+//   const [activeCategories, setActiveCategories] = useState(
+//     new Set(USED_CATEGORIES)
+//   );
 
+//   const applyVisibility = () => {
+//     Object.values(markersRef.current).forEach(({ marker, category }) => {
+//       const el = marker.getElement && marker.getElement();
+//       if (!el) return;
+//       const visible = activeCategoriesRef.current.has(category);
+//       el.style.display = visible ? "" : "none";
+//       el.style.pointerEvents = visible ? "auto" : "none";
+//     });
+//   };
+
+//   // Keep a ref in sync so the async Leaflet setup can read the latest filter state.
 //   useEffect(() => {
-//     if (mapRef.current || !containerRef.current) return;
+//     activeCategoriesRef.current = activeCategories;
+//     applyVisibility();
+//   }, [activeCategories]);
 
-//     import("leaflet").then((L) => {
-//       if (mapRef.current) return;
+//   const toggleCategory = (cat) => {
+//     setActiveCategories((prev) => {
+//       const next = new Set(prev);
+//       if (next.has(cat)) next.delete(cat);
+//       else next.add(cat);
+//       return next;
+//     });
+//   };
+
+//   const showAllCategories = () => setActiveCategories(new Set(USED_CATEGORIES));
+
+//   // ---- Map initialisation ----
+//   useEffect(() => {
+//     let cancelled = false;
+//     let resizeObserver = null;
+
+//     if (!containerRef.current) return;
+
+//     import("leaflet").then((mod) => {
+//       // Leaflet is CommonJS/UMD — depending on the bundler, the real
+//       // object lives on `.default`.
+//       const L = mod.default ?? mod;
+
+//       if (cancelled || mapRef.current || !containerRef.current) return;
 //       leafletRef.current = L;
 
 //       const map = L.map(containerRef.current, {
@@ -472,12 +832,12 @@
 //       });
 //       mapRef.current = map;
 
-//       // CARTO Voyager basemap — free, no API key, clean/minimal styling.
+//       // Esri World Street Map — labels are rendered in English.
 //       L.tileLayer(
-//         "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+//         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
 //         {
 //           attribution:
-//             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+//             "Tiles &copy; Esri &mdash; Source: Esri, HERE, Garmin, USGS, OpenStreetMap contributors",
 //           maxZoom: 19,
 //         }
 //       ).addTo(map);
@@ -491,6 +851,7 @@
 //             display: flex; align-items: center; justify-content: center;
 //             box-shadow: 0 1px 4px rgba(0,0,0,0.35);
 //             transition: transform 0.15s ease, box-shadow 0.15s ease;
+//             cursor: pointer;
 //           ">
 //             <span style="width:16px;height:16px;display:block;">${CATEGORY_ICONS[place.category]}</span>
 //           </div>`,
@@ -503,31 +864,45 @@
 //           .addTo(map)
 //           .bindPopup(popupHTML(place), { maxWidth: 280 });
 
-//         marker.on("mouseover", () => setHoveredId(place.id));
-//         marker.on("mouseout", () =>
-//           setHoveredId((cur) => (cur === place.id ? null : cur))
-//         );
-
-//         markersRef.current[place.id] = marker;
+//         markersRef.current[place.id] = { marker, category: place.category };
 //       });
 
-//       // Fit the map to every marker (locations range from the medina to the
-//       // Sahara, so bounds-fitting beats a fixed center/zoom).
+//       // Fit the map to every marker (medina -> Sahara).
 //       const bounds = L.latLngBounds(PLACES.map((p) => [p.lat, p.lng]));
 //       map.fitBounds(bounds, { padding: [30, 30] });
+
+//       applyVisibility();
+
+//       // Make sure Leaflet knows the real container size (fixes blank/grey tiles).
+//       setTimeout(() => {
+//         if (mapRef.current) {
+//           mapRef.current.invalidateSize();
+//           mapRef.current.fitBounds(bounds, { padding: [30, 30] });
+//         }
+//       }, 250);
+
+//       if (typeof ResizeObserver !== "undefined") {
+//         resizeObserver = new ResizeObserver(() => {
+//           if (mapRef.current) mapRef.current.invalidateSize();
+//         });
+//         resizeObserver.observe(containerRef.current);
+//       }
 //     });
 
 //     return () => {
+//       cancelled = true;
+//       if (resizeObserver) resizeObserver.disconnect();
 //       if (mapRef.current) {
 //         mapRef.current.remove();
 //         mapRef.current = null;
 //       }
+//       markersRef.current = {};
 //     };
 //   }, []);
 
-//   // Highlight the matching marker whenever a sidebar item (or map marker) is hovered
+//   // Highlight the matching marker when a sidebar item is hovered / tapped
 //   useEffect(() => {
-//     Object.entries(markersRef.current).forEach(([id, marker]) => {
+//     Object.entries(markersRef.current).forEach(([id, { marker }]) => {
 //       const el = marker.getElement && marker.getElement();
 //       const pin = el && el.querySelector(".marrakech-pin");
 //       if (!pin) return;
@@ -535,7 +910,7 @@
 //       if (id === hoveredId) {
 //         pin.style.transform = "scale(1.35)";
 //         pin.style.boxShadow = "0 2px 8px rgba(0,0,0,0.45)";
-//         pin.style.zIndex = "1000";
+//         if (el) el.style.zIndex = "1000";
 //         marker.openPopup();
 //         if (mapRef.current) {
 //           mapRef.current.panTo(marker.getLatLng(), { animate: true });
@@ -543,27 +918,63 @@
 //       } else {
 //         pin.style.transform = "scale(1)";
 //         pin.style.boxShadow = "0 1px 4px rgba(0,0,0,0.35)";
-//         pin.style.zIndex = "auto";
-//         marker.closePopup();
+//         if (el) el.style.zIndex = "";
 //       }
 //     });
 //   }, [hoveredId]);
 
+//   const allActive = activeCategories.size === USED_CATEGORIES.length;
+
 //   return (
 //     <section className="w-full py-16 px-4 md:px-6" style={{ backgroundColor: BG }}>
 //       <div className="max-w-6xl mx-auto">
-//         <h2
-//           className="text-2xl md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center"
-//           // style={{ color: OFFWHITE }}
-//         >
-//           Marrakech Map
+//         <h2 className="text-2xl max-md:text-[10vw] max-md:leading-[12vw] md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
+//           Marrakech <br className="sm:hidden" /> Map
 //         </h2>
-//         <p
-//           className="text-sm md:text-base Font_CV text-[#F1E2C6] opacity-80 mb-8 text-center max-w-md mx-auto"
-//           // style={{ color: OFFWHITE }}
-//         >
+//         <p className="max-sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
 //           Hover a place on the list to see its story on the map.
 //         </p>
+//         <p className="sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
+//           Tap the place on the list to see its story on the map.
+//         </p>
+
+//         {/* Category filter pills (optional — uncomment to enable) */}
+//         {/* <div className="flex flex-wrap justify-center gap-2 mb-6">
+//           <button
+//             type="button"
+//             onClick={showAllCategories}
+//             className="text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border transition-colors"
+//             style={{
+//               borderColor: OFFWHITE,
+//               color: allActive ? BG : OFFWHITE,
+//               backgroundColor: allActive ? OFFWHITE : "transparent",
+//             }}
+//           >
+//             All
+//           </button>
+//           {USED_CATEGORIES.map((cat) => {
+//             const active = activeCategories.has(cat);
+//             return (
+//               <button
+//                 key={cat}
+//                 type="button"
+//                 onClick={() => toggleCategory(cat)}
+//                 className="flex items-center gap-1.5 text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border transition-colors"
+//                 style={{
+//                   borderColor: OFFWHITE,
+//                   color: active ? BG : OFFWHITE,
+//                   backgroundColor: active ? OFFWHITE : "transparent",
+//                 }}
+//               >
+//                 <span
+//                   style={{ width: 12, height: 12, display: "block" }}
+//                   dangerouslySetInnerHTML={{ __html: CATEGORY_ICONS[cat] }}
+//                 />
+//                 {CATEGORY_LABELS[cat]}
+//               </button>
+//             );
+//           })}
+//         </div> */}
 
 //         <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch">
 //           {/* Sidebar list */}
@@ -571,75 +982,90 @@
 //             className="w-full md:w-72 shrink-0 p-4 md:max-h-[560px] overflow-y-auto"
 //             style={{ backgroundColor: OFFWHITE }}
 //           >
-//             {SECTIONS.map((section) => (
-//               <div key={section.id} className="mb-5 last:mb-0">
-//                 <p
-//                   className="text-xs font-medium uppercase tracking-wide mb-2 opacity-70"
-//                   style={{ color: BG }}
-//                 >
-//                   {section.title}
-//                 </p>
-//                 <ul>
-//                   {section.places.map((place) => (
-//                     <li key={place.id}>
-//                       <button
-//                         type="button"
-//                         onMouseEnter={() => setHoveredId(place.id)}
-//                         onMouseLeave={() =>
-//                           setHoveredId((cur) => (cur === place.id ? null : cur))
-//                         }
-//                         onFocus={() => setHoveredId(place.id)}
-//                         onBlur={() =>
-//                           setHoveredId((cur) => (cur === place.id ? null : cur))
-//                         }
-//                         onClick={() => setHoveredId(place.id)}
-//                         className="w-full flex items-start gap-2 text-left rounded-lg px-2 py-1.5 mb-1 transition-colors"
-//                         style={{
-//                           color: BG,
-//                           backgroundColor:
-//                             hoveredId === place.id
-//                               ? "rgba(210,95,39,0.12)"
-//                               : "transparent",
-//                         }}
-//                       >
-//                         <span
+//             {SECTIONS.map((section) => {
+//               const visiblePlaces = section.places.filter((p) =>
+//                 activeCategories.has(p.category)
+//               );
+//               if (visiblePlaces.length === 0) return null;
+
+//               return (
+//                 <div key={section.id} className="mb-5 last:mb-0">
+//                   <p
+//                     className="font-medium uppercase tracking-wide mb-2 opacity-70 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"
+//                     style={{ color: BG }}
+//                   >
+//                     {section.title}
+//                   </p>
+//                   <ul>
+//                     {visiblePlaces.map((place) => (
+//                       <li key={place.id}>
+//                         <button
+//                           type="button"
+//                           onMouseEnter={() => setHoveredId(place.id)}
+//                           onMouseLeave={() =>
+//                             setHoveredId((cur) => (cur === place.id ? null : cur))
+//                           }
+//                           onFocus={() => setHoveredId(place.id)}
+//                           onBlur={() =>
+//                             setHoveredId((cur) => (cur === place.id ? null : cur))
+//                           }
+//                           onClick={() => setHoveredId(place.id)}
+//                           className="w-full flex items-start gap-2 text-left rounded-lg px-2 py-1.5 mb-1 transition-colors"
 //                           style={{
-//                             width: 16,
-//                             height: 16,
-//                             display: "block",
 //                             color: BG,
-//                             marginTop: 2,
-//                             flexShrink: 0,
+//                             backgroundColor:
+//                               hoveredId === place.id
+//                                 ? "rgba(210,95,39,0.12)"
+//                                 : "transparent",
 //                           }}
-//                           dangerouslySetInnerHTML={{
-//                             __html: CATEGORY_ICONS[place.category],
-//                           }}
-//                         />
-//                         <span className="flex flex-col">
-//                           <span className="text-sm font-medium">{place.name}</span>
-//                           {hoveredId === place.id && (
-//                             <span
-//                               className="text-xs mt-0.5"
-//                               style={{ color: BG, opacity: 0.85 }}
-//                             >
-//                               {place.description}
-//                             </span>
-//                           )}
-//                         </span>
-//                       </button>
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </div>
-//             ))}
+//                         >
+//                           <span
+//                             style={{
+//                               width: 16,
+//                               height: 16,
+//                               display: "block",
+//                               color: BG,
+//                               marginTop: 2,
+//                               flexShrink: 0,
+//                             }}
+//                             dangerouslySetInnerHTML={{
+//                               __html: CATEGORY_ICONS[place.category],
+//                             }}
+//                           />
+//                           <span className="flex flex-col">
+//                             <span className="text-sm font-medium">{place.name}</span>
+//                             {hoveredId === place.id && (
+//                               <span
+//                                 className="text-xs mt-0.5"
+//                                 style={{ color: BG, opacity: 0.85 }}
+//                               >
+//                                 {place.description}
+//                               </span>
+//                             )}
+//                           </span>
+//                         </button>
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </div>
+//               );
+//             })}
 //           </div>
 
 //           {/* Map */}
 //           <div
 //             className="flex-1 overflow-hidden"
-//             style={{ border: `2px solid ${OFFWHITE}` }}
+//             style={{
+//               border: `2px solid ${OFFWHITE}`,
+//               position: "relative",
+//               isolation: "isolate",
+//               minHeight: 560,
+//             }}
 //           >
-//             <div ref={containerRef} style={{ width: "100%", height: "560px" }} />
+//             <div
+//               ref={containerRef}
+//               style={{ width: "100%", height: "560px", background: "#e8e4dc" }}
+//             />
 //           </div>
 //         </div>
 //       </div>
@@ -648,7 +1074,6 @@
 // };
 
 // export default MarrakechMap;
-
 
 "use client";
 
@@ -659,22 +1084,24 @@ import "leaflet/dist/leaflet.css";
 const BG = "#D25F27";
 const OFFWHITE = "#F7F3EA";
 
-// Small inline SVG glyphs per category (kept simple/monoline, colored via `currentColor`)
+const svg = (inner) =>
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+
 const CATEGORY_ICONS = {
-  hotel: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14"/><path d="M13 21V11a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v10"/><path d="M7 9h.01M7 13h.01M7 17h.01"/><path d="M3 21h18"/></svg>`,
-  square: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M4 21h16"/></svg>`,
-  landmark: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M12 7v13M8 20h8"/></svg>`,
-  palace: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6M12 4v3"/></svg>`,
-  madrasa: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><rect x="9" y="9" width="6" height="6" rx="0.5"/></svg>`,
-  garden: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-5 4-6 4-11a4 4 0 0 0-8 0c0 5 4 6 4 11z"/><path d="M12 11V2"/></svg>`,
-  riad_garden: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>`,
-  mountains: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-11 4 6.5L16 9l5 11z"/></svg>`,
-  valley: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c2 0 2 3 4 3s2-3 4-3 2 3 4 3 2-3 4-3 2 3 4 3"/><path d="M2 14c2 0 2 3 4 3s2-3 4-3 2 3 4 3 2-3 4-3 2 3 4 3"/></svg>`,
-  desert: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M2 18c2.5 0 3.5-3 6-3s3.5 3 6 3 3.5-3 6-3 1.5 2 2 2"/></svg>`,
-  multi_day: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2 2M7.6 16.4l-2 2M18.4 18.4l-2-2M7.6 7.6l-2-2"/></svg>`,
-  garden_riad: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-5 4-6 4-11a4 4 0 0 0-8 0c0 5 4 6 4 11z"/><path d="M12 11V2"/></svg>`,
-  rooftop: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>`,
-  cafe: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2c0 1-1 1-1 2s1 1 1 2M12 2c0 1-1 1-1 2s1 1 1 2"/></svg>`,
+  hotel: svg(`<path d="M3 21V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14"/><path d="M13 21V11a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v10"/><path d="M7 9h.01M7 13h.01M7 17h.01"/><path d="M3 21h18"/>`),
+  square: svg(`<path d="M4 21V11a8 8 0 0 1 16 0v10"/><path d="M4 21h16"/>`),
+  landmark: svg(`<path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M12 7v13M8 20h8"/>`),
+  palace: svg(`<path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6M12 4v3"/>`),
+  madrasa: svg(`<rect x="4" y="4" width="16" height="16" rx="1"/><rect x="9" y="9" width="6" height="6" rx="0.5"/>`),
+  garden: svg(`<path d="M12 22c0-5 4-6 4-11a4 4 0 0 0-8 0c0 5 4 6 4 11z"/><path d="M12 11V2"/>`),
+  riad_garden: svg(`<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>`),
+  mountains: svg(`<path d="M3 20l6-11 4 6.5L16 9l5 11z"/>`),
+  valley: svg(`<path d="M2 8c2 0 2 3 4 3s2-3 4-3 2 3 4 3 2-3 4-3 2 3 4 3"/><path d="M2 14c2 0 2 3 4 3s2-3 4-3 2 3 4 3 2-3 4-3 2 3 4 3"/>`),
+  desert: svg(`<circle cx="12" cy="8" r="3"/><path d="M2 18c2.5 0 3.5-3 6-3s3.5 3 6 3 3.5-3 6-3 1.5 2 2 2"/>`),
+  multi_day: svg(`<circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2 2M7.6 16.4l-2 2M18.4 18.4l-2-2M7.6 7.6l-2-2"/>`),
+  garden_riad: svg(`<path d="M12 22c0-5 4-6 4-11a4 4 0 0 0-8 0c0 5 4 6 4 11z"/><path d="M12 11V2"/>`),
+  rooftop: svg(`<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>`),
+  cafe: svg(`<path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2c0 1-1 1-1 2s1 1 1 2M12 2c0 1-1 1-1 2s1 1 1 2"/>`),
 };
 
 const CATEGORY_LABELS = {
@@ -694,9 +1121,6 @@ const CATEGORY_LABELS = {
   cafe: "Café",
 };
 
-// Real-world places, grouped into the sections from the trip notes.
-// Each place carries its own description + short "note" line (shown on hover),
-// and Ben Youssef Madrasa carries an extra personal note.
 const SECTIONS = [
   {
     id: "stay",
@@ -706,10 +1130,7 @@ const SECTIONS = [
         id: "oberoi",
         name: "The Oberoi Marrakech",
         category: "hotel",
-        // Approximate — the resort sits off Route de Ouarzazate, ~25 min
-        // south of the medina near the palmeraie/golf belt. Worth a quick
-        // check against Google Maps for the exact gate before this ships.
-        lat: 31.5985,
+        lat: 31.5985, // VERIFY in Google Maps
         lng: -7.9105,
         description:
           "Twenty-eight acres of citrus orchards and olive groves on the edge of the city, with a central courtyard modeled on the Ben Youssef Madrasa and views out to the snow-capped Atlas Mountains.",
@@ -725,8 +1146,8 @@ const SECTIONS = [
         id: "jemaa",
         name: "Jemaa el-Fnaa",
         category: "square",
-        lat: 31.6258,
-        lng: -7.9891,
+        lat: 31.6259,
+        lng: -7.989,
         description:
           "The beating heart of the medina, and a UNESCO-listed open-air theatre by night. Juice stalls, storytellers, and food carts that fill the square as the sun drops.",
         note: "Best after 6pm — go hungry",
@@ -735,8 +1156,8 @@ const SECTIONS = [
         id: "koutoubia",
         name: "Koutoubia Mosque",
         category: "landmark",
-        lat: 31.6238,
-        lng: -7.9932,
+        lat: 31.6237,
+        lng: -7.9937,
         description:
           "A 12th-century minaret that still anchors the skyline. Non-Muslim visitors can't enter, but the gardens and exterior at dusk are worth the walk alone.",
         note: "15 min, viewed from outside",
@@ -745,8 +1166,8 @@ const SECTIONS = [
         id: "bahia",
         name: "Bahia Palace",
         category: "palace",
-        lat: 31.6215,
-        lng: -7.9836,
+        lat: 31.6216,
+        lng: -7.9834,
         description:
           'A 19th-century palace built to be "the brilliant one" — and it is. Carved cedar ceilings, painted courtyards, and zellige tilework in every direction you look.',
         note: "Allow 1 hour",
@@ -755,8 +1176,8 @@ const SECTIONS = [
         id: "madrasa",
         name: "Ben Youssef Madrasa",
         category: "madrasa",
-        lat: 31.6314,
-        lng: -7.9838,
+        lat: 31.6316,
+        lng: -7.9865,
         description:
           "Once one of the largest Islamic colleges in North Africa. The central courtyard — carved stucco, zellige, cedar lattice — is almost overwhelming in the best way.",
         note: "45 min",
@@ -774,7 +1195,7 @@ const SECTIONS = [
         name: "Jardin Majorelle & YSL Museum",
         category: "garden",
         lat: 31.6417,
-        lng: -8.0031,
+        lng: -8.0033,
         description:
           "The cobalt-blue villa garden built by Jacques Majorelle, later restored by Yves Saint Laurent. The blue that gives the garden its name is the same one we borrowed for this page.",
         note: "Book timed tickets online in advance · 1.5–3 hrs",
@@ -783,8 +1204,8 @@ const SECTIONS = [
         id: "secret",
         name: "Le Jardin Secret",
         category: "riad_garden",
-        lat: 31.6294,
-        lng: -7.9868,
+        lat: 31.6318,
+        lng: -7.9872,
         description:
           "A restored riad garden tucked inside the medina itself, split into an Islamic garden and an exotic one. Quieter than Majorelle, with a tower view over the rooftops.",
         note: "Good midday escape from the heat",
@@ -799,8 +1220,8 @@ const SECTIONS = [
         id: "atlas",
         name: "Atlas Mountains & Imlil",
         category: "mountains",
-        lat: 31.1449,
-        lng: -7.9146,
+        lat: 31.1361,
+        lng: -7.9192,
         description:
           "Berber villages, walnut groves, and trailheads into the High Atlas — about 90 minutes from the city by car. A full reset from the pace of the medina.",
         note: "Half or full day",
@@ -809,8 +1230,8 @@ const SECTIONS = [
         id: "ourika",
         name: "Ourika Valley",
         category: "valley",
-        lat: 31.4928,
-        lng: -7.7645,
+        lat: 31.2225, // Setti Fatma (waterfalls)
+        lng: -7.6789,
         description:
           "Waterfalls, riverside cafes built right into the rock, and a green, fast-running valley that feels nothing like the city below it.",
         note: "Half day, roughly an hour each way",
@@ -819,8 +1240,8 @@ const SECTIONS = [
         id: "agafay",
         name: "Agafay Desert",
         category: "desert",
-        lat: 31.4700,
-        lng: -8.2600,
+        lat: 31.45,
+        lng: -8.24,
         description:
           "A rocky, lunar stretch of desert just 30 minutes from Marrakech — no need for the full Sahara trek. Camel rides and sunset dinners under open sky.",
         note: "Best for golden hour",
@@ -829,8 +1250,8 @@ const SECTIONS = [
         id: "sahara",
         name: "The Sahara",
         category: "multi_day",
-        lat: 31.0801,
-        lng: -4.0133,
+        lat: 31.1,
+        lng: -4.01, // Merzouga / Erg Chebbi
         description:
           "The real thing — endless dunes at Erg Chebbi or Erg Chegaga — sits two to three days from Marrakech, over the Atlas passes and down through the Draa Valley. Camel treks, a night camped under more stars than you knew existed, and dune-gold sunrises.",
         note: "2–3 days round trip, book in advance",
@@ -845,8 +1266,8 @@ const SECTIONS = [
         id: "lejardin",
         name: "Le Jardin",
         category: "garden_riad",
-        lat: 31.6298,
-        lng: -7.9819,
+        lat: 31.6321, // VERIFY in Google Maps
+        lng: -7.9845,
         description:
           "Down a quiet medina alleyway, a 16th-century mansion turned peaceful courtyard restaurant. Excellent for a slow lunch out of the sun.",
         note: "Best for lunch or brunch",
@@ -855,8 +1276,8 @@ const SECTIONS = [
         id: "cafearabe",
         name: "Café Arabe",
         category: "rooftop",
-        lat: 31.6294,
-        lng: -7.9862,
+        lat: 31.6316, // VERIFY in Google Maps
+        lng: -7.9877,
         description:
           "Set inside a 17th-century palace, with a rooftop bar built for a sunset cocktail before dinner. One of the most atmospheric rooms in the medina.",
         note: "Go for golden hour drinks",
@@ -865,7 +1286,7 @@ const SECTIONS = [
         id: "bacha",
         name: "Bacha Coffee",
         category: "cafe",
-        lat: 31.6303,
+        lat: 31.6318,
         lng: -7.9903,
         description:
           "A coffee house dating back to 1910, recently reopened and instantly the most photographed café in the city. Palatial interiors, a tea and coffee list that runs for pages, and pastries worth the queue.",
@@ -875,12 +1296,7 @@ const SECTIONS = [
   },
 ];
 
-// Flat lookup used by the map layer
 const PLACES = SECTIONS.flatMap((s) => s.places);
-
-// Only show filter pills for categories that are actually in use, in the
-// order they first appear across the sections above.
-const USED_CATEGORIES = Array.from(new Set(PLACES.map((p) => p.category)));
 
 const popupHTML = (place) => `
   <div style="min-width:220px;max-width:260px;font-family:inherit;">
@@ -889,77 +1305,46 @@ const popupHTML = (place) => `
       <span style="font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:${BG};opacity:0.7;">${CATEGORY_LABELS[place.category]}</span>
     </div>
     <strong style="color:${BG};font-size:14px;display:block;margin-bottom:4px;">${place.name}</strong>
-    <p class="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]" style="color:#4a3a2f;margin:0 0 6px 0;">${place.description}</p>
-    <p class="text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]" style="color:${BG};font-style:italic;margin:0;">${place.note}</p>
-    ${
-      place.personalNote
-        ? `<div style="margin-top:8px;padding:6px 8px;background:#EAF1F7;border-radius:6px;color:#2c4a63;font-size:11px;line-height:1.4;">${place.personalNote}</div>`
-        : ""
-    }
+    <p style="color:#4a3a2f;margin:0 0 6px 0;font-size:12px;line-height:1.45;">${place.description}</p>
+    <p style="color:${BG};font-style:italic;margin:0;font-size:12px;line-height:1.4;">${place.note}</p>
+    ${place.personalNote
+    ? `<div style="margin-top:8px;padding:6px 8px;background:#EAF1F7;border-radius:6px;color:#2c4a63;font-size:11px;line-height:1.4;">${place.personalNote}</div>`
+    : ""
+  }
+    <a href="https://www.google.com/maps/search/?api=1&query=${place.lat},${place.lng}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;font-size:11px;color:${BG};text-decoration:underline;">Open in Google Maps</a>
   </div>
 `;
 
 const MarrakechMap = () => {
   const mapRef = useRef(null);
   const containerRef = useRef(null);
-  const markersRef = useRef({}); // id -> { marker, category }
+  const markersRef = useRef({});
   const leafletRef = useRef(null);
-  const activeCategoriesRef = useRef(new Set(USED_CATEGORIES));
+  const userMarkerRef = useRef(null);
   const [hoveredId, setHoveredId] = useState(null);
-  const [activeCategories, setActiveCategories] = useState(
-    new Set(USED_CATEGORIES)
-  );
+  const [locStatus, setLocStatus] = useState("idle"); // idle | loading | ok | error
 
-  // Keep a ref in sync so the async Leaflet setup can read the latest
-  // filter state without re-running the whole init effect.
+  // ---- Map initialisation ----
   useEffect(() => {
-    activeCategoriesRef.current = activeCategories;
-    applyVisibility();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeCategories]);
+    let cancelled = false;
+    let resizeObserver = null;
 
-  const applyVisibility = () => {
-    Object.values(markersRef.current).forEach(({ marker, category }) => {
-      const el = marker.getElement && marker.getElement();
-      if (!el) return;
-      const visible = activeCategoriesRef.current.has(category);
-      el.style.display = visible ? "" : "none";
-      el.style.pointerEvents = visible ? "auto" : "none";
-    });
-  };
+    if (!containerRef.current) return;
 
-  const toggleCategory = (cat) => {
-    setActiveCategories((prev) => {
-      const next = new Set(prev);
-      if (next.has(cat)) {
-        next.delete(cat);
-      } else {
-        next.add(cat);
-      }
-      return next;
-    });
-  };
-
-  const showAllCategories = () => setActiveCategories(new Set(USED_CATEGORIES));
-
-  useEffect(() => {
-    if (mapRef.current || !containerRef.current) return;
-
-    import("leaflet").then((L) => {
-      if (mapRef.current) return;
+    import("leaflet").then((mod) => {
+      const L = mod.default ?? mod;
+      if (cancelled || mapRef.current || !containerRef.current) return;
       leafletRef.current = L;
 
-      const map = L.map(containerRef.current, {
-        scrollWheelZoom: false,
-      });
+      const map = L.map(containerRef.current, { scrollWheelZoom: false });
       mapRef.current = map;
 
-      // CARTO Voyager basemap — free, no API key, clean/minimal styling.
+      // Esri World Street Map — English labels
       L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
         {
           attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            "Tiles &copy; Esri &mdash; Source: Esri, HERE, Garmin, USGS, OpenStreetMap contributors",
           maxZoom: 19,
         }
       ).addTo(map);
@@ -967,13 +1352,13 @@ const MarrakechMap = () => {
       PLACES.forEach((place) => {
         const icon = L.divIcon({
           className: "",
-          html: `<div class="marrakech-pin" data-id="${place.id}" style="
-            width: 30px; height: 30px; border-radius: 50%;
-            background: ${OFFWHITE}; border: 2px solid ${BG}; color: ${BG};
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.35);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-          ">
+          html: `<div class="marrakech-pin" style="
+            width:30px;height:30px;border-radius:50%;
+            background:${OFFWHITE};border:2px solid ${BG};color:${BG};
+            display:flex;align-items:center;justify-content:center;
+            box-shadow:0 1px 4px rgba(0,0,0,0.35);
+            transition:transform 0.15s ease, box-shadow 0.15s ease;
+            cursor:pointer;">
             <span style="width:16px;height:16px;display:block;">${CATEGORY_ICONS[place.category]}</span>
           </div>`,
           iconSize: [30, 30],
@@ -985,34 +1370,40 @@ const MarrakechMap = () => {
           .addTo(map)
           .bindPopup(popupHTML(place), { maxWidth: 280 });
 
-        marker.on("mouseover", () => setHoveredId(place.id));
-        marker.on("mouseout", () =>
-          setHoveredId((cur) => (cur === place.id ? null : cur))
-        );
-
-        markersRef.current[place.id] = { marker, category: place.category };
+        markersRef.current[place.id] = { marker };
       });
 
-      // Fit the map to every marker (locations range from the medina to the
-      // Sahara, so bounds-fitting beats a fixed center/zoom).
       const bounds = L.latLngBounds(PLACES.map((p) => [p.lat, p.lng]));
       map.fitBounds(bounds, { padding: [30, 30] });
 
-      // Apply whatever filter state exists at mount time (in case a
-      // category was toggled off before Leaflet finished loading).
-      applyVisibility();
+      setTimeout(() => {
+        if (mapRef.current) {
+          mapRef.current.invalidateSize();
+          mapRef.current.fitBounds(bounds, { padding: [30, 30] });
+        }
+      }, 250);
+
+      if (typeof ResizeObserver !== "undefined") {
+        resizeObserver = new ResizeObserver(() => {
+          if (mapRef.current) mapRef.current.invalidateSize();
+        });
+        resizeObserver.observe(containerRef.current);
+      }
     });
 
     return () => {
+      cancelled = true;
+      if (resizeObserver) resizeObserver.disconnect();
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
       }
+      markersRef.current = {};
+      userMarkerRef.current = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Highlight the matching marker whenever a sidebar item (or map marker) is hovered
+  // Highlight the matching marker when a sidebar item is hovered / tapped
   useEffect(() => {
     Object.entries(markersRef.current).forEach(([id, { marker }]) => {
       const el = marker.getElement && marker.getElement();
@@ -1022,21 +1413,65 @@ const MarrakechMap = () => {
       if (id === hoveredId) {
         pin.style.transform = "scale(1.35)";
         pin.style.boxShadow = "0 2px 8px rgba(0,0,0,0.45)";
-        pin.style.zIndex = "1000";
+        el.style.zIndex = "1000";
         marker.openPopup();
         if (mapRef.current) {
-          mapRef.current.panTo(marker.getLatLng(), { animate: true });
+          mapRef.current.setView(marker.getLatLng(), Math.max(mapRef.current.getZoom(), 13), {
+            animate: true,
+          });
         }
       } else {
         pin.style.transform = "scale(1)";
         pin.style.boxShadow = "0 1px 4px rgba(0,0,0,0.35)";
-        pin.style.zIndex = "auto";
-        marker.closePopup();
+        el.style.zIndex = "";
       }
     });
   }, [hoveredId]);
 
-  const allActive = activeCategories.size === USED_CATEGORIES.length;
+  // "Locate me"
+  const locateMe = () => {
+    const L = leafletRef.current;
+    const map = mapRef.current;
+    if (!L || !map) return;
+    if (!navigator.geolocation) {
+      setLocStatus("error");
+      return;
+    }
+    setLocStatus("loading");
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude, longitude, accuracy } = pos.coords;
+        if (userMarkerRef.current) {
+          map.removeLayer(userMarkerRef.current);
+        }
+        const dot = L.divIcon({
+          className: "",
+          html: `<div style="width:16px;height:16px;border-radius:50%;background:#2563eb;border:3px solid #fff;box-shadow:0 0 0 2px rgba(37,99,235,0.4);"></div>`,
+          iconSize: [16, 16],
+          iconAnchor: [8, 8],
+        });
+        const group = L.layerGroup([
+          L.circle([latitude, longitude], {
+            radius: accuracy,
+            color: "#2563eb",
+            weight: 1,
+            fillOpacity: 0.1,
+          }),
+          L.marker([latitude, longitude], { icon: dot }).bindPopup("You are here"),
+        ]).addTo(map);
+        userMarkerRef.current = group;
+
+        const bounds = L.latLngBounds([
+          [latitude, longitude],
+          ...PLACES.map((p) => [p.lat, p.lng]),
+        ]);
+        map.fitBounds(bounds, { padding: [30, 30] });
+        setLocStatus("ok");
+      },
+      () => setLocStatus("error"),
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  };
 
   return (
     <section className="w-full py-16 px-4 md:px-6" style={{ backgroundColor: BG }}>
@@ -1044,50 +1479,12 @@ const MarrakechMap = () => {
         <h2 className="text-2xl max-md:text-[10vw] max-md:leading-[12vw] md:text-5xl uppercase Font_CV text-[#F1E2C6] tracking-wide mb-2 text-center">
           Marrakech <br className="sm:hidden" /> Map
         </h2>
-        <p className="max-sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
+        <p className="max-sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.4rem]">
           Hover a place on the list to see its story on the map.
         </p>
-        <p className="sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
-         Tap the place on the list to see its story on the map.
+        <p className="sm:hidden text-[#F1E2C6] mb-6 text-center max-w-md mx-auto text-[1.2rem] leading-[1.4rem]">
+          Tap the place on the list to see its story on the map.
         </p>
-
-        {/* Category filter pills */}
-        {/* <div className="flex flex-wrap justify-center gap-2 mb-6">
-          <button
-            type="button"
-            onClick={showAllCategories}
-            className="text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border transition-colors"
-            style={{
-              borderColor: OFFWHITE,
-              color: allActive ? BG : OFFWHITE,
-              backgroundColor: allActive ? OFFWHITE : "transparent",
-            }}
-          >
-            All
-          </button>
-          {USED_CATEGORIES.map((cat) => {
-            const active = activeCategories.has(cat);
-            return (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => toggleCategory(cat)}
-                className="flex items-center gap-1.5 text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border transition-colors"
-                style={{
-                  borderColor: OFFWHITE,
-                  color: active ? BG : OFFWHITE,
-                  backgroundColor: active ? OFFWHITE : "transparent",
-                }}
-              >
-                <span
-                  style={{ width: 12, height: 12, display: "block" }}
-                  dangerouslySetInnerHTML={{ __html: CATEGORY_ICONS[cat] }}
-                />
-                {CATEGORY_LABELS[cat]}
-              </button>
-            );
-          })}
-        </div> */}
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-stretch">
           {/* Sidebar list */}
@@ -1095,82 +1492,97 @@ const MarrakechMap = () => {
             className="w-full md:w-72 shrink-0 p-4 md:max-h-[560px] overflow-y-auto"
             style={{ backgroundColor: OFFWHITE }}
           >
-            {SECTIONS.map((section) => {
-              const visiblePlaces = section.places.filter((p) =>
-                activeCategories.has(p.category)
-              );
-              if (visiblePlaces.length === 0) return null;
-
-              return (
-                <div key={section.id} className="mb-5 last:mb-0">
-                  <p
-                    className="font-medium uppercase tracking-wide mb-2 opacity-70 text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]"
-                    style={{ color: BG }}
-                  >
-                    {section.title}
-                  </p>
-                  <ul>
-                    {visiblePlaces.map((place) => (
-                      <li key={place.id}>
-                        <button
-                          type="button"
-                          onMouseEnter={() => setHoveredId(place.id)}
-                          onMouseLeave={() =>
-                            setHoveredId((cur) => (cur === place.id ? null : cur))
-                          }
-                          onFocus={() => setHoveredId(place.id)}
-                          onBlur={() =>
-                            setHoveredId((cur) => (cur === place.id ? null : cur))
-                          }
-                          onClick={() => setHoveredId(place.id)}
-                          className="w-full flex items-start gap-2 text-left rounded-lg px-2 py-1.5 mb-1 transition-colors"
+            {SECTIONS.map((section) => (
+              <div key={section.id} className="mb-5 last:mb-0">
+                <p
+                  className="font-medium uppercase tracking-wide mb-2 opacity-70 text-[1.1rem] leading-[1.4rem]"
+                  style={{ color: BG }}
+                >
+                  {section.title}
+                </p>
+                <ul>
+                  {section.places.map((place) => (
+                    <li key={place.id}>
+                      <button
+                        type="button"
+                        onMouseEnter={() => setHoveredId(place.id)}
+                        onMouseLeave={() =>
+                          setHoveredId((cur) => (cur === place.id ? null : cur))
+                        }
+                        onFocus={() => setHoveredId(place.id)}
+                        onClick={() => setHoveredId(place.id)}
+                        className="w-full flex items-start gap-2 text-left rounded-lg px-2 py-1.5 mb-1 transition-colors"
+                        style={{
+                          color: BG,
+                          backgroundColor:
+                            hoveredId === place.id ? "rgba(210,95,39,0.12)" : "transparent",
+                        }}
+                      >
+                        <span
                           style={{
+                            width: 16,
+                            height: 16,
+                            display: "block",
                             color: BG,
-                            backgroundColor:
-                              hoveredId === place.id
-                                ? "rgba(210,95,39,0.12)"
-                                : "transparent",
+                            marginTop: 2,
+                            flexShrink: 0,
                           }}
-                        >
-                          <span
-                            style={{
-                              width: 16,
-                              height: 16,
-                              display: "block",
-                              color: BG,
-                              marginTop: 2,
-                              flexShrink: 0,
-                            }}
-                            dangerouslySetInnerHTML={{
-                              __html: CATEGORY_ICONS[place.category],
-                            }}
-                          />
-                          <span className="flex flex-col">
-                            <span className="text-sm font-medium">{place.name}</span>
-                            {hoveredId === place.id && (
-                              <span
-                                className="text-xs mt-0.5"
-                                style={{ color: BG, opacity: 0.85 }}
-                              >
-                                {place.description}
-                              </span>
-                            )}
-                          </span>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
+                          dangerouslySetInnerHTML={{ __html: CATEGORY_ICONS[place.category] }}
+                        />
+                        <span className="flex flex-col">
+                          <span className="text-sm font-medium">{place.name}</span>
+                          {hoveredId === place.id && (
+                            <span className="text-xs mt-0.5" style={{ color: BG, opacity: 0.85 }}>
+                              {place.description}
+                            </span>
+                          )}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
           {/* Map */}
           <div
             className="flex-1 overflow-hidden"
-            style={{ border: `2px solid ${OFFWHITE}` }}
+            style={{
+              border: `2px solid ${OFFWHITE}`,
+              position: "relative",
+              isolation: "isolate",
+              minHeight: 560,
+            }}
           >
-            <div ref={containerRef} style={{ width: "100%", height: "560px" }} />
+            <div
+              ref={containerRef}
+              style={{ width: "100%", height: "560px", background: "#e8e4dc" }}
+            />
+
+            {/* Locate me button */}
+            <button
+              type="button"
+              onClick={locateMe}
+              disabled={locStatus === "loading"}
+              className="absolute top-3 right-3 text-xs uppercase tracking-wide px-3 py-2 rounded-full shadow"
+              style={{
+                zIndex: 1000,
+                backgroundColor: OFFWHITE,
+                color: BG,
+                border: `1px solid ${BG}`,
+              }}
+            >
+              {locStatus === "loading" ? "Locating…" : "Locate me"}
+            </button>
+            {locStatus === "error" && (
+              <div
+                className="absolute bottom-3 left-3 right-3 text-xs px-3 py-2 rounded"
+                style={{ zIndex: 1000, backgroundColor: OFFWHITE, color: BG }}
+              >
+                Couldn't get your location. Please allow location access in your browser.
+              </div>
+            )}
           </div>
         </div>
       </div>

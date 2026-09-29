@@ -86,9 +86,11 @@ const page = () => {
           </div>
         </section>
 
+        {/* INFO */}
+        <section className="WeddingTextCont mx-auto w-[90vw] sm:w-fit mt-10 flex flex-col items-center">
 
-        {/* IMFO */}
-        <section className="WeddingTextCont BGCLR mx-auto border border-[#F1E2C6] w-[90vw] sm:w-fit p-5 mt-10 flex h-fit items-center relative justify-center px-6 pt-5">
+          {/* Page break (top) */}
+          <div className="w-[60vw] max-w-[100px] h-[2px] bg-[#F1E2C6]/60 mb-8" />
 
           <div className="text-center text-[#F1E2C6]">
             <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify COLOR_TEXT_RED text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
@@ -105,6 +107,9 @@ const page = () => {
               to find out more!
             </p>
           </div>
+
+          {/* Page break (bottom) */}
+          <div className="w-[60vw] max-w-[100px] h-[2px] bg-[#F1E2C6]/60 mt-8" />
         </section>
 
 
