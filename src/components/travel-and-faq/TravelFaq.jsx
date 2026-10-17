@@ -128,7 +128,7 @@ export default function FAQSection() {
     id: 16,
     question: "Transport",
     answer:
-      "Transfers will be arranged for all guests between the hotels and wedding events, including airport shuttle services.",
+      "Transfers will be arranged for all guests between the hotels and wedding events, including airport shuttle services. Please note that we have only arranged airport transfers for guests on the 20th of October.",
   },
   {
     id: 17,
