@@ -87,29 +87,30 @@ const page = () => {
         </section>
 
         {/* INFO */}
-        <section className="WeddingTextCont mx-auto w-[90vw] sm:w-fit mt-10 flex flex-col items-center">
+        <section className="WeddingTextCont w-full mx-auto mt-10 max-sm:mt-8 px-6 max-sm:px-[5vw] flex flex-col items-center">
 
           {/* Page break (top) */}
-          <div className="w-[60vw] max-w-[100px] h-[2px] bg-[#F1E2C6]/60 mb-8" />
+          <div className="w-[100px] max-sm:w-[64px] h-[2px] bg-[#F1E2C6]/60 mb-8 max-sm:mb-6" />
 
-          <div className="text-center text-[#F1E2C6]">
-            <p className="max-w-[70vw] mx-auto max-sm:max-w-[95vw] max-sm:text-justify COLOR_TEXT_RED text-[1.1rem] leading-[1.1rem] max-sm:text-[1.2rem] max-sm:leading-[1.4rem]">
+          <div className="w-full text-center text-[#F1E2C6]">
+            <p className="max-w-[70vw] max-sm:max-w-full mx-auto COLOR_TEXT_RED text-[1.1rem] leading-[1.1rem] max-sm:text-[1.1rem] max-sm:leading-[1.5rem]">
               We have teamed up with I Morocco Tours to design a bespoke tour for you.
               This is an optional tour to the Atlas Mountains and Sahara’s desert that
-              you can book directly with the agency.{" "}
-              <a
-                href="/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
-                download="Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
-                className="cursor-pointer font-semibold text-[#F1E2C6] underline underline-offset-4 transition-opacity hover:opacity-80"
-              >
-                Click Here
-              </a>{" "}
-              to find out more!
+              you can book directly with the agency.
             </p>
           </div>
 
+          {/* Font size and padding scale with viewport width on phones so the label stays on one line */}
+          <a
+            href="/Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
+            download="Morocco-Desert-Tour-Itinerary-Oct-23-26.pdf"
+            className="mt-8 max-sm:mt-6 inline-block max-w-full text-center whitespace-nowrap bg-[#F1E2C6] text-[#D25F28] font-semibold uppercase tracking-wide text-[1rem] px-8 py-3 max-sm:text-[2.8vw] max-sm:px-[3vw] max-sm:py-[2.5vw] max-sm:tracking-normal transition-opacity hover:opacity-80 active:opacity-80"
+          >
+            Click here for a bespoke <br  className="sm:hidden "/> tour of the Sahara
+          </a>
+
           {/* Page break (bottom) */}
-          <div className="w-[60vw] max-w-[100px] h-[2px] bg-[#F1E2C6]/60 mt-8" />
+          <div className="w-[100px] max-sm:w-[64px] h-[2px] bg-[#F1E2C6]/60 mt-8 max-sm:mt-6" />
         </section>
 
 
